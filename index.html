@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VCura Terapias | Medicina Tradicional Chinesa &amp; Saúde Integrativa na Alta de Lisboa</title>
+  <meta name="description" content="Clínica de Medicina Tradicional Chinesa e Saúde Integrativa na Alta de Lisboa / Lumiar. Acupuntura, Fitoterapia, Saúde Feminina, Nutrição Funcional e Terapias Integrativas." />
+
+  <!-- Google Fonts: Noto Serif (Títulos) & Plus Jakarta Sans (Texto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              green: '#37A817',        // Verde principal
+              'green-dark': '#216D25',  // Verde escuro para textos e destaques
+              'green-soft': '#F2F8EF',  // Verde muito suave para fundos alternados
+              white: '#FFFFFF',         // Branco puro
+              blue: '#173E8C',          // Azul discreto institucional
+              gray: '#F6F7F5',          // Cinzento suave
+              text: '#303830'           // Texto principal
+            }
+          },
+          fontFamily: {
+            serif: ['"Noto Serif"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'subtle': '0 4px 20px -2px rgba(33, 109, 37, 0.06)',
+            'card': '0 8px 30px -4px rgba(33, 109, 37, 0.08)',
+            'elevated': '0 16px 40px -8px rgba(33, 109, 37, 0.12)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Suavização de scroll e estilos base */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      color: #303830;
+      background-color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Estilo de seleção de texto nas cores da marca */
+    ::selection {
+      background-color: #F2F8EF;
+      color: #216D25;
+    }
+    /* Material Symbols alinhamento perfeito */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-flex;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill-1 {
+      font-variation-settings: 'FILL' 1;
+    }
+    /* Animação suave para acordião */
+    .accordion-content {
+      transition: max-height 0.35s ease-in-out, opacity 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body class="bg-white text-brand-text flex flex-col min-h-screen">
+
+  <!-- CONFIGURAÇÃO CENTRALIZADA DE CONTACTOS (PT-PT) -->
+  <script>
+    const VCURA_CONFIG = {
+      whatsappNumber: "351964423853",
+      whatsappDisplay: "964 423 853",
+      email: "vcuramtc@gmail.com",
+      address: "Av. David Mourão Ferreira, 25B, Loja A, 1750-209 Lisboa",
+      location: "Alta de Lisboa / Lumiar, Portugal",
+      mapsUrl: "https://maps.google.com/?q=Av.+David+Mour%C3%A3o-Ferreira+25B+Lisboa",
+      cedula: "C-006284"
+    };
+
+    function getWhatsAppLink(customMsg = "") {
+      const msg = customMsg || "Olá! Gostaria de obter mais informações e marcar uma consulta na VCura Terapias.";
+      return `https://wa.me/${VCURA_CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+    }
+  </script>
+
+  <!-- ========================================================================= -->
+  <!-- 3. CABEÇALHO & NAVEGAÇÃO -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-brand-gray shadow-sm transition-all duration-300" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Logótipo Oficial VCura -->
+      <a href="#hero" class="flex items-center gap-3 group shrink-0" aria-label="VCura Terapias - Página Inicial">
+        <img src="./Logo.png" alt="Logótipo Oficial VCura Terapias" class="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+        <div class="flex flex-col">
+          <span class="font-serif text-xl sm:text-2xl font-bold text-brand-green-dark tracking-tight leading-none">VCura</span>
+          <span class="text-[11px] font-semibold text-brand-green tracking-widest uppercase mt-0.5">Terapias • Lisboa</span>
+        </div>
+      </a>
+
+      <!-- Menu Desktop -->
+      <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium text-brand-text" aria-label="Navegação Principal">
+        <a href="#hero" class="px-3 py-2 rounded-full hover:text-brand-green hover:bg-brand-green-soft transition-colors font-semibold text-brand-green-dark">Início</a>
+        <a href="#tratamentos" class="px-3 py-2 rounded-full hover:text-brand-green hover:bg-brand-green-soft transition-colors">Tratamentos</a>
+        <a href="#terapias" class="px-3 py-2 rounded-full hover:text-brand-green hover:bg-brand-green-soft transition-colors">Terapias</a>
+        <a href="#quem-somos" class="px-3 py-2 rounded-full hover:text-brand-green hover:bg-brand-green-soft transition-colors">Quem Somos</a>
+        <a href="#workshops" class="px-3 py-2 rounded-full hover:text-brand-green hover:bg-brand-green-soft transition-colors">Workshops</a>
+        <a href="#espaco" class="px-3 py-2 rounded-full hover:text-brand-green hover:bg-brand-green-soft transition-colors">Espaço</a>
+        <a href="#contactos" class="px-3 py-2 rounded-full hover:text-brand-green hover:bg-brand-green-soft transition-colors">Contactos</a>
+      </nav>
+
+      <!-- Botões de Ação no Header -->
+      <div class="flex items-center gap-3">
+        <!-- WhatsApp Header Link (Desktop) -->
+        <a href="https://wa.me/351964423853" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-brand-green-soft text-brand-green-dark text-xs font-semibold hover:bg-brand-green hover:text-white transition-all duration-200">
+          <span class="material-symbols-outlined text-[17px] text-brand-green group-hover:text-white">chat</span>
+          <span>WhatsApp • 964 423 853</span>
+        </a>
+
+        <!-- Botão de Destaque "Marcar Consulta" -->
+        <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20na%20VCura%20Terapias." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-brand-green text-white text-sm font-semibold shadow-sm hover:bg-brand-green-dark transition-all duration-200 hover:shadow-subtle">
+          <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+          <span>Marcar consulta</span>
+        </a>
+
+        <!-- Botão Hambúrguer Mobile -->
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-xl text-brand-green-dark hover:bg-brand-green-soft transition-colors" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+          <span id="menu-icon-open" class="material-symbols-outlined text-3xl">menu</span>
+          <span id="menu-icon-close" class="material-symbols-outlined text-3xl hidden">close</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Drawer Mobile -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-brand-gray bg-white/98 backdrop-blur-md px-4 pt-3 pb-6 shadow-elevated">
+      <nav class="flex flex-col space-y-1 text-base font-medium text-brand-text">
+        <a href="#hero" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Início</a>
+        <a href="#tratamentos" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Tratamentos</a>
+        <a href="#terapias" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Terapias</a>
+        <a href="#quem-somos" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Quem Somos</a>
+        <a href="#workshops" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Workshops</a>
+        <a href="#espaco" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Espaço</a>
+        <a href="#salas" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Aluguer de Salas</a>
+        <a href="#contactos" class="mobile-nav-link px-4 py-2.5 rounded-xl hover:bg-brand-green-soft hover:text-brand-green transition-colors">Contactos</a>
+      </nav>
+      <div class="mt-4 pt-4 border-t border-brand-gray flex flex-col gap-2">
+        <a href="https://wa.me/351964423853" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+          <span class="material-symbols-outlined text-[18px]">chat</span>
+          <span>Marcar consulta no WhatsApp (964 423 853)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- ========================================================================= -->
+    <!-- 4. SECÇÃO HERO — APRESENTAÇÃO DA CLÍNICA -->
+    <!-- ========================================================================= -->
+    <section id="hero" class="relative overflow-hidden bg-white py-12 lg:py-20 border-b border-brand-gray/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          
+          <!-- Coluna Esquerda: Conteúdo Textual -->
+          <div class="lg:col-span-7 flex flex-col justify-center order-1">
+            
+            <!-- Etiqueta de Localização -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green-soft text-brand-green-dark w-fit mb-5 shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+              <span class="text-xs font-semibold uppercase tracking-wider">Alta de Lisboa • Lumiar</span>
+            </div>
+
+            <!-- Título Principal Obrigatório -->
+            <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-text tracking-tight leading-[1.18] mb-4">
+              Medicina Tradicional Chinesa &amp; Saúde Integrativa na Alta de Lisboa
+            </h1>
+
+            <!-- Subtítulo Obrigatório -->
+            <p class="font-serif text-xl sm:text-2xl font-normal text-brand-green-dark mb-3">
+              Promoção, prevenção e bem-estar.
+            </p>
+
+            <!-- Texto de Posicionamento Obrigatório -->
+            <p class="text-base sm:text-lg font-medium text-brand-text/90 mb-4">
+              Saúde integrativa, personalizada e centrada em cada pessoa.
+            </p>
+
+            <!-- Parágrafo Obrigatório -->
+            <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed max-w-2xl mb-8">
+              Na VCura, acreditamos numa abordagem integrada da saúde, que respeita a individualidade de cada pessoa e procura promover equilíbrio, prevenção e bem-estar.
+            </p>
+
+            <!-- Botões de Ação Hero -->
+            <div class="flex flex-wrap items-center gap-4 mb-10">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20na%20VCura%20Terapias." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-brand-green text-white font-semibold text-base shadow-card hover:bg-brand-green-dark transition-all duration-300 hover:shadow-elevated transform hover:-translate-y-0.5">
+                <span class="material-symbols-outlined text-[22px]">chat</span>
+                <span>Marcar consulta no WhatsApp</span>
+              </a>
+              <a href="#tratamentos" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-brand-gray text-brand-text hover:bg-brand-green-soft hover:text-brand-green-dark font-medium text-base transition-all duration-200">
+                <span>Conhecer áreas de cuidado</span>
+                <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+              </a>
+            </div>
+
+            <!-- Faixa Discreta com 3 Elementos de Confiança Obrigatórios -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-brand-gray">
+              
+              <!-- Elemento 1: Avaliações 5 Estrelas -->
+              <div class="flex items-center gap-3 p-3 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft">
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-amber-500 shadow-xs shrink-0">
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-brand-text leading-snug">Avaliações 5 estrelas</span>
+                  <span class="text-[11px] text-brand-text/70">no Google</span>
+                </div>
+              </div>
+
+              <!-- Elemento 2: Acordos de Saúde -->
+              <div class="flex items-center gap-3 p-3 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft">
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-blue shadow-xs shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">verified_user</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-brand-text leading-snug">Acordos de Saúde</span>
+                  <span class="text-[11px] text-brand-text/70">Multicare, Medicare e SCML</span>
+                </div>
+              </div>
+
+              <!-- Elemento 3: Estacionamento Gratuito -->
+              <div class="flex items-center gap-3 p-3 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft">
+                <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-green-dark shadow-xs shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">local_parking</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-brand-text leading-snug">Estacionamento gratuito</span>
+                  <span class="text-[11px] text-brand-text/70">À porta na Alta de Lisboa</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Coluna Direita: Fotografia Acolhedora da Clínica -->
+          <div class="lg:col-span-5 relative flex justify-center items-center order-2">
+            <div class="relative w-full max-w-[460px] aspect-[4/5] rounded-3xl overflow-hidden shadow-card border-4 border-white bg-brand-gray group">
+              <!-- Fotografia Real das Instalações da Clínica (Fachada e Luz Natural no Lumiar) -->
+              <img src="./Video_%20Imagens/72.jpg" alt="Instalações acolhedoras e luminosas da clínica VCura Terapias na Alta de Lisboa" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              
+              <!-- Cartão Flutuante 1: Cuidado Integrativo -->
+              <div class="absolute top-5 left-5 p-3.5 bg-white/95 backdrop-blur-md rounded-2xl shadow-subtle flex items-center gap-3 border border-brand-gray/80 max-w-[220px]">
+                <div class="w-9 h-9 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">spa</span>
+                </div>
+                <div>
+                  <p class="text-[10px] uppercase font-bold text-brand-green tracking-wider">Espaço Clínico</p>
+                  <p class="text-xs font-semibold text-brand-text">Ambiente Sereno &amp; Acolhedor</p>
+                </div>
+              </div>
+
+              <!-- Cartão Flutuante 2: MTC & Saúde -->
+              <div class="absolute bottom-5 right-5 p-3.5 bg-white/95 backdrop-blur-md rounded-2xl shadow-subtle flex items-center gap-3 border border-brand-gray/80 max-w-[230px]">
+                <div class="w-9 h-9 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                  <span class="material-symbols-outlined text-[20px]">self_improvement</span>
+                </div>
+                <div>
+                  <p class="text-[10px] uppercase font-bold text-brand-green-dark tracking-wider">Medicina Chinesa</p>
+                  <p class="text-xs font-semibold text-brand-text">Equilíbrio, Prevenção e Cura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. SECÇÃO DE TRATAMENTOS -->
+    <!-- ========================================================================= -->
+    <section id="tratamentos" class="py-16 lg:py-24 bg-brand-green-soft/50 border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Cabeçalho da Secção Obrigatório -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Áreas de Acompanhamento</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">Como podemos ajudar?</h2>
+          <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed">
+            Conheça as nossas principais áreas de acompanhamento e descubra a abordagem mais adequada às suas necessidades.
+          </p>
+        </div>
+
+        <!-- 4 Cartões de Categoria Obrigatórios com Dimensões Consistentes -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          
+          <!-- Cartão 1 — Saúde Feminina -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray/80 shadow-subtle hover:shadow-card transition-all duration-300 flex flex-col group">
+            <div class="h-48 overflow-hidden relative bg-brand-gray">
+              <img src="./Video_%20Imagens/3.jpg" alt="Gabinete Harmony - Saúde Feminina na VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-green-dark font-semibold text-xs rounded-full shadow-xs">
+                Especialidade
+              </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-brand-text mb-3 group-hover:text-brand-green-dark transition-colors">
+                  Saúde Feminina
+                </h3>
+                <p class="text-sm text-brand-text/80 leading-relaxed mb-4">
+                  Ciclo menstrual, TPM, cistite, endometriose, climatério e menopausa.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20Sa%C3%BAde%20Feminina." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+                <span>Saber mais</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cartão 2 — Stress, Ansiedade & Sono -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray/80 shadow-subtle hover:shadow-card transition-all duration-300 flex flex-col group">
+            <div class="h-48 overflow-hidden relative bg-brand-gray">
+              <img src="./Video_%20Imagens/2.jpg" alt="Gabinete Healing - Relaxamento, Ansiedade e Sono" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-green-dark font-semibold text-xs rounded-full shadow-xs">
+                Equilíbrio Emocional
+              </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-brand-text mb-3 group-hover:text-brand-green-dark transition-colors">
+                  Stress, Ansiedade &amp; Sono
+                </h3>
+                <p class="text-sm text-brand-text/80 leading-relaxed mb-4">
+                  Exaustão, ansiedade, insónia, depressão e fadiga mental.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20Stress,%20Ansiedade%20e%20Sono." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+                <span>Saber mais</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cartão 3 — Dores, Lesões & Recuperação -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray/80 shadow-subtle hover:shadow-card transition-all duration-300 flex flex-col group">
+            <div class="h-48 overflow-hidden relative bg-brand-gray">
+              <img src="./Video_%20Imagens/45.jpg" alt="Tratamento de dores e lesões na VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-green-dark font-semibold text-xs rounded-full shadow-xs">
+                Alívio da Dor
+              </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-brand-text mb-3 group-hover:text-brand-green-dark transition-colors">
+                  Dores, Lesões &amp; Recuperação
+                </h3>
+                <p class="text-sm text-brand-text/80 leading-relaxed mb-4">
+                  Desconforto cervical e lombar, ciática, ombros, joelhos, dores musculares, contraturas e recuperação muscular.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20Dores%20e%20Les%C3%B5es." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+                <span>Saber mais</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Cartão 4 — Saúde Digestiva & Nutrição -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray/80 shadow-subtle hover:shadow-card transition-all duration-300 flex flex-col group">
+            <div class="h-48 overflow-hidden relative bg-brand-gray">
+              <img src="./Video_%20Imagens/7.jpg" alt="Consulta de Saúde Digestiva e Nutrição na VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm text-brand-green-dark font-semibold text-xs rounded-full shadow-xs">
+                Vitalidade &amp; Nutrição
+              </span>
+            </div>
+            <div class="p-6 flex flex-col flex-grow justify-between">
+              <div>
+                <h3 class="font-serif text-xl font-bold text-brand-text mb-3 group-hover:text-brand-green-dark transition-colors">
+                  Saúde Digestiva &amp; Nutrição
+                </h3>
+                <p class="text-sm text-brand-text/80 leading-relaxed mb-4">
+                  Obstipação, refluxo, gastrite, desequilíbrios digestivos, sistema imunitário, obesidade e reeducação alimentar.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Sa%C3%BAde%20Digestiva%20e%20Nutri%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+                <span>Saber mais</span>
+                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Chamada de Atenção Abaixo dos Cartões Obrigatória -->
+        <div class="p-6 md:p-8 rounded-2xl bg-white border border-brand-gray shadow-subtle flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+          <div class="flex items-center gap-4 text-center md:text-left">
+            <div class="w-12 h-12 rounded-full bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+              <span class="material-symbols-outlined text-[26px]">help_outline</span>
+            </div>
+            <div>
+              <h4 class="font-serif text-lg font-bold text-brand-text">
+                Tem outras queixas ou não sabe qual a abordagem indicada para si?
+              </h4>
+              <p class="text-sm text-brand-text/75 mt-0.5">
+                Envie-nos uma mensagem e a nossa equipa ajuda a esclarecer o melhor caminho para o seu caso.
+              </p>
+            </div>
+          </div>
+          <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20sobre%20qual%20a%20abordagem%20indicada%20para%20o%20meu%20caso." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all duration-200 whitespace-nowrap shrink-0">
+            <span class="material-symbols-outlined text-[18px]">chat</span>
+            <span>Fale connosco</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. SECÇÃO DE TERAPIAS E ESPECIALIDADES -->
+    <!-- ========================================================================= -->
+    <section id="terapias" class="py-16 lg:py-24 bg-white border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Título da Secção Obrigatório -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Modalidades Clínicas</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">Terapias e especialidades</h2>
+          <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed">
+            Modalidades integrativas praticadas por profissionais devidamente qualificados e com cédula profissional, atuando de forma sinérgica para a sua saúde.
+          </p>
+        </div>
+
+        <!-- Bloco 1: Medicina Tradicional Chinesa -->
+        <div class="p-8 md:p-10 rounded-3xl bg-brand-green-soft/60 border border-brand-green-soft mb-16 shadow-subtle">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-6 border-b border-brand-green/20">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1">Fundamento &amp; Tradição</span>
+              <h3 class="font-serif text-2xl font-bold text-brand-text">Medicina Tradicional Chinesa</h3>
+              <p class="text-sm text-brand-text/80 mt-1 max-w-2xl">
+                Diagnóstico minucioso e tratamento integrativo que restabelece o fluxo energético, harmonizando corpo, mente e emoções.
+              </p>
+            </div>
+            <div class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-xs font-semibold text-brand-green-dark border border-brand-gray shadow-xs self-start md:self-center">
+              <span class="material-symbols-outlined text-brand-green text-[18px]">verified</span>
+              <span>Cédula ACSS C-006284</span>
+            </div>
+          </div>
+
+          <!-- Grelha das Modalidades de MTC Obrigatórias -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">colorize</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Acupuntura</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">healing</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Tui Na</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Moxabustão</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">filter_vintage</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Ventosaterapia</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">hearing</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Auriculoterapia</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">waves</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Terapia Termo Auricular</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">eco</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Fitoterapia Chinesa</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-brand-gray/70 shadow-xs flex items-center gap-3 hover:border-brand-green/40 transition-colors">
+              <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+                <span class="material-symbols-outlined text-[20px]">restaurant</span>
+              </div>
+              <span class="font-semibold text-sm text-brand-text">Dietoterapia</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bloco 2: Outras Terapias Obrigatórias -->
+        <div class="mb-16">
+          <div class="mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1">Cuidados Integrados</span>
+            <h3 class="font-serif text-2xl font-bold text-brand-text">Outras terapias</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Osteopatia -->
+            <div class="p-6 rounded-2xl bg-brand-gray/70 border border-brand-gray flex flex-col justify-between hover:bg-brand-green-soft/40 transition-colors">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-brand-green-dark mb-4 shadow-xs">
+                  <span class="material-symbols-outlined text-[24px]">accessibility_new</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Osteopatia</h4>
+                <p class="text-sm text-brand-text/75 leading-relaxed">
+                  Avaliação biomecânica e manipulação articular e muscular para alinhamento postural, libertação de tensões e recuperação do movimento natural.
+                </p>
+              </div>
+            </div>
+
+            <!-- Naturopatia (Descrição Obrigatória) -->
+            <div class="p-6 rounded-2xl bg-brand-gray/70 border border-brand-gray flex flex-col justify-between hover:bg-brand-green-soft/40 transition-colors">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-brand-green-dark mb-4 shadow-xs">
+                  <span class="material-symbols-outlined text-[24px]">psychiatry</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Naturopatia</h4>
+                <p class="text-sm text-brand-text/75 leading-relaxed">
+                  Acompanhamento personalizado para melhorar a alimentação, os hábitos e o estilo de vida, com estratégias naturais ajustadas às suas necessidades e objetivos.
+                </p>
+              </div>
+            </div>
+
+            <!-- Massagens -->
+            <div class="p-6 rounded-2xl bg-brand-gray/70 border border-brand-gray flex flex-col justify-between hover:bg-brand-green-soft/40 transition-colors">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-brand-green-dark mb-4 shadow-xs">
+                  <span class="material-symbols-outlined text-[24px]">self_improvement</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Massagens</h4>
+                <p class="text-sm text-brand-text/75 leading-relaxed">
+                  Massagens de relaxamento, terapêutica e miofascial para alívio de contraturas, relaxamento muscular profundo e drenagem de tensões acumuladas.
+                </p>
+              </div>
+            </div>
+
+            <!-- Shiatsu Terapêutico & Reflexologia Podal -->
+            <div class="p-6 rounded-2xl bg-brand-gray/70 border border-brand-gray flex flex-col justify-between hover:bg-brand-green-soft/40 transition-colors">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-brand-green-dark mb-4 shadow-xs">
+                  <span class="material-symbols-outlined text-[24px]">footprint</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Shiatsu &amp; Reflexologia</h4>
+                <p class="text-sm text-brand-text/75 leading-relaxed">
+                  Shiatsu Terapêutico e Reflexologia Podal. Pressão pontual nos meridianos e pontos reflexos dos pés para restabelecer a harmonia orgânica.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bloco 3: Especialidade — Saúde Feminina, Climatério & Menopausa (Bloco de Destaque Obrigatório) -->
+        <div class="rounded-3xl bg-brand-green-soft/70 p-8 md:p-12 mb-16 border border-brand-green-soft shadow-subtle overflow-hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7">
+              <span class="inline-block px-3.5 py-1 rounded-full bg-brand-green text-white font-semibold text-xs mb-3">
+                Especialidade em Destaque
+              </span>
+              <!-- Título Obrigatório -->
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-text mb-3">
+                Cuidar de si em todas as fases da vida.
+              </h3>
+              <!-- Texto Obrigatório -->
+              <p class="text-base text-brand-text/80 leading-relaxed mb-6">
+                Na VCura Terapias, integramos Medicina Tradicional Chinesa, Fitoterapia e Naturopatia, num plano de acordo com as necessidades individuais de cada mulher.
+              </p>
+
+              <!-- Grupos Visuais de Queixas e Temas Acompanhados Obrigatórios -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+                <div class="flex items-center gap-2.5 text-sm font-medium text-brand-text bg-white/80 p-2.5 rounded-xl border border-brand-green/10">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">check_circle</span>
+                  <span>Ciclo menstrual, TPM e endometriose.</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-brand-text bg-white/80 p-2.5 rounded-xl border border-brand-green/10">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">check_circle</span>
+                  <span>Cistite e desconforto íntimo.</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-brand-text bg-white/80 p-2.5 rounded-xl border border-brand-green/10">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">check_circle</span>
+                  <span>Afrontamentos e suores noturnos.</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-brand-text bg-white/80 p-2.5 rounded-xl border border-brand-green/10">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">check_circle</span>
+                  <span>Alterações do sono, humor e peso.</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-brand-text bg-white/80 p-2.5 rounded-xl border border-brand-green/10">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">check_circle</span>
+                  <span>Fadiga mental e cansaço.</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-brand-text bg-white/80 p-2.5 rounded-xl border border-brand-green/10">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">check_circle</span>
+                  <span>Alterações da libido.</span>
+                </div>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-brand-text bg-white/80 p-2.5 rounded-xl border border-brand-green/10 sm:col-span-2">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">check_circle</span>
+                  <span>Dores e rigidez articulares.</span>
+                </div>
+              </div>
+
+              <!-- Informação Complementar Obrigatória -->
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20consulta%20de%20Sa%C3%BAde%20Feminina." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-card hover:bg-brand-green-dark transition-all">
+                  <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                  <span>Marcar consulta de Saúde Feminina</span>
+                </a>
+                <span class="text-xs font-semibold text-brand-green-dark flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px]">schedule</span>
+                  <span>Consultas presenciais ou online · Primeira consulta de 1 hora.</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Imagem Natural e Elegante da Especialidade -->
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="relative w-full aspect-square max-w-[380px] rounded-3xl overflow-hidden shadow-card border-4 border-white bg-white">
+                <img src="./Video_%20Imagens/3.jpg" alt="Acolhimento de Saúde Feminina na VCura Terapias" class="w-full h-full object-cover" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bloco 4: Especialidade — Nutrição Funcional -->
+        <div class="rounded-3xl bg-brand-gray/60 p-8 md:p-12 mb-16 border border-brand-gray shadow-subtle">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-2">Nutrição &amp; Terreno Biológico</span>
+              <!-- Título Obrigatório -->
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-text mb-3">
+                Nutrição Funcional — Acompanhamento &amp; Suplementação
+              </h3>
+              <!-- Texto Obrigatório -->
+              <p class="text-base text-brand-text/80 leading-relaxed mb-3">
+                Uma abordagem personalizada à alimentação, nutrição e estilo de vida, adaptada às necessidades de cada pessoa.
+              </p>
+              <!-- Segundo Parágrafo Obrigatório -->
+              <p class="text-base text-brand-text/80 leading-relaxed mb-8">
+                O acompanhamento pode ajudar a melhorar energia, digestão, equilíbrio metabólico e bem-estar, através de estratégias alimentares e, quando adequado, suplementação personalizada.
+              </p>
+
+              <!-- Bloco Visual Secundário Obrigatório: Avaliação Bionutricional -->
+              <div class="p-6 rounded-2xl bg-white border border-brand-green-soft shadow-xs mb-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="material-symbols-outlined text-brand-green text-[20px]">biotech</span>
+                  <h4 class="font-serif text-lg font-bold text-brand-text">Avaliação Bionutricional</h4>
+                </div>
+                <p class="text-sm text-brand-text/80 mb-4">
+                  Uma avaliação complementar que permite identificar possíveis necessidades nutricionais e apoiar a definição de um plano individualizado.
+                </p>
+                <!-- Indicações Apresentadas em Lista Obrigatórias -->
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-brand-text/85">
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-brand-green text-[16px]">check</span>
+                    <span>Reeducação alimentar e melhoria dos hábitos.</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-brand-green text-[16px]">check</span>
+                    <span>Saúde digestiva e intestinal.</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-brand-green text-[16px]">check</span>
+                    <span>Cansaço e baixa energia.</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-brand-green text-[16px]">check</span>
+                    <span>Equilíbrio metabólico.</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-brand-green text-[16px]">check</span>
+                    <span>Necessidades nutricionais específicas.</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-brand-green text-[16px]">check</span>
+                    <span>Suplementação personalizada.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Botão Obrigatório -->
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Nutri%C3%A7%C3%A3o%20Funcional." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+                <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                <span>Agendar consulta</span>
+              </a>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center">
+              <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-card border-4 border-white bg-white">
+                <img src="./Video_%20Imagens/7.jpg" alt="Mesa de avaliação clínica e nutrição funcional" class="w-full h-full object-cover" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bloco 5: Especialidade — Bem-Estar & Equilíbrio (3 Cartões Obrigatórios) -->
+        <div>
+          <div class="mb-8">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1">Harmonização Integral</span>
+            <h3 class="font-serif text-2xl font-bold text-brand-text">Especialidade — Bem-Estar &amp; Equilíbrio</h3>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            
+            <!-- Cartão 1: Reiki Usui -->
+            <div class="p-6 rounded-2xl bg-white border border-brand-gray/80 shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
+                  <span class="material-symbols-outlined text-[24px]">energy_savings_leaf</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Reiki Usui</h4>
+                <p class="text-sm text-brand-text/75 leading-relaxed">
+                  Prática de canalização energética suave que atua no desbloqueio dos centros de energia vital, promovendo relaxamento somático, redução da ansiedade e equilíbrio interior.
+                </p>
+              </div>
+            </div>
+
+            <!-- Cartão 2: Constelações Familiares -->
+            <div class="p-6 rounded-2xl bg-white border border-brand-gray/80 shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
+                  <span class="material-symbols-outlined text-[24px]">diversity_3</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Constelações Familiares</h4>
+                <p class="text-sm text-brand-text/75 leading-relaxed">
+                  Abordagem sistémica e fenomenológica para identificar e harmonizar dinâmicas inconscientes familiares, bloqueios relacionais e padrões emocionais repetitivos.
+                </p>
+              </div>
+            </div>
+
+            <!-- Cartão 3: Terapia Quântica — Biofeedback (Descrição Obrigatória) -->
+            <div class="p-6 rounded-2xl bg-white border border-brand-gray/80 shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="w-12 h-12 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
+                  <span class="material-symbols-outlined text-[24px]">hub</span>
+                </div>
+                <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Terapia Quântica — Biofeedback</h4>
+                <p class="text-sm text-brand-text/75 leading-relaxed">
+                  Uma abordagem que utiliza tecnologia de biofeedback como ferramenta de avaliação e acompanhamento, integrada numa perspetiva de equilíbrio e bem-estar.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Botão Obrigatório -->
+          <div class="text-center">
+            <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20de%20Bem-Estar%20e%20Equil%C3%ADbrio." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+              <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+              <span>Agendar consulta</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. A NOSSA ABORDAGEM -->
+    <!-- ========================================================================= -->
+    <section class="py-16 lg:py-24 bg-brand-green-soft/40 border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Título da Secção Obrigatório -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">O Seu Percurso na VCura</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">Um acompanhamento pensado para si</h2>
+          <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed">
+            Cada pessoa é única. Desenhamos um percurso claro, transparente e acompanhado de perto em cada fase.
+          </p>
+        </div>
+
+        <!-- 4 Etapas Ligadas: Linha horizontal no desktop, sequência vertical no telemóvel -->
+        <div class="relative mb-12">
+          <!-- Linha conetora horizontal (Desktop) -->
+          <div class="hidden lg:block absolute top-10 left-[12%] right-[12%] h-0.5 bg-brand-green/30 z-0"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            
+            <!-- Etapa 1 — Fale connosco -->
+            <div class="flex flex-col items-center text-center group">
+              <div class="w-20 h-20 rounded-full bg-white border-4 border-brand-green-soft flex items-center justify-center text-brand-green-dark shadow-subtle mb-5 group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
+                <span class="font-serif text-xl font-bold">01</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Fale connosco</h4>
+              <p class="text-sm text-brand-text/80 leading-relaxed">
+                Envie mensagem e indicamos a consulta mais adequada para si.
+              </p>
+            </div>
+
+            <!-- Etapa 2 — Avaliação -->
+            <div class="flex flex-col items-center text-center group">
+              <div class="w-20 h-20 rounded-full bg-white border-4 border-brand-green-soft flex items-center justify-center text-brand-green-dark shadow-subtle mb-5 group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
+                <span class="font-serif text-xl font-bold">02</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Avaliação</h4>
+              <p class="text-sm text-brand-text/80 leading-relaxed">
+                Conhecemos a sua história, sintomas e necessidades.
+              </p>
+            </div>
+
+            <!-- Etapa 3 — Personalização -->
+            <div class="flex flex-col items-center text-center group">
+              <div class="w-20 h-20 rounded-full bg-white border-4 border-brand-green-soft flex items-center justify-center text-brand-green-dark shadow-subtle mb-5 group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
+                <span class="font-serif text-xl font-bold">03</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Personalização</h4>
+              <p class="text-sm text-brand-text/80 leading-relaxed">
+                Definimos a abordagem mais adequada ao seu caso.
+              </p>
+            </div>
+
+            <!-- Etapa 4 — Acompanhamento -->
+            <div class="flex flex-col items-center text-center group">
+              <div class="w-20 h-20 rounded-full bg-white border-4 border-brand-green-soft flex items-center justify-center text-brand-green-dark shadow-subtle mb-5 group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
+                <span class="font-serif text-xl font-bold">04</span>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-brand-text mb-2">Acompanhamento</h4>
+              <p class="text-sm text-brand-text/80 leading-relaxed">
+                Monitorizamos e ajustamos a sua evolução sempre que necessário.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Texto de Encerramento e Botão Único Obrigatórios -->
+        <div class="text-center max-w-2xl mx-auto pt-4">
+          <p class="text-base text-brand-text/85 font-medium mb-6">
+            O objetivo é ajudar a cuidar da sua saúde de forma mais consciente e sustentável.
+          </p>
+          <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20falar%20convosco%20para%20conhecer%20a%20consulta%20mais%20indicada." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-brand-green text-white font-semibold text-base shadow-sm hover:bg-brand-green-dark transition-all duration-200">
+            <span class="material-symbols-outlined text-[20px]">chat</span>
+            <span>Fale connosco</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. TESTEMUNHOS -->
+    <!-- ========================================================================= -->
+    <section class="py-16 lg:py-24 bg-white border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Experiências Partilhadas</span>
+            <!-- Título Obrigatório -->
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text">O que dizem os nossos pacientes</h2>
+          </div>
+          <!-- Ligação Obrigatória: Ver todas as avaliações no Google -->
+          <a href="https://maps.google.com/?q=VCura+Terapias+Lisboa" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-brand-green-dark hover:text-brand-green transition-colors mt-4 md:mt-0">
+            <span>Ver todas as avaliações no Google</span>
+            <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+          </a>
+        </div>
+
+        <!-- 3 Cartões com nomes e temas de referência (sem inventar frases clínicas) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Testemunho 1: Nuno Seara -->
+          <div class="p-8 rounded-2xl bg-brand-green-soft/40 border border-brand-green-soft flex flex-col justify-between shadow-subtle">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-amber-500">
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                </div>
+                <span class="text-xs font-semibold text-brand-text/60 flex items-center gap-1">
+                  <span class="material-symbols-outlined text-brand-blue text-[16px]">verified</span> Google
+                </span>
+              </div>
+              <div class="mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-2">Tema de Acompanhamento</span>
+                <p class="font-serif text-base font-semibold text-brand-text mb-2">
+                  Experiência com acupuntura e epicondilite
+                </p>
+                <p class="text-sm text-brand-text/75 italic bg-white/70 p-3.5 rounded-xl border border-brand-gray/50">
+                  Avaliação verificada no Google sobre o tratamento de acupuntura e alívio da dor articular de epicondilite.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-brand-gray">
+              <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-sm">NS</div>
+              <div>
+                <p class="text-sm font-bold text-brand-text">Nuno Seara</p>
+                <p class="text-xs text-brand-text/65">Paciente • Google Reviews</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testemunho 2: Fátima A. -->
+          <div class="p-8 rounded-2xl bg-brand-green-soft/40 border border-brand-green-soft flex flex-col justify-between shadow-subtle">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-amber-500">
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                </div>
+                <span class="text-xs font-semibold text-brand-text/60 flex items-center gap-1">
+                  <span class="material-symbols-outlined text-brand-blue text-[16px]">verified</span> Google
+                </span>
+              </div>
+              <div class="mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-2">Tema de Acompanhamento</span>
+                <p class="font-serif text-base font-semibold text-brand-text mb-2">
+                  Experiência relacionada com diagnóstico e recuperação
+                </p>
+                <p class="text-sm text-brand-text/75 italic bg-white/70 p-3.5 rounded-xl border border-brand-gray/50">
+                  Avaliação verificada no Google sobre o rigor do diagnóstico e o processo gradual de recuperação do bem-estar.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-brand-gray">
+              <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-sm">FA</div>
+              <div>
+                <p class="text-sm font-bold text-brand-text">Fátima A.</p>
+                <p class="text-xs text-brand-text/65">Paciente • Google Reviews</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testemunho 3: Rita Lucena -->
+          <div class="p-8 rounded-2xl bg-brand-green-soft/40 border border-brand-green-soft flex flex-col justify-between shadow-subtle">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-amber-500">
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                  <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+                </div>
+                <span class="text-xs font-semibold text-brand-text/60 flex items-center gap-1">
+                  <span class="material-symbols-outlined text-brand-blue text-[16px]">verified</span> Google
+                </span>
+              </div>
+              <div class="mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-2">Tema de Acompanhamento</span>
+                <p class="font-serif text-base font-semibold text-brand-text mb-2">
+                  Atendimento e ambiente da clínica
+                </p>
+                <p class="text-sm text-brand-text/75 italic bg-white/70 p-3.5 rounded-xl border border-brand-gray/50">
+                  Avaliação verificada no Google destacando o acolhimento humano, a atenção individual e a serenidade do espaço.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-brand-gray">
+              <div class="w-10 h-10 rounded-full bg-brand-green text-white flex items-center justify-center font-bold text-sm">RL</div>
+              <div>
+                <p class="text-sm font-bold text-brand-text">Rita Lucena</p>
+                <p class="text-xs text-brand-text/65">Paciente • Google Reviews</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9. QUEM SOMOS -->
+    <!-- ========================================================================= -->
+    <section id="quem-somos" class="py-16 lg:py-24 bg-brand-green-soft/40 border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Coluna Esquerda: Conteúdo Editorial -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Fundadora &amp; Direção Técnica</span>
+            
+            <!-- Título Obrigatório -->
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">
+              Cuidar de cada pessoa de forma única
+            </h2>
+
+            <!-- Identificação Obrigatória -->
+            <div class="mb-6 pb-6 border-b border-brand-gray/80">
+              <h3 class="font-serif text-2xl font-bold text-brand-green-dark">Elisabete Monteiro</h3>
+              <p class="text-base font-semibold text-brand-text mt-1">Fundadora e Diretora Técnica da VCura Terapias</p>
+              <div class="flex flex-wrap items-center gap-3 mt-2 text-sm text-brand-text/80">
+                <span class="inline-flex items-center gap-1 font-medium text-brand-green-dark">
+                  <span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+                  <span>Especialista de Medicina Tradicional Chinesa</span>
+                </span>
+                <span class="text-brand-gray">•</span>
+                <span class="inline-flex items-center gap-1 font-medium bg-white px-3 py-1 rounded-full border border-brand-gray text-xs">
+                  <span>Cédula profissional: <strong>C-006284</strong></span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Biografia Obrigatória -->
+            <div class="space-y-4 text-base text-brand-text/85 leading-relaxed mb-8">
+              <p>
+                Com experiência clínica internacional e estágios hospitalares na China, em Luzhou e Sanya, e no Brasil, em São Paulo, Elisabete Monteiro lidera uma equipa de terapeutas que une diferentes abordagens para cuidar de cada pessoa de forma única, integrativa e humana.
+              </p>
+              <p>
+                A sua prática clínica assenta no diagnóstico rigoroso e na escuta ativa, integrando técnicas ancestrais e complementares para restabelecer a vitalidade e a harmonia interior de cada paciente.
+              </p>
+            </div>
+
+            <!-- Ações e Credenciais -->
+            <div class="flex flex-wrap items-center gap-4">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Elisabete%20Monteiro." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+                <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                <span>Marcar consulta com Elisabete Monteiro</span>
+              </a>
+              <button onclick="openModal('modal-cert')" type="button" class="inline-flex items-center gap-1.5 px-4 py-3 rounded-full bg-white text-brand-green-dark text-xs font-semibold border border-brand-gray hover:bg-brand-gray transition-colors">
+                <span class="material-symbols-outlined text-[18px] text-brand-blue">school</span>
+                <span>Ver Certificação Hospitalar (Sanya, China)</span>
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Coluna Direita: Fotografia Profissional Oficial da Fundadora -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="relative w-full max-w-[420px] rounded-3xl overflow-hidden shadow-card border-4 border-white bg-white p-2">
+              <div class="w-full aspect-[3/4] rounded-2xl overflow-hidden bg-brand-gray relative">
+                <!-- Fotografia Oficial da Fundadora Elisabete Monteiro com farda e logótipo oficial -->
+                <img src="./Video_%20Imagens/Imagens%20EM/Fotos%20EM%20Green%20Brand%20VCura.jpeg" alt="Elisabete Monteiro - Fundadora e Diretora Técnica da VCura Terapias" class="w-full h-full object-cover object-top" />
+              </div>
+              <div class="p-4 text-center">
+                <span class="font-serif text-base font-bold text-brand-text block">Elisabete Monteiro</span>
+                <span class="text-xs text-brand-green-dark font-medium">Fundadora &amp; Diretora Técnica • Cédula C-006284</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10. CONDIÇÕES ESPECIAIS, ACORDOS E PARCERIAS -->
+    <!-- ========================================================================= -->
+    <section class="py-16 lg:py-20 bg-white border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Título e Texto Obrigatórios -->
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Protocolos de Saúde</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-3">Condições especiais para si</h2>
+          <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed">
+            Tem seguro ou é parceiro? Pode ter condições especiais.
+          </p>
+        </div>
+
+        <!-- Duas Áreas Distintas Obrigatórias -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 max-w-5xl mx-auto">
+          
+          <!-- Área 1: Seguros e entidades -->
+          <div class="p-8 rounded-3xl bg-brand-green-soft/50 border border-brand-green-soft">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-blue shadow-xs">
+                <span class="material-symbols-outlined text-[24px]">health_and_safety</span>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-brand-text">Seguros e entidades</h3>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-3 mb-4">
+              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center">
+                <span class="font-serif text-base font-bold text-brand-green-dark">Multicare</span>
+                <span class="text-[11px] text-brand-text/60 mt-0.5">Seguros de Saúde</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center">
+                <span class="font-serif text-base font-bold text-brand-green-dark">Medicare</span>
+                <span class="text-[11px] text-brand-text/60 mt-0.5">Plano de Saúde</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center">
+                <span class="font-serif text-base font-bold text-brand-green-dark">Misericórdia</span>
+                <span class="text-[11px] text-brand-text/60 mt-0.5">Misericórdia Saúde</span>
+              </div>
+            </div>
+            <p class="text-xs text-brand-text/70 italic text-center">
+              Apresente o seu cartão de beneficiário para confirmação direta das condições acordadas.
+            </p>
+          </div>
+
+          <!-- Área 2: Parceiros -->
+          <div class="p-8 rounded-3xl bg-brand-green-soft/50 border border-brand-green-soft">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-green-dark shadow-xs">
+                <span class="material-symbols-outlined text-[24px]">corporate_fare</span>
+              </div>
+              <h3 class="font-serif text-xl font-bold text-brand-text">Parceiros</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center">
+                <span class="font-serif text-base font-bold text-brand-text">Leroy Merlin</span>
+                <span class="text-[11px] text-brand-text/60 mt-0.5">Protocolo Institucional</span>
+              </div>
+              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center">
+                <span class="font-serif text-base font-bold text-brand-text">Banco Atlântico Europa</span>
+                <span class="text-[11px] text-brand-text/60 mt-0.5">Protocolo Institucional</span>
+              </div>
+            </div>
+            <p class="text-xs text-brand-text/70 italic text-center">
+              Condições aplicáveis a colaboradores e respetivos agregados familiares diretos.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Botão Obrigatório -->
+        <div class="text-center">
+          <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20as%20condi%C3%A7%C3%B5es%20do%20meu%20acordo%20ou%20seguro%20de%20sa%C3%BAde." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+            <span>Confirmar as condições do meu acordo</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 11. WORKSHOPS E FORMAÇÕES -->
+    <!-- ========================================================================= -->
+    <section id="workshops" class="py-16 lg:py-24 bg-brand-green-soft/40 border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Título e Texto Introdutório Obrigatórios -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Aprendizagem &amp; Transformação</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">Workshops &amp; Formações</h2>
+          <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed">
+            Para empresas e particulares. Explore os vários temas e promova momentos de aprendizagem e transformação para o bem-estar das suas equipas.
+          </p>
+        </div>
+
+        <!-- Eventos em Destaque Obrigatórios (2 Colunas) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          
+          <!-- Evento 1 em Destaque: Workshop Presencial - Menopausa Consciente -->
+          <div class="bg-white rounded-3xl p-8 border border-brand-gray shadow-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3.5 py-1 rounded-full bg-brand-green-soft text-brand-green-dark font-semibold text-xs">
+                  Workshop Presencial em Destaque
+                </span>
+                <button onclick="openFlyer('IMG_2869.PNG')" type="button" class="text-xs font-semibold text-brand-blue hover:underline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">visibility</span> Ver Cartaz Oficial
+                </button>
+              </div>
+
+              <!-- Título Obrigatório -->
+              <h3 class="font-serif text-2xl font-bold text-brand-text mb-3">
+                Menopausa Consciente | Conhecer. Escolher. Cuidar.
+              </h3>
+
+              <!-- Informação Obrigatória -->
+              <div class="flex flex-col gap-2 text-sm text-brand-text/85 mb-5 bg-brand-green-soft/40 p-4 rounded-2xl">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">calendar_month</span>
+                  <span><strong>Data:</strong> 7 de novembro de 2026</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">schedule</span>
+                  <span><strong>Horário:</strong> 10h30–13h00</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">location_on</span>
+                  <span><strong>Local:</strong> VCura Terapias | Alta de Lisboa / Lumiar</span>
+                </div>
+              </div>
+
+              <!-- Descrição Obrigatória -->
+              <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed mb-6">
+                Um encontro dirigido a mulheres que querem compreender melhor as transformações do climatério e da menopausa, conhecer diferentes possibilidades de cuidado e adquirir ferramentas para viver esta fase de forma mais consciente.
+              </p>
+            </div>
+
+            <!-- Botões Obrigatórios: Saber mais & Inscrições -->
+            <div class="flex items-center gap-3 pt-6 border-t border-brand-gray">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20a%20minha%20inscri%C3%A7%C3%A3o%20no%20Workshop%20Menopausa%20Consciente%20(7%20de%20Novembro)." target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+                Inscrições
+              </a>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Workshop%20Menopausa%20Consciente." target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-full bg-brand-gray text-brand-text font-semibold text-sm hover:bg-brand-green-soft hover:text-brand-green-dark transition-all">
+                Saber mais
+              </a>
+            </div>
+          </div>
+
+          <!-- Evento 2: Formação Presencial — Reiki Usui, Nível 1 -->
+          <div class="bg-white rounded-3xl p-8 border border-brand-gray shadow-card flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="px-3.5 py-1 rounded-full bg-brand-green-soft text-brand-green-dark font-semibold text-xs">
+                  Formação Presencial Certificada
+                </span>
+                <button onclick="openFlyer('IMG_2868.PNG')" type="button" class="text-xs font-semibold text-brand-blue hover:underline flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[16px]">visibility</span> Ver Cartaz Oficial
+                </button>
+              </div>
+
+              <!-- Título Obrigatório -->
+              <h3 class="font-serif text-2xl font-bold text-brand-text mb-3">
+                Formação presencial — Reiki Usui, Nível 1
+              </h3>
+
+              <!-- Informação Obrigatória -->
+              <div class="flex flex-col gap-2 text-sm text-brand-text/85 mb-5 bg-brand-green-soft/40 p-4 rounded-2xl">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">calendar_month</span>
+                  <span><strong>Data:</strong> dezembro de 2026 — data a definir</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-green text-[18px]">location_on</span>
+                  <span><strong>Local:</strong> VCura Terapias | Alta de Lisboa / Lumiar</span>
+                </div>
+              </div>
+
+              <!-- Descrição Obrigatória -->
+              <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed mb-6">
+                Uma formação presencial de iniciação ao Reiki Usui, dirigida a quem deseja conhecer e aprofundar esta prática.
+              </p>
+            </div>
+
+            <!-- Botões Obrigatórios: Saber mais & Manifestar interesse -->
+            <div class="flex items-center gap-3 pt-6 border-t border-brand-gray">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20manifestar%20interesse%20na%20Forma%C3%A7%C3%A3o%20presencial%20de%20Reiki%20Usui%20N%C3%ADvel%201." target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+                Manifestar interesse
+              </a>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20curso%20de%20Reiki%20Usui%20N%C3%ADvel%201." target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-full bg-brand-gray text-brand-text font-semibold text-sm hover:bg-brand-green-soft hover:text-brand-green-dark transition-all">
+                Saber mais
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Workshops Presenciais e Online — Grelha de Temas Obrigatória -->
+        <div class="mb-16">
+          <div class="mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1">Catálogo de Temáticas</span>
+            <h3 class="font-serif text-2xl font-bold text-brand-text">Workshops presenciais e online</h3>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Tema 1 -->
+            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
+                  <span class="material-symbols-outlined text-[20px]">psychology</span>
+                </div>
+                <h4 class="font-serif text-base font-bold text-brand-text mb-2">Fadiga Mental</h4>
+                <p class="text-xs text-brand-text/75 leading-relaxed mb-4">
+                  Identificar, Compreender e Recuperar.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Fadiga%20Mental." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
+                <span>Informações e inscrições</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Tema 2 -->
+            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
+                  <span class="material-symbols-outlined text-[20px]">bolt</span>
+                </div>
+                <h4 class="font-serif text-base font-bold text-brand-text mb-2">Stress Crónico</h4>
+                <p class="text-xs text-brand-text/75 leading-relaxed mb-4">
+                  Compreender, Prevenir e Intervir.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Stress%20Cr%C3%B3nico." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
+                <span>Informações e inscrições</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Tema 3 -->
+            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
+                  <span class="material-symbols-outlined text-[20px]">nature_people</span>
+                </div>
+                <h4 class="font-serif text-base font-bold text-brand-text mb-2">Climatério &amp; Menopausa</h4>
+                <p class="text-xs text-brand-text/75 leading-relaxed mb-4">
+                  Do Sofrimento ao Florescimento.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Climat%C3%A9rio%20e%20Menopausa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
+                <span>Informações e inscrições</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+            <!-- Tema 4 -->
+            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle flex flex-col justify-between">
+              <div>
+                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
+                  <span class="material-symbols-outlined text-[20px]">nutrition</span>
+                </div>
+                <h4 class="font-serif text-base font-bold text-brand-text mb-2">Alimentação Saudável</h4>
+                <p class="text-xs text-brand-text/75 leading-relaxed mb-4">
+                  Integrar a alimentação como pilar no seu estilo de vida com Dietoterapia Chinesa e Naturopatia.
+                </p>
+              </div>
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Alimenta%C3%A7%C3%A3o%20Saud%C3%A1vel." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
+                <span>Informações e inscrições</span>
+                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bloco de Formações Obrigatório -->
+        <div class="p-8 rounded-3xl bg-white border border-brand-gray shadow-subtle flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-2xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark shrink-0">
+              <span class="material-symbols-outlined text-[26px]">school</span>
+            </div>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block">Cursos com Certificação</span>
+              <h4 class="font-serif text-lg font-bold text-brand-text">
+                Reiki Usui — Cursos com certificação para quem deseja aprender e aprofundar a prática de Reiki Usui.
+              </h4>
+            </div>
+          </div>
+          <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20as%20datas%20e%20programa%20das%20forma%C3%A7%C3%B5es%20de%20Reiki%20Usui." target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm hover:bg-brand-green-dark transition-all whitespace-nowrap shadow-sm shrink-0">
+            Consultar formações
+          </a>
+        </div>
+
+        <!-- Workshops para Empresas Obrigatório -->
+        <div class="p-8 md:p-10 rounded-3xl bg-brand-green-soft/70 border border-brand-green-soft shadow-subtle mb-16">
+          <div class="max-w-3xl">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Corporate Wellness</span>
+            <!-- Título Obrigatório -->
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-text mb-3">
+              Uma experiência à medida da sua equipa
+            </h3>
+            <!-- Texto Obrigatório -->
+            <p class="text-base text-brand-text/80 leading-relaxed mb-4">
+              Têm uma necessidade específica? Criamos workshops à medida da sua empresa ou equipa.
+            </p>
+            <!-- Informação Obrigatória -->
+            <p class="text-sm font-semibold text-brand-green-dark mb-6">
+              Preços sob consulta.
+            </p>
+            <!-- Botão Obrigatório -->
+            <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20proposta%20de%20workshop%20para%20a%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+              <span class="material-symbols-outlined text-[18px]">chat</span>
+              <span>Fale connosco</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Galeria de Eventos Obrigatória -->
+        <div>
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1">Momentos de Partilha</span>
+              <h3 class="font-serif text-2xl font-bold text-brand-text">Galeria de eventos</h3>
+            </div>
+            <span class="text-xs text-brand-text/60">Registos de workshops e encontros na clínica</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer" onclick="openLightbox('./WhatsApp%20Image%202025-02-22%20at%2019.31.16.jpeg', 'Workshop presencial na sala de formações da VCura Terapias')">
+              <img src="./WhatsApp%20Image%202025-02-22%20at%2019.31.16.jpeg" alt="Workshop e partilha em grupo na VCura Terapias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer" onclick="openLightbox('./Video_%20Imagens/1.jpg', 'Sala de formações e workshops equipada com cadeiras com prancheta')">
+              <img src="./Video_%20Imagens/1.jpg" alt="Sala de Formações VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer" onclick="openLightbox('./Video_%20Imagens/17.jpg', 'Espaço de formação e dinâmicas na VCura')">
+              <img src="./Video_%20Imagens/17.jpg" alt="Sala de Dinâmicas de Grupo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 13. ESPAÇO VCURA TERAPIAS -->
+    <!-- ========================================================================= -->
+    <section id="espaco" class="py-16 lg:py-24 bg-white border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Título e Texto Obrigatórios -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Instalações Clínicas</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">Conheça o Espaço VCura Terapias</h2>
+          <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed">
+            Um espaço pensado para acolher, acompanhar e proporcionar momentos de cuidado e bem-estar.
+          </p>
+        </div>
+
+        <!-- Destaques Obrigatórios: Localização Alta de Lisboa / Lumiar e Estacionamento Gratuito -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto mb-12">
+          <div class="p-4 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-green-dark shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[22px]">location_on</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-brand-green-dark uppercase tracking-wider">Localização de Excelência</p>
+              <p class="text-sm font-semibold text-brand-text">Alta de Lisboa / Lumiar (Fácil acesso Eixo Norte-Sul)</p>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft flex items-center gap-3.5">
+            <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-green-dark shrink-0 shadow-xs">
+              <span class="material-symbols-outlined text-[22px]">local_parking</span>
+            </div>
+            <div>
+              <p class="text-xs font-bold text-brand-green-dark uppercase tracking-wider">Comodidade Total</p>
+              <p class="text-sm font-semibold text-brand-text">Estacionamento gratuito facilitado mesmo à porta</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vídeo de Apresentação do Espaço Obrigatório -->
+        <div class="mb-14 rounded-3xl overflow-hidden shadow-card border border-brand-gray bg-black max-w-4xl mx-auto">
+          <div class="relative aspect-video flex items-center justify-center bg-brand-gray">
+            <video controls preload="metadata" poster="./Video_%20Imagens/72.jpg" class="w-full h-full object-cover">
+              <source src="./Video_%20Imagens/Video/Video%20VCura.mp4" type="video/mp4" />
+              O seu navegador não suporta a reprodução de vídeo HTML5.
+            </video>
+          </div>
+          <div class="p-4 bg-white border-t border-brand-gray flex items-center justify-between text-xs text-brand-text/75">
+            <span class="flex items-center gap-1.5 font-medium">
+              <span class="material-symbols-outlined text-brand-green text-[18px]">play_circle</span>
+              <span>Vídeo de Apresentação das Instalações VCura Terapias</span>
+            </span>
+            <span class="text-brand-green-dark font-semibold">Alta de Lisboa</span>
+          </div>
+        </div>
+
+        <!-- Galeria de Imagens Reais das Instalações Obrigatória (com Lightbox) -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+          
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/71.jpg', 'Entrada Principal da VCura Terapias no Lumiar')">
+            <img src="./Video_%20Imagens/71.jpg" alt="Entrada da clínica VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text">Entrada Principal</span>
+          </div>
+
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Gabinete Harmony - Marquesa de Tratamento e Decoração Zen')">
+            <img src="./Video_%20Imagens/3.jpg" alt="Gabinete Harmony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text">Gabinete Harmony</span>
+          </div>
+
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Gabinete Healing - Consulta e Terapia Manual')">
+            <img src="./Video_%20Imagens/2.jpg" alt="Gabinete Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text">Gabinete Healing</span>
+          </div>
+
+          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/7.jpg', 'Gabinete VCura - Gabinete de Consulta Clínica e Anamnese')">
+            <img src="./Video_%20Imagens/7.jpg" alt="Gabinete de Consulta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text">Gabinete de Consulta</span>
+          </div>
+
+        </div>
+
+        <!-- Botão Obrigatório -->
+        <div class="text-center pt-2">
+          <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20na%20VCura%20Terapias." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+            <span>Marcar consulta</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 14. ALUGUER DE SALAS -->
+    <!-- ========================================================================= -->
+    <section id="salas" class="py-16 lg:py-24 bg-brand-green-soft/30 border-b border-brand-gray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-14">
+          
+          <div class="lg:col-span-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Comunidade de Saúde &amp; Bem-Estar</span>
+            <!-- Título Obrigatório -->
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">
+              Um espaço para desenvolver a sua atividade
+            </h2>
+            
+            <!-- Descrição fiel ao serviço oficial sem inventar preços ou condições não fornecidas -->
+            <p class="text-base sm:text-lg text-brand-text/85 leading-relaxed mb-6">
+              A VCura Terapias disponibiliza gabinetes clínicos e sala multiusos para terapeutas, psicólogos, nutricionistas, osteopatas e profissionais de saúde integrativa que procurem um ambiente acolhedor, profissional e com excelente localização na Alta de Lisboa.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-brand-text/80 mb-8">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-brand-green text-[18px]">check</span>
+                <span>Gabinetes preparados para consultas e terapias manuais</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-brand-green text-[18px]">check</span>
+                <span>Sala multiusos para workshops, cursos e palestras</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-brand-green text-[18px]">check</span>
+                <span>Zona de acolhimento e receção serena</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-brand-green text-[18px]">check</span>
+                <span>Estacionamento público gratuito à porta</span>
+              </div>
+            </div>
+
+            <!-- Botão Obrigatório -->
+            <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Tenho%20interesse%20no%20aluguer%20de%20salas%20e%20gostaria%20de%20marcar%20visita." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all">
+              <span class="material-symbols-outlined text-[18px]">meeting_room</span>
+              <span>Marcar visita</span>
+            </a>
+          </div>
+
+          <div class="lg:col-span-4">
+            <div class="p-6 rounded-3xl bg-white border border-brand-gray shadow-card">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark">
+                  <span class="material-symbols-outlined text-[22px]">info</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-base font-bold text-brand-text">Visitas e Condições</h4>
+                  <p class="text-xs text-brand-text/65">Agendamento sob consulta</p>
+                </div>
+              </div>
+              <p class="text-xs text-brand-text/75 leading-relaxed mb-4">
+                Para conhecer as salas disponíveis, opções de horários e condições de aluguer, agende uma visita presencial connosco através do WhatsApp.
+              </p>
+              <div class="text-xs font-semibold text-brand-green-dark flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-[16px]">call</span>
+                <span>Contacto direto: 964 423 853</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Galeria Dedicada Exclusivamente às Salas Disponíveis Obrigatória -->
+        <div>
+          <h3 class="font-serif text-xl font-bold text-brand-text mb-6">Salas disponíveis para aluguer</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Sala 1: Gabinete Healing -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group">
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Gabinete Healing - Gabinete para consultas e terapias com marquesa e secretária')">
+                <img src="./Video_%20Imagens/2.jpg" alt="Gabinete Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark">
+                  Gabinete Healing
+                </span>
+              </div>
+              <div class="p-5">
+                <h4 class="font-serif text-base font-bold text-brand-text mb-1">Gabinete Clínico Healing</h4>
+                <p class="text-xs text-brand-text/75">
+                  Equipado com marquesa clínica, mesa de consulta e iluminação natural.
+                </p>
+              </div>
+            </div>
+
+            <!-- Sala 2: Gabinete Harmony -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group">
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Gabinete Harmony - Gabinete acolhedor ideal para terapias manuais e acupuntura')">
+                <img src="./Video_%20Imagens/3.jpg" alt="Gabinete Harmony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark">
+                  Gabinete Harmony
+                </span>
+              </div>
+              <div class="p-5">
+                <h4 class="font-serif text-base font-bold text-brand-text mb-1">Gabinete Clínico Harmony</h4>
+                <p class="text-xs text-brand-text/75">
+                  Ambiente sereno com marquesa regulável, decoração zen e total privacidade.
+                </p>
+              </div>
+            </div>
+
+            <!-- Sala 3: Sala Multiusos & Formações -->
+            <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group">
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/1.jpg', 'Sala Multiusos - Sala ampla para formações, workshops e cursos com cadeiras individuais')">
+                <img src="./Video_%20Imagens/1.jpg" alt="Sala Multiusos e Workshops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark">
+                  Sala Multiusos
+                </span>
+              </div>
+              <div class="p-5">
+                <h4 class="font-serif text-base font-bold text-brand-text mb-1">Sala Multiusos &amp; Workshops</h4>
+                <p class="text-xs text-brand-text/75">
+                  Espaço amplo com cadeiras individuais com prancheta, mesa de formador e luz natural.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 15. PERGUNTAS FREQUENTES -->
+    <!-- ========================================================================= -->
+    <section class="py-16 lg:py-24 bg-white border-b border-brand-gray">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-14">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block">Esclareça as suas dúvidas</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-3">Perguntas frequentes</h2>
+          <p class="text-base text-brand-text/80">
+            Respostas às dúvidas mais habituais antes da sua primeira consulta na VCura.
+          </p>
+        </div>
+
+        <!-- Acordeão com 4 Perguntas e Respostas Obrigatórias -->
+        <div class="space-y-4" id="faq-list">
+          
+          <!-- Pergunta 1 -->
+          <div class="rounded-2xl border border-brand-gray bg-brand-green-soft/30 overflow-hidden transition-all duration-200">
+            <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-brand-text hover:text-brand-green-dark transition-colors" data-target="faq-ans-1" aria-expanded="false">
+              <span>Nunca fiz acupuntura. Posso marcar?</span>
+              <span class="material-symbols-outlined text-brand-green-dark transition-transform duration-300">expand_more</span>
+            </button>
+            <div id="faq-ans-1" class="accordion-content hidden px-6 pb-6 text-base text-brand-text/80 border-t border-brand-gray/50 pt-3">
+              Sim. Na primeira consulta avaliamos a sua situação e explicamos tudo antes de começar.
+            </div>
+          </div>
+
+          <!-- Pergunta 2 -->
+          <div class="rounded-2xl border border-brand-gray bg-brand-green-soft/30 overflow-hidden transition-all duration-200">
+            <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-brand-text hover:text-brand-green-dark transition-colors" data-target="faq-ans-2" aria-expanded="false">
+              <span>Não sei que terapia preciso. E agora?</span>
+              <span class="material-symbols-outlined text-brand-green-dark transition-transform duration-300">expand_more</span>
+            </button>
+            <div id="faq-ans-2" class="accordion-content hidden px-6 pb-6 text-base text-brand-text/80 border-t border-brand-gray/50 pt-3">
+              Não precisa de saber. Fale connosco e orientamos para a consulta mais indicada.
+            </div>
+          </div>
+
+          <!-- Pergunta 3 -->
+          <div class="rounded-2xl border border-brand-gray bg-brand-green-soft/30 overflow-hidden transition-all duration-200">
+            <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-brand-text hover:text-brand-green-dark transition-colors" data-target="faq-ans-3" aria-expanded="false">
+              <span>Têm consultas online?</span>
+              <span class="material-symbols-outlined text-brand-green-dark transition-transform duration-300">expand_more</span>
+            </button>
+            <div id="faq-ans-3" class="accordion-content hidden px-6 pb-6 text-base text-brand-text/80 border-t border-brand-gray/50 pt-3">
+              Sim. Disponibilizamos consultas online de Saúde Feminina, Nutrição Funcional, Naturopatia, Fitoterapia Chinesa e Dietoterapia.
+            </div>
+          </div>
+
+          <!-- Pergunta 4 -->
+          <div class="rounded-2xl border border-brand-gray bg-brand-green-soft/30 overflow-hidden transition-all duration-200">
+            <button type="button" class="faq-toggle w-full px-6 py-5 text-left flex items-center justify-between gap-4 font-serif text-lg font-bold text-brand-text hover:text-brand-green-dark transition-colors" data-target="faq-ans-4" aria-expanded="false">
+              <span>Posso usar o meu seguro?</span>
+              <span class="material-symbols-outlined text-brand-green-dark transition-transform duration-300">expand_more</span>
+            </button>
+            <div id="faq-ans-4" class="accordion-content hidden px-6 pb-6 text-base text-brand-text/80 border-t border-brand-gray/50 pt-3">
+              Temos acordos com várias seguradoras e entidades. Envie mensagem e confirmamos as condições do seu caso.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 16. CHAMADA FINAL PARA MARCAÇÃO -->
+    <!-- ========================================================================= -->
+    <section class="py-16 lg:py-24 bg-brand-green-soft border-b border-brand-gray/60">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <div class="w-16 h-16 rounded-full bg-white flex items-center justify-center text-brand-green-dark mx-auto mb-6 shadow-xs">
+          <span class="material-symbols-outlined text-[32px]">spa</span>
+        </div>
+
+        <!-- Título Obrigatório -->
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4">
+          Pronta(o) para começar a cuidar de si?
+        </h2>
+
+        <!-- Texto Obrigatório -->
+        <p class="text-base sm:text-lg text-brand-text/80 leading-relaxed max-w-2xl mx-auto mb-8">
+          Estamos aqui para esclarecer as suas dúvidas e ajudar a encontrar a abordagem mais adequada às suas necessidades.
+        </p>
+
+        <!-- Botão Principal Obrigatório (Verde destacado com texto branco) -->
+        <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Estou%20pronta(o)%20para%20come%C3%A7ar%20a%20cuidar%20de%20mim%20e%20gostaria%20de%20marcar%20consulta." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-brand-green text-white font-semibold text-base shadow-card hover:bg-brand-green-dark transition-all duration-300 hover:shadow-elevated transform hover:-translate-y-0.5">
+          <span class="material-symbols-outlined text-[22px]">chat</span>
+          <span>Marcar consulta no WhatsApp</span>
+        </a>
+
+        <p class="text-xs text-brand-text/60 mt-4">
+          Contacto direto • Resposta rápida em horário de funcionamento
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 17. RODAPÉ E CONTACTOS -->
+  <!-- ========================================================================= -->
+  <footer id="contactos" class="bg-brand-gray text-brand-text border-t border-brand-gray pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 mb-12">
+        
+        <!-- Coluna 1: Apresentação da Clínica e Logótipo -->
+        <div class="lg:col-span-4 flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="./Logo.png" alt="VCura Terapias" class="h-10 w-auto object-contain" />
+            <div class="flex flex-col">
+              <span class="font-serif text-xl font-bold text-brand-green-dark leading-none">VCura</span>
+              <span class="text-[10px] font-semibold text-brand-green tracking-widest uppercase">Terapias • Lisboa</span>
+            </div>
+          </div>
+          <p class="text-sm text-brand-text/75 leading-relaxed mb-6">
+            Clínica de Medicina Tradicional Chinesa e Saúde Integrativa na Alta de Lisboa. Cuidado centrado na pessoa, com rigor ético, prevenção e promoção do bem-estar global.
+          </p>
+          <div class="text-xs text-brand-text/70 space-y-1">
+            <p><strong>Diretora Técnica:</strong> Elisabete Monteiro</p>
+            <p><strong>Cédula Profissional ACSS:</strong> C-006284</p>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Informações Obrigatórias (Morada, Localização, Horário, Estacionamento) -->
+        <div class="lg:col-span-4 flex flex-col space-y-4">
+          <h4 class="font-serif text-base font-bold text-brand-text">Localização &amp; Horário</h4>
+          
+          <div class="flex items-start gap-3 text-sm text-brand-text/80">
+            <span class="material-symbols-outlined text-brand-green text-[20px] shrink-0 mt-0.5">location_on</span>
+            <div>
+              <p class="font-semibold text-brand-text">Av. David Mourão Ferreira, 25B, Loja A, 1750-209 Lisboa</p>
+              <p class="text-xs text-brand-green-dark font-medium">Alta de Lisboa / Lumiar</p>
+              <a href="https://maps.google.com/?q=Av.+David+Mour%C3%A3o-Ferreira+25B+Lisboa" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-blue font-semibold hover:underline inline-flex items-center gap-1 mt-1">
+                <span>Abrir no Google Maps</span>
+                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 text-sm text-brand-text/80">
+            <span class="material-symbols-outlined text-brand-green text-[20px] shrink-0 mt-0.5">schedule</span>
+            <div>
+              <p class="font-semibold text-brand-text">Horário de Funcionamento:</p>
+              <p class="text-xs">Terça a sexta-feira: 9h–21h</p>
+              <p class="text-xs">Sábado: 9h–13h</p>
+              <p class="text-[11px] text-brand-text/60">Domingos e Segundas: Encerrado</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 text-sm text-brand-text/80">
+            <span class="material-symbols-outlined text-brand-green text-[20px] shrink-0 mt-0.5">local_parking</span>
+            <div>
+              <p class="font-semibold text-brand-text">Estacionamento:</p>
+              <p class="text-xs">Estacionamento gratuito facilitado em frente à clínica.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Coluna 3: Contactos & Mapa Incorporado Obrigatórios -->
+        <div class="lg:col-span-4 flex flex-col">
+          <h4 class="font-serif text-base font-bold text-brand-text mb-4">Contactos Diretos</h4>
+          
+          <div class="space-y-3 mb-6">
+            <a href="https://wa.me/351964423853" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 text-sm font-semibold text-brand-green-dark hover:text-brand-green transition-colors">
+              <span class="material-symbols-outlined text-[20px]">chat</span>
+              <span>WhatsApp: 964 423 853</span>
+            </a>
+            <a href="mailto:vcuramtc@gmail.com" class="flex items-center gap-2.5 text-sm text-brand-text/80 hover:text-brand-green transition-colors">
+              <span class="material-symbols-outlined text-[20px] text-brand-green">mail</span>
+              <span>vcuramtc@gmail.com</span>
+            </a>
+          </div>
+
+          <!-- Mapa Google Incorporado com Localização Oficial -->
+          <div class="w-full h-36 rounded-2xl overflow-hidden border border-brand-gray/80 shadow-xs relative">
+            <iframe 
+              title="Localização da VCura Terapias na Alta de Lisboa" 
+              src="https://maps.google.com/maps?q=Avenida+David+Mour%C3%A3o-Ferreira+25B+Lisboa&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior de Direitos e Políticas -->
+      <div class="pt-8 border-t border-brand-gray/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-text/70">
+        <div>
+          <span>&copy; 2026 VCura Terapias. Todos os direitos reservados. Lisboa, Portugal.</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <button onclick="openModal('modal-privacidade')" type="button" class="hover:text-brand-green transition-colors underline">
+            Política de Privacidade
+          </button>
+          <span>•</span>
+          <button onclick="openModal('modal-cookies')" type="button" class="hover:text-brand-green transition-colors underline">
+            Informação sobre Cookies
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- BOTÃO FLUTUANTE DE WHATSAPP (CONVERSÃO RÁPIDA MOBILE & DESKTOP) -->
+  <!-- ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center">
+    <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20na%20VCura%20Terapias." target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2.5 px-4 py-3 bg-brand-green text-white rounded-full shadow-card hover:bg-brand-green-dark hover:shadow-elevated transition-all duration-300 transform hover:scale-105" aria-label="Falar connosco pelo WhatsApp">
+      <span class="material-symbols-outlined text-[24px]">chat</span>
+      <span class="text-sm font-semibold hidden sm:inline-block">Fale connosco</span>
+      <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-white border-2 border-brand-green rounded-full"></span>
+    </a>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAIS INTERATIVOS: LIGHTBOX, FLYERS E POLÍTICAS -->
+  <!-- ========================================================================= -->
+  
+  <!-- Modal 1: Lightbox de Imagens -->
+  <div id="modal-lightbox" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center">
+      <button onclick="closeModal('modal-lightbox')" type="button" class="absolute -top-12 right-0 text-white hover:text-brand-green transition-colors p-2" aria-label="Fechar Imagem">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      <img id="lightbox-img" src="" alt="Ampliação" class="max-h-[80vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl" />
+      <p id="lightbox-caption" class="text-white text-sm mt-3 text-center px-4 font-medium"></p>
+    </div>
+  </div>
+
+  <!-- Modal 2: Visualizador de Cartazes de Workshops (Flyers Oficiais) -->
+  <div id="modal-flyer" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-lg w-full max-h-[92vh] flex flex-col items-center">
+      <button onclick="closeModal('modal-flyer')" type="button" class="absolute -top-12 right-0 text-white hover:text-brand-green transition-colors p-2" aria-label="Fechar Cartaz">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </button>
+      <img id="flyer-img" src="" alt="Cartaz Oficial do Workshop" class="max-h-[82vh] w-auto max-w-full rounded-2xl object-contain shadow-2xl bg-white" />
+    </div>
+  </div>
+
+  <!-- Modal 3: Certificação Hospitalar (Sanya, China) -->
+  <div id="modal-cert" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-2xl w-full bg-white rounded-3xl p-6 flex flex-col items-center shadow-2xl">
+      <div class="w-full flex items-center justify-between pb-4 border-b border-brand-gray mb-4">
+        <h4 class="font-serif text-lg font-bold text-brand-text">Certificação Hospitalar • Sanya, China</h4>
+        <button onclick="closeModal('modal-cert')" type="button" class="text-brand-text hover:text-brand-green p-1">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <img src="./Video_%20Imagens/30.jpg" alt="Certificado Hospitalar Sanya Traditional Chinese Medicine Hospital" class="w-full h-auto max-h-[65vh] object-contain rounded-xl border border-brand-gray" />
+      <p class="text-xs text-brand-text/70 mt-3 text-center">
+        Certificado de estudos hospitalares em Acupuntura, Fitoterapia Chinesa e Massagem Tuina no Sanya TCM Hospital (China) atribuído à Dra. Elisabete Pina Monteiro.
+      </p>
+    </div>
+  </div>
+
+  <!-- Modal 4: Política de Privacidade Placeholder -->
+  <div id="modal-privacidade" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-xl w-full bg-white rounded-3xl p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-brand-gray mb-4">
+        <h4 class="font-serif text-xl font-bold text-brand-text">Política de Privacidade</h4>
+        <button onclick="closeModal('modal-privacidade')" type="button" class="text-brand-text hover:text-brand-green p-1">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <div class="space-y-3 text-sm text-brand-text/80 max-h-[60vh] overflow-y-auto pr-2">
+        <p>A VCura Terapias está empenhada em proteger a privacidade e os dados pessoais dos seus pacientes e visitantes.</p>
+        <p>Todos os dados recolhidos através de canais diretos (como formulários de contacto ou mensagens de WhatsApp) destinam-se exclusivamente à gestão de consultas, prestação de esclarecimentos clínicos e informações sobre eventos solicitados pelo titular.</p>
+        <p>Os seus dados não são cedidos a terceiros sem consentimento prévio e são tratados ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD).</p>
+      </div>
+      <div class="pt-4 border-t border-brand-gray mt-4 text-right">
+        <button onclick="closeModal('modal-privacidade')" type="button" class="px-5 py-2.5 rounded-full bg-brand-green text-white text-xs font-semibold hover:bg-brand-green-dark transition-colors">
+          Compreendi
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Informação sobre Cookies Placeholder -->
+  <div id="modal-cookies" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="relative max-w-xl w-full bg-white rounded-3xl p-6 sm:p-8 shadow-2xl">
+      <div class="flex items-center justify-between pb-4 border-b border-brand-gray mb-4">
+        <h4 class="font-serif text-xl font-bold text-brand-text">Informação sobre Cookies</h4>
+        <button onclick="closeModal('modal-cookies')" type="button" class="text-brand-text hover:text-brand-green p-1">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+      <div class="space-y-3 text-sm text-brand-text/80 max-h-[60vh] overflow-y-auto pr-2">
+        <p>Este website utiliza apenas cookies técnicos e estritamente necessários para assegurar a navegação fluida, o correto carregamento de fontes e a exibição de componentes interativos (como mapas e vídeos).</p>
+        <p>Não utilizamos cookies de rastreio publicitário intrusivo. Pode configurar o seu navegador a qualquer momento para bloquear ou alertar sobre a presença de cookies.</p>
+      </div>
+      <div class="pt-4 border-t border-brand-gray mt-4 text-right">
+        <button onclick="closeModal('modal-cookies')" type="button" class="px-5 py-2.5 rounded-full bg-brand-green text-white text-xs font-semibold hover:bg-brand-green-dark transition-colors">
+          Aceitar e Fechar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- SCRIPTS INTERATIVOS & FUNCIONAMENTO GERAL -->
+  <!-- ========================================================================= -->
+  <script>
+    // 1. Menu Mobile Hamburger Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+        if (isOpen) {
+          mobileMenu.classList.add('hidden');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        } else {
+          mobileMenu.classList.remove('hidden');
+          menuIconOpen.classList.add('hidden');
+          menuIconClose.classList.remove('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Fechar menu mobile ao clicar em qualquer link de navegação
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIconOpen.classList.remove('hidden');
+          menuIconClose.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // 2. Acordeão das Perguntas Frequentes (FAQ)
+    document.querySelectorAll('.faq-toggle').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        const icon = button.querySelector('.material-symbols-outlined');
+        const isExpanded = !targetContent.classList.contains('hidden');
+
+        // Fechar outros acordeões para manter a leitura limpa
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          c.classList.add('hidden');
+        });
+        document.querySelectorAll('.faq-toggle').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          const ic = b.querySelector('.material-symbols-outlined');
+          if (ic) ic.style.transform = 'rotate(0deg)';
+        });
+
+        if (!isExpanded) {
+          targetContent.classList.remove('hidden');
+          button.setAttribute('aria-expanded', 'true');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // 3. Funções de Modais e Lightbox
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      }
+    }
+
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
+
+    function openLightbox(src, caption) {
+      const lightboxImg = document.getElementById('lightbox-img');
+      const lightboxCaption = document.getElementById('lightbox-caption');
+      if (lightboxImg) lightboxImg.src = src;
+      if (lightboxCaption) lightboxCaption.textContent = caption || '';
+      openModal('modal-lightbox');
+    }
+
+    function openFlyer(filename) {
+      const flyerImg = document.getElementById('flyer-img');
+      if (flyerImg) {
+        flyerImg.src = `./${filename}`;
+      }
+      openModal('modal-flyer');
+    }
+
+    // Fechar modais ao carregar na tecla ESC ou fora do conteúdo
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        ['modal-lightbox', 'modal-flyer', 'modal-cert', 'modal-privacidade', 'modal-cookies'].forEach(id => {
+          closeModal(id);
+        });
+      }
+    });
+
+    document.querySelectorAll('#modal-lightbox, #modal-flyer, #modal-cert, #modal-privacidade, #modal-cookies').forEach(m => {
+      m.addEventListener('click', (e) => {
+        if (e.target === m) {
+          closeModal(m.id);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

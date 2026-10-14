@@ -1,0 +1,15 @@
+# Ficheiros comprimidos pesados (>100MB que excedem limite do GitHub)
+*.zip
+
+# Cpias temporrias e de backup
+*.bak
+*backup*
+index.original.html
+
+# Ficheiros do sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Ficheiros de logs locais
+*.log

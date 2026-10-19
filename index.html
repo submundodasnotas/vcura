@@ -518,8 +518,8 @@
               </a>
             </div>
 
-            <!-- Faixa Discreta com 3 Elementos de Confiança Obrigatórios -->
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-brand-gray">
+            <!-- Faixa Discreta com 3 Elementos de Confiança Obrigatórios (No desktop abaixo dos botões, no mobile abaixo da imagem) -->
+            <div class="hidden lg:grid grid-cols-1 sm:grid-cols-3 gap-3 pt-6 border-t border-brand-gray">
               
               <!-- Elemento 1: Avaliações 5 Estrelas -->
               <div class="flex items-center gap-3 p-3 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft">
@@ -590,6 +590,44 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- Faixa de Elementos de Confiança EXCLUSIVA para Mobile/Tablet (fica logo abaixo da imagem da fachada) -->
+          <div class="lg:hidden col-span-1 grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 order-3">
+            
+            <!-- Elemento 1: Avaliações 5 Estrelas -->
+            <div class="flex items-center gap-3 p-3 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-amber-500 shadow-xs shrink-0">
+                <span class="material-symbols-outlined text-[20px] fill-1">star</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold text-brand-text leading-snug whitespace-nowrap" data-i18n="hero.trust1_title">Avaliações 5 estrelas</span>
+                <span class="text-[11px] text-brand-text/70 whitespace-nowrap" data-i18n="hero.trust1_sub">no Google</span>
+              </div>
+            </div>
+
+            <!-- Elemento 2: Acordos de Saúde -->
+            <div class="flex items-center gap-3 p-3 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-blue shadow-xs shrink-0">
+                <span class="material-symbols-outlined text-[20px]">verified_user</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold text-brand-text leading-snug whitespace-nowrap" data-i18n="hero.trust2_title">Acordos de Saúde</span>
+                <span class="text-[11px] text-brand-text/70 whitespace-nowrap" data-i18n="hero.trust2_sub">Multicare, Medicare e SCML</span>
+              </div>
+            </div>
+
+            <!-- Elemento 3: Estacionamento Gratuito -->
+            <div class="flex items-center gap-3 p-3 rounded-2xl bg-brand-green-soft/70 border border-brand-green-soft">
+              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-green-dark shadow-xs shrink-0">
+                <span class="material-symbols-outlined text-[20px]">local_parking</span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-xs font-semibold text-brand-text leading-snug whitespace-nowrap" data-i18n="hero.trust3_title">Estacionamento gratuito</span>
+                <span class="text-[11px] text-brand-text/70 whitespace-nowrap" data-i18n="hero.trust3_sub">À porta na Alta de Lisboa</span>
+              </div>
+            </div>
+
           </div>
 
         </div>

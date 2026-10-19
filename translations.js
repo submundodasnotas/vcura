@@ -191,10 +191,10 @@ window.VCURA_TRANSLATIONS = {
     "protocols.partners_note": "Condições aplicáveis a colaboradores e respetivos agregados familiares diretos.",
     "protocols.btn": "Confirmar as condições do meu acordo",
 
-    // Secção 11: Workshops & Formações
-    "workshops.tag": "Aprendizagem & Transformação",
-    "workshops.title": "Workshops & Formações",
-    "workshops.desc": "Para empresas e particulares. Explore os vários temas e promova momentos de aprendizagem e transformação para o bem-estar das suas equipas.",
+    // Secção 11: Cursos, Formações & Workshops
+    "workshops.tag": "Cursos & Desenvolvimento",
+    "workshops.title": "Cursos, Formações & Workshops",
+    "workshops.desc": "Cursos práticos e formações certificadas para particulares e empresas. Aprenda técnicas integrativas, desenvolva novos conhecimentos e promova a saúde e o bem-estar pessoal ou da sua equipa.",
     "workshops.ev1_badge": "Workshop Presencial em Destaque",
     "workshops.ev1_title": "Menopausa Consciente | Conhecer. Escolher. Cuidar.",
     "workshops.ev1_date": "Data:",
@@ -516,10 +516,10 @@ window.VCURA_TRANSLATIONS = {
     "protocols.partners_note": "Terms apply to employees and their immediate family members.",
     "protocols.btn": "Confirm my agreement conditions",
 
-    // Section 11: Workshops & Training
-    "workshops.tag": "Learning & Transformation",
-    "workshops.title": "Workshops & Training",
-    "workshops.desc": "For businesses and individuals. Explore diverse wellness topics and foster transformative learning experiences for your teams.",
+    // Section 11: Courses, Training & Workshops
+    "workshops.tag": "Courses & Development",
+    "workshops.title": "Courses, Training & Workshops",
+    "workshops.desc": "Practical courses and certified training for individuals and businesses. Learn integrative techniques, gain new skills, and foster health and wellbeing for yourself or your team.",
     "workshops.ev1_badge": "Featured In-Person Workshop",
     "workshops.ev1_title": "Conscious Menopause | Understand. Choose. Care.",
     "workshops.ev1_date": "Date:",
@@ -841,10 +841,10 @@ window.VCURA_TRANSLATIONS = {
     "protocols.partners_note": "Avantages valables pour les collaborateurs et leurs ayants droit directs.",
     "protocols.btn": "Confirmer les conditions de mon accord",
 
-    // Section 11: Ateliers & Formations
-    "workshops.tag": "Apprentissage & Transformation",
-    "workshops.title": "Ateliers & Formations",
-    "workshops.desc": "Pour particuliers et entreprises. Explorez des thématiques passionnantes pour cultiver l'équilibre et le bien-être au quotidien.",
+    // Section 11: Cours, Formations & Ateliers
+    "workshops.tag": "Cours & Développement",
+    "workshops.title": "Cours, Formations & Ateliers",
+    "workshops.desc": "Cours pratiques et formations certifiées pour particuliers et entreprises. Maîtrisez des approches intégratives, développez de nouvelles compétences et cultivez le bien-être individuel et collectif.",
     "workshops.ev1_badge": "Atelier Présentiel à la Une",
     "workshops.ev1_title": "Ménopause Consciente | Connaître. Choisir. Prendre soin.",
     "workshops.ev1_date": "Date :",
@@ -1166,10 +1166,10 @@ window.VCURA_TRANSLATIONS = {
     "protocols.partners_note": "Beneficios extensibles a empleados y familiares directos.",
     "protocols.btn": "Confirmar las condiciones de mi acuerdo",
 
-    // Sección 11: Talleres y Formaciones
-    "workshops.tag": "Aprendizaje y Transformación",
-    "workshops.title": "Talleres y Formaciones",
-    "workshops.desc": "Para particulares y corporaciones. Descubra temáticas enriquecedoras orientadas al bienestar personal y de equipos.",
+    // Sección 11: Cursos, Formaciones y Talleres
+    "workshops.tag": "Cursos y Desarrollo",
+    "workshops.title": "Cursos, Formaciones y Talleres",
+    "workshops.desc": "Cursos prácticos y formaciones certificadas para particulares y empresas. Aprenda técnicas integrativas, adquiera nuevas competencias y promueva la salud y el bienestar personal o de su equipo.",
     "workshops.ev1_badge": "Taller Presencial Destacado",
     "workshops.ev1_title": "Menopausia Consciente | Conocer. Decidir. Cuidar.",
     "workshops.ev1_date": "Fecha:",

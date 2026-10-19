@@ -191,11 +191,12 @@
     .bg-dark-cta-gradient {
       background: linear-gradient(145deg, #05130B 0%, #0C281A 45%, #163F28 100%);
     }
-    .bg-dark-rose-feminine {
-      background: linear-gradient(135deg, #1A0B14 0%, #25101F 38%, #171C19 72%, #0C1A13 100%);
+    .bg-dark-rose-feminine,
+    .bg-uva-rosada-gradient {
+      background: linear-gradient(135deg, #915473 0%, #a45d82 30%, #be749b 65%, #d68eb2 100%);
     }
     .shadow-glow-rose {
-      box-shadow: 0 20px 50px rgba(225, 29, 98, 0.16), 0 0 35px rgba(244, 114, 182, 0.10);
+      box-shadow: 0 20px 45px -10px rgba(145, 84, 115, 0.40), 0 0 35px rgba(214, 142, 178, 0.25);
     }
 
     /* Efeito de Vidro Fosco Escuro (Dark Glassmorphism) */
@@ -210,14 +211,76 @@
       border-color: rgba(55, 168, 23, 0.45);
     }
     .glass-dark-rose {
-      background: rgba(255, 240, 245, 0.05);
+      background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(244, 114, 182, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.30);
     }
     .glass-dark-rose:hover {
-      background: rgba(255, 240, 245, 0.09);
-      border-color: rgba(244, 114, 182, 0.45);
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.55);
+    }
+
+    /* ========================================================================= */
+    /* LINHA DO TEMPO DINÂMICA (SCROLL-TRIGGERED TIMELINE)                       */
+    /* Acende verde esmeralda ao descer (meio da visão) e apaga ao subir         */
+    /* ========================================================================= */
+    .v-timeline-step {
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.4s ease,
+                  background-color 0.4s ease,
+                  box-shadow 0.4s ease;
+      background: rgba(10, 28, 18, 0.85);
+    }
+    
+    .v-timeline-step.timeline-active {
+      border-color: rgba(55, 168, 23, 0.85) !important;
+      background: rgba(14, 45, 28, 0.95) !important;
+      box-shadow: 0 14px 40px -5px rgba(55, 168, 23, 0.40), 0 0 30px rgba(55, 168, 23, 0.25) !important;
+      transform: translateY(-6px);
+    }
+
+    .v-timeline-step .timeline-badge {
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .v-timeline-step.timeline-active .timeline-badge {
+      background: linear-gradient(135deg, #37A817 0%, #10b981 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #a7f3d0 !important;
+      box-shadow: 0 0 35px rgba(55, 168, 23, 0.95), 0 0 60px rgba(16, 185, 129, 0.45) !important;
+      transform: scale(1.12);
+    }
+
+    .v-timeline-step.timeline-focal .timeline-halo {
+      opacity: 1;
+      animation: timelinePulseRing 2s infinite cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .v-timeline-step.timeline-active .timeline-title {
+      color: #6ee7b7 !important;
+    }
+
+    .v-timeline-step.timeline-active .timeline-desc {
+      color: #e6f7ec !important;
+    }
+
+    @keyframes timelinePulseRing {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+        box-shadow: 0 0 0 0 rgba(55, 168, 23, 0.75);
+      }
+      70% {
+        transform: scale(1.45);
+        opacity: 0;
+        box-shadow: 0 0 0 25px rgba(55, 168, 23, 0);
+      }
+      100% {
+        transform: scale(1.45);
+        opacity: 0;
+        box-shadow: 0 0 0 0 rgba(55, 168, 23, 0);
+      }
     }
 
     /* Brilho pulsante suave em degradê */
@@ -568,9 +631,9 @@
                   Ciclo menstrual, TPM, cistite, endometriose, climatério e menopausa.
                 </p>
               </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20Sa%C3%BAde%20Feminina." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20Sa%C3%BAde%20Feminina." target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_24px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02] group/btn">
                 <span data-i18n="btn.learn_more">Saber mais</span>
-                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -592,9 +655,9 @@
                   Exaustão, ansiedade, insónia, depressão e fadiga mental.
                 </p>
               </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20Stress,%20Ansiedade%20e%20Sono." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20Stress,%20Ansiedade%20e%20Sono." target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_24px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02] group/btn">
                 <span data-i18n="btn.learn_more">Saber mais</span>
-                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -616,9 +679,9 @@
                   Desconforto cervical e lombar, ciática, ombros, joelhos, dores musculares, contraturas e recuperação muscular.
                 </p>
               </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20Dores%20e%20Les%C3%B5es." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20tratamento%20de%20Dores%20e%20Les%C3%B5es." target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_24px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02] group/btn">
                 <span data-i18n="btn.learn_more">Saber mais</span>
-                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -640,9 +703,9 @@
                   Obstipação, refluxo, gastrite, desequilíbrios digestivos, sistema imunitário, obesidade e reeducação alimentar.
                 </p>
               </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Sa%C3%BAde%20Digestiva%20e%20Nutri%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-between w-full pt-4 border-t border-brand-gray text-brand-green-dark font-semibold text-sm hover:text-brand-green transition-colors">
+              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20Sa%C3%BAde%20Digestiva%20e%20Nutri%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_24px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02] group/btn">
                 <span data-i18n="btn.learn_more">Saber mais</span>
-                <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                <span class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
               </a>
             </div>
           </div>
@@ -831,18 +894,18 @@
           </div>
         </div>
 
-        <!-- Bloco 3: Especialidade — Saúde Feminina, Climatério & Menopausa (Bloco de Destaque com Toque Feminino em Tom Rosa Sutil e Degradê Escuro) -->
-        <div class="v-reveal-scale rounded-3xl bg-dark-rose-feminine text-white p-8 md:p-12 mb-16 border border-rose-300/30 shadow-glow-rose overflow-hidden relative group">
-          <!-- Brilhos decorativos no fundo escuro com tom rosa sutil e esmeralda -->
-          <div class="absolute -right-20 -top-20 w-80 h-80 bg-rose-500/18 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
-          <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-rose-400/12 rounded-full blur-3xl pointer-events-none"></div>
-          <div class="absolute top-1/2 left-1/3 -translate-y-1/2 w-72 h-72 bg-brand-green/10 rounded-full blur-3xl pointer-events-none"></div>
+        <!-- Bloco 3: Especialidade — Saúde Feminina, Climatério & Menopausa (Bloco de Destaque em Uva Rosada #915473 com Degradê) -->
+        <div class="v-reveal-scale rounded-3xl bg-dark-rose-feminine text-white p-8 md:p-12 mb-16 border border-white/25 shadow-glow-rose overflow-hidden relative group">
+          <!-- Brilhos decorativos no fundo uva rosada suave e esmeralda -->
+          <div class="absolute -right-20 -top-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none group-hover:scale-125 transition-transform duration-700"></div>
+          <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-rose-200/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="absolute top-1/2 left-1/3 -translate-y-1/2 w-72 h-72 bg-brand-green/15 rounded-full blur-3xl pointer-events-none"></div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             
             <div class="lg:col-span-7">
-              <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-rose-500/20 text-rose-200 border border-rose-400/35 font-semibold text-xs mb-3 shadow-xs">
-                <span class="w-1.5 h-1.5 rounded-full bg-rose-400 animate-pulse"></span>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/20 text-white border border-white/35 font-semibold text-xs mb-3 shadow-xs">
+                <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
                 <span data-i18n="women.badge">Saúde da Mulher • Especialidade Integrativa</span>
               </span>
               <!-- Título Explícito para a Mulher -->
@@ -850,50 +913,50 @@
                 Saúde Feminina: Cuidar de si em todas as fases da vida.
               </h3>
               <!-- Texto Obrigatório -->
-              <p class="text-base text-rose-100/90 leading-relaxed mb-6 font-light" data-i18n="women.desc">
+              <p class="text-base text-rose-50/95 leading-relaxed mb-6 font-light" data-i18n="women.desc">
                 Na VCura Terapias, integramos Medicina Tradicional Chinesa, Fitoterapia e Naturopatia, num plano de acordo com as necessidades individuais de cada mulher.
               </p>
 
-              <!-- Grupos Visuais de Queixas e Temas Acompanhados Obrigatórios (Cards com Dark Glassmorphism em tom rosa sutil) -->
+              <!-- Grupos Visuais de Queixas e Temas Acompanhados Obrigatórios (Cards com Glassmorphism em tom uva rosada) -->
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-                <div class="flex items-center gap-2.5 text-sm font-medium text-white/95 glass-dark-rose p-2.5 rounded-xl transition-all">
-                  <span class="material-symbols-outlined text-rose-300 text-[18px]">check_circle</span>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-white glass-dark-rose p-2.5 rounded-xl transition-all">
+                  <span class="material-symbols-outlined text-rose-100 text-[18px]">check_circle</span>
                   <span data-i18n="women.sym1">Ciclo menstrual, TPM e endometriose.</span>
                 </div>
-                <div class="flex items-center gap-2.5 text-sm font-medium text-white/95 glass-dark-rose p-2.5 rounded-xl transition-all">
-                  <span class="material-symbols-outlined text-rose-300 text-[18px]">check_circle</span>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-white glass-dark-rose p-2.5 rounded-xl transition-all">
+                  <span class="material-symbols-outlined text-rose-100 text-[18px]">check_circle</span>
                   <span data-i18n="women.sym2">Cistite e desconforto íntimo.</span>
                 </div>
-                <div class="flex items-center gap-2.5 text-sm font-medium text-white/95 glass-dark-rose p-2.5 rounded-xl transition-all">
-                  <span class="material-symbols-outlined text-rose-300 text-[18px]">check_circle</span>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-white glass-dark-rose p-2.5 rounded-xl transition-all">
+                  <span class="material-symbols-outlined text-rose-100 text-[18px]">check_circle</span>
                   <span data-i18n="women.sym3">Afrontamentos e suores noturnos.</span>
                 </div>
-                <div class="flex items-center gap-2.5 text-sm font-medium text-white/95 glass-dark-rose p-2.5 rounded-xl transition-all">
-                  <span class="material-symbols-outlined text-rose-300 text-[18px]">check_circle</span>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-white glass-dark-rose p-2.5 rounded-xl transition-all">
+                  <span class="material-symbols-outlined text-rose-100 text-[18px]">check_circle</span>
                   <span data-i18n="women.sym4">Alterações do sono, humor e peso.</span>
                 </div>
-                <div class="flex items-center gap-2.5 text-sm font-medium text-white/95 glass-dark-rose p-2.5 rounded-xl transition-all">
-                  <span class="material-symbols-outlined text-rose-300 text-[18px]">check_circle</span>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-white glass-dark-rose p-2.5 rounded-xl transition-all">
+                  <span class="material-symbols-outlined text-rose-100 text-[18px]">check_circle</span>
                   <span data-i18n="women.sym5">Fadiga mental e cansaço.</span>
                 </div>
-                <div class="flex items-center gap-2.5 text-sm font-medium text-white/95 glass-dark-rose p-2.5 rounded-xl transition-all">
-                  <span class="material-symbols-outlined text-rose-300 text-[18px]">check_circle</span>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-white glass-dark-rose p-2.5 rounded-xl transition-all">
+                  <span class="material-symbols-outlined text-rose-100 text-[18px]">check_circle</span>
                   <span data-i18n="women.sym6">Alterações da libido.</span>
                 </div>
-                <div class="flex items-center gap-2.5 text-sm font-medium text-white/95 glass-dark-rose p-2.5 rounded-xl transition-all sm:col-span-2">
-                  <span class="material-symbols-outlined text-rose-300 text-[18px]">check_circle</span>
+                <div class="flex items-center gap-2.5 text-sm font-medium text-white glass-dark-rose p-2.5 rounded-xl transition-all sm:col-span-2">
+                  <span class="material-symbols-outlined text-rose-100 text-[18px]">check_circle</span>
                   <span data-i18n="women.sym7">Dores e rigidez articulares.</span>
                 </div>
               </div>
 
               <!-- Informação Complementar Obrigatória -->
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2">
-                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20consulta%20de%20Sa%C3%BAde%20Feminina." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-to-r from-rose-600 via-rose-500 to-brand-green hover:from-rose-500 hover:to-brand-green-dark text-white font-semibold text-sm shadow-[0_4px_25px_rgba(225,29,98,0.35)] transition-all hover:scale-105">
-                  <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20consulta%20de%20Sa%C3%BAde%20Feminina." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-[#7d3255] hover:bg-rose-50 hover:text-[#5e203d] font-bold text-sm shadow-[0_6px_25px_rgba(0,0,0,0.18)] transition-all hover:scale-105">
+                  <span class="material-symbols-outlined text-[18px] text-brand-green">calendar_today</span>
                   <span data-i18n="women.btn">Marcar consulta de Saúde Feminina</span>
                 </a>
-                <span class="text-xs font-semibold text-rose-200/90 flex items-center gap-1.5">
-                  <span class="material-symbols-outlined text-[16px] text-rose-300">schedule</span>
+                <span class="text-xs font-semibold text-rose-100/95 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-[16px] text-rose-100">schedule</span>
                   <span data-i18n="women.schedule">Consultas presenciais ou online · Primeira consulta de 1 hora.</span>
                 </span>
               </div>
@@ -901,8 +964,8 @@
 
             <!-- Imagem Natural e Elegante da Especialidade -->
             <div class="lg:col-span-5 flex justify-center">
-              <div class="relative w-full aspect-square max-w-[380px] rounded-3xl overflow-hidden shadow-2xl border-4 border-rose-300/30 bg-white group/img hover:border-rose-400/60 transition-all duration-500">
-                <div class="absolute -inset-4 bg-gradient-to-tr from-rose-500/20 to-brand-green/15 rounded-[2.5rem] blur-2xl -z-10 pointer-events-none"></div>
+              <div class="relative w-full aspect-square max-w-[380px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/35 bg-white group/img hover:border-white/60 transition-all duration-500">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-white/20 to-brand-green/20 rounded-[2.5rem] blur-2xl -z-10 pointer-events-none"></div>
                 <img src="./Video_%20Imagens/3.jpg" alt="Acolhimento de Saúde Feminina na VCura Terapias" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700" />
               </div>
             </div>
@@ -1066,51 +1129,62 @@
 
         <!-- 4 Etapas Ligadas: Linha horizontal no desktop, sequência vertical no telemóvel -->
         <div class="relative mb-14">
-          <!-- Linha conetora horizontal (Desktop) com degradê esmeralda -->
-          <div class="hidden lg:block absolute top-10 left-[12%] right-[12%] h-[2px] bg-gradient-to-r from-emerald-500/20 via-brand-green to-emerald-500/20 z-0"></div>
+          <!-- Linha conetora horizontal (Desktop) com rasto de progresso dinâmico -->
+          <div class="hidden lg:block absolute top-[64px] left-[12%] right-[12%] h-[3px] bg-white/10 z-0 rounded-full overflow-hidden pointer-events-none">
+            <div id="timelineProgressDesktop" class="h-full bg-gradient-to-r from-brand-green via-emerald-400 to-emerald-300 shadow-[0_0_15px_rgba(55,168,23,0.95)] transition-all duration-200 w-0"></div>
+          </div>
+
+          <!-- Linha conetora vertical (Mobile / Tablet) com rasto de progresso dinâmico -->
+          <div class="block lg:hidden absolute top-[64px] bottom-24 left-1/2 -translate-x-1/2 w-[3px] bg-white/10 z-0 rounded-full overflow-hidden pointer-events-none">
+            <div id="timelineProgressMobile" class="w-full bg-gradient-to-b from-brand-green via-emerald-400 to-emerald-300 shadow-[0_0_15px_rgba(55,168,23,0.95)] transition-all duration-200 h-0"></div>
+          </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10 v-stagger-group">
             
             <!-- Etapa 1 — Fale connosco -->
-            <div class="flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-300 transform hover:-translate-y-1.5 shadow-subtle">
-              <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300">
+            <div class="v-timeline-step flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-500 transform hover:-translate-y-1.5 shadow-subtle relative z-10" data-timeline-step="1">
+              <div class="timeline-badge w-20 h-20 rounded-full bg-[#0a1e14] backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300 relative">
+                <span class="timeline-halo absolute inset-0 rounded-full bg-emerald-400/30 -z-10 transition-all duration-500 opacity-0 scale-95 pointer-events-none"></span>
                 <span class="font-serif text-xl font-bold">01</span>
               </div>
-              <h4 class="font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step1_title">Fale connosco</h4>
-              <p class="text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step1_desc">
+              <h4 class="timeline-title font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step1_title">Fale connosco</h4>
+              <p class="timeline-desc text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step1_desc">
                 Envie mensagem e indicamos a consulta mais adequada para si.
               </p>
             </div>
 
             <!-- Etapa 2 — Avaliação -->
-            <div class="flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-300 transform hover:-translate-y-1.5 shadow-subtle">
-              <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300">
+            <div class="v-timeline-step flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-500 transform hover:-translate-y-1.5 shadow-subtle relative z-10" data-timeline-step="2">
+              <div class="timeline-badge w-20 h-20 rounded-full bg-[#0a1e14] backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300 relative">
+                <span class="timeline-halo absolute inset-0 rounded-full bg-emerald-400/30 -z-10 transition-all duration-500 opacity-0 scale-95 pointer-events-none"></span>
                 <span class="font-serif text-xl font-bold">02</span>
               </div>
-              <h4 class="font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step2_title">Avaliação</h4>
-              <p class="text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step2_desc">
+              <h4 class="timeline-title font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step2_title">Avaliação</h4>
+              <p class="timeline-desc text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step2_desc">
                 Conhecemos a sua história, sintomas e necessidades.
               </p>
             </div>
 
             <!-- Etapa 3 — Personalização -->
-            <div class="flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-300 transform hover:-translate-y-1.5 shadow-subtle">
-              <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300">
+            <div class="v-timeline-step flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-500 transform hover:-translate-y-1.5 shadow-subtle relative z-10" data-timeline-step="3">
+              <div class="timeline-badge w-20 h-20 rounded-full bg-[#0a1e14] backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300 relative">
+                <span class="timeline-halo absolute inset-0 rounded-full bg-emerald-400/30 -z-10 transition-all duration-500 opacity-0 scale-95 pointer-events-none"></span>
                 <span class="font-serif text-xl font-bold">03</span>
               </div>
-              <h4 class="font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step3_title">Personalização</h4>
-              <p class="text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step3_desc">
+              <h4 class="timeline-title font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step3_title">Personalização</h4>
+              <p class="timeline-desc text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step3_desc">
                 Definimos a abordagem mais adequada ao seu caso.
               </p>
             </div>
 
             <!-- Etapa 4 — Acompanhamento -->
-            <div class="flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-300 transform hover:-translate-y-1.5 shadow-subtle">
-              <div class="w-20 h-20 rounded-full bg-white/10 backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300">
+            <div class="v-timeline-step flex flex-col items-center text-center group glass-dark p-6 rounded-3xl border border-white/10 hover:border-emerald-400/50 transition-all duration-500 transform hover:-translate-y-1.5 shadow-subtle relative z-10" data-timeline-step="4">
+              <div class="timeline-badge w-20 h-20 rounded-full bg-[#0a1e14] backdrop-blur-md border-2 border-emerald-400/40 flex items-center justify-center text-emerald-300 shadow-[0_0_25px_rgba(55,168,23,0.3)] mb-5 group-hover:scale-110 group-hover:bg-brand-green group-hover:text-white group-hover:border-emerald-300 transition-all duration-300 relative">
+                <span class="timeline-halo absolute inset-0 rounded-full bg-emerald-400/30 -z-10 transition-all duration-500 opacity-0 scale-95 pointer-events-none"></span>
                 <span class="font-serif text-xl font-bold">04</span>
               </div>
-              <h4 class="font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step4_title">Acompanhamento</h4>
-              <p class="text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step4_desc">
+              <h4 class="timeline-title font-serif text-lg font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors" data-i18n="approach.step4_title">Acompanhamento</h4>
+              <p class="timeline-desc text-sm text-emerald-100/75 leading-relaxed font-light" data-i18n="approach.step4_desc">
                 Monitorizamos e ajustamos a sua evolução sempre que necessário.
               </p>
             </div>
@@ -2442,6 +2516,99 @@
             el.classList.remove('v-in-view');
           }
         });
+
+        // Controlo da Linha do Tempo Dinâmica (O Seu Percurso na VCura: 01, 02, 03, 04)
+        // Ao descer: quando passa no meio da tela (visão do telemóvel), acende verde sozinho um a um
+        // Ao subir: vai apagando o de baixo e acendendo o de cima
+        (function updateTimeline() {
+          const steps = document.querySelectorAll('.v-timeline-step');
+          if (!steps.length) return;
+
+          const isDesktop = window.innerWidth >= 1024;
+          const triggerY = windowHeight * 0.52; // Ponto focal central no ângulo de visão
+          const progMobile = document.getElementById('timelineProgressMobile');
+          const progDesktop = document.getElementById('timelineProgressDesktop');
+
+          if (!isDesktop) {
+            // MODO TELEMÓVEL & TABLET (Linha vertical sequencial)
+            let lastActiveIdx = -1;
+            let firstCenterY = null;
+            let lastCenterY = null;
+
+            steps.forEach((step, idx) => {
+              const badge = step.querySelector('.timeline-badge') || step;
+              const bRect = badge.getBoundingClientRect();
+              const centerY = bRect.top + bRect.height / 2;
+
+              if (idx === 0) firstCenterY = centerY;
+              if (idx === steps.length - 1) lastCenterY = centerY;
+
+              if (centerY <= triggerY) {
+                step.classList.add('timeline-active');
+                lastActiveIdx = idx;
+              } else {
+                step.classList.remove('timeline-active');
+                step.classList.remove('timeline-focal');
+              }
+            });
+
+            // Adiciona halo pulsante ao passo que está no foco atual
+            steps.forEach((step, idx) => {
+              if (idx === lastActiveIdx) {
+                step.classList.add('timeline-focal');
+              } else {
+                step.classList.remove('timeline-focal');
+              }
+            });
+
+            // Atualiza linha conetora vertical
+            if (progMobile && firstCenterY !== null && lastCenterY !== null) {
+              if (triggerY < firstCenterY) {
+                progMobile.style.height = '0%';
+              } else if (triggerY >= lastCenterY) {
+                progMobile.style.height = '100%';
+              } else {
+                const pct = Math.max(0, Math.min(100, ((triggerY - firstCenterY) / (lastCenterY - firstCenterY)) * 100));
+                progMobile.style.height = pct + '%';
+              }
+            }
+          } else {
+            // MODO DESKTOP (Horizontal sequencial com preenchimento da linha)
+            const firstStep = steps[0];
+            const sRect = firstStep.getBoundingClientRect();
+            const startTrigger = triggerY + 60;
+
+            if (sRect.top <= startTrigger) {
+              const span = Math.max(120, sRect.height * 0.85);
+              const progress = Math.max(0, Math.min(1, (startTrigger - sRect.top) / span));
+
+              if (progDesktop) progDesktop.style.width = (progress * 100) + '%';
+
+              const thresholds = [0.05, 0.32, 0.62, 0.88];
+              let activeCount = -1;
+              steps.forEach((step, idx) => {
+                if (progress >= thresholds[idx]) {
+                  step.classList.add('timeline-active');
+                  activeCount = idx;
+                } else {
+                  step.classList.remove('timeline-active');
+                  step.classList.remove('timeline-focal');
+                }
+              });
+
+              steps.forEach((step, idx) => {
+                if (idx === activeCount) {
+                  step.classList.add('timeline-focal');
+                } else {
+                  step.classList.remove('timeline-focal');
+                }
+              });
+            } else {
+              steps.forEach(step => step.classList.remove('timeline-active', 'timeline-focal'));
+              if (progDesktop) progDesktop.style.width = '0%';
+            }
+          }
+        })();
 
         isTicking = false;
       }

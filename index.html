@@ -292,6 +292,36 @@
       animation: pulseGlow 4s ease-in-out infinite;
     }
 
+    /* ========================================================================= */
+    /* FAIXA EM DEGRADÊ ESMERALDA DINÂMICO & ROLL LATERAL INFINITO DE LOGOS      */
+    /* ========================================================================= */
+    @keyframes emeraldGradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .bg-emerald-flowing-gradient {
+      background: linear-gradient(120deg, #062b16 0%, #0f5132 25%, #198754 50%, #10b981 75%, #052c17 100%);
+      background-size: 260% 260%;
+      animation: emeraldGradientShift 9s ease infinite;
+    }
+
+    @keyframes logoMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-marquee-infinite {
+      display: flex;
+      width: max-content;
+      animation: logoMarquee 26s linear infinite;
+    }
+
+    .animate-marquee-infinite:hover {
+      animation-play-state: paused;
+    }
+
   </style>
 </head>
 <body class="bg-white text-brand-text flex flex-col min-h-screen">
@@ -1479,67 +1509,92 @@
           </p>
         </div>
 
-        <!-- Duas Áreas Distintas Obrigatórias -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 max-w-5xl mx-auto v-stagger-group">
-          
-          <!-- Área 1: Seguros e entidades -->
-          <div class="p-8 rounded-3xl bg-brand-green-soft/50 border border-brand-green-soft hover:shadow-card transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-blue shadow-xs">
-                <span class="material-symbols-outlined text-[24px]">health_and_safety</span>
-              </div>
-              <h3 class="font-serif text-xl font-bold text-brand-text" data-i18n="protocols.insurances_title">Seguros e entidades</h3>
-            </div>
+        <!-- Faixa em Degradê Esmeralda com Efeito Dinâmico de Cores & Roll Lateral Infinito de Logos -->
+        <div class="max-w-6xl mx-auto mb-12 v-reveal-scale">
+          <div class="relative rounded-3xl p-6 sm:p-8 bg-emerald-flowing-gradient shadow-[0_16px_40px_-10px_rgba(15,81,50,0.5),0_0_30px_rgba(16,185,129,0.25)] border border-emerald-400/30 overflow-hidden">
             
-            <div class="grid grid-cols-3 gap-3 mb-4">
-              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center hover:-translate-y-1 transition-transform">
-                <span class="font-serif text-base font-bold text-brand-green-dark">Multicare</span>
-                <span class="text-[11px] text-brand-text/60 mt-0.5" data-i18n="protocols.multicare_sub">Seguros de Saúde</span>
-              </div>
-              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center hover:-translate-y-1 transition-transform">
-                <span class="font-serif text-base font-bold text-brand-green-dark">Medicare</span>
-                <span class="text-[11px] text-brand-text/60 mt-0.5" data-i18n="protocols.medicare_sub">Plano de Saúde</span>
-              </div>
-              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center hover:-translate-y-1 transition-transform">
-                <span class="font-serif text-base font-bold text-brand-green-dark">Misericórdia</span>
-                <span class="text-[11px] text-brand-text/60 mt-0.5" data-i18n="protocols.scml_sub">Misericórdia Saúde</span>
-              </div>
-            </div>
-            <p class="text-xs text-brand-text/70 italic text-center" data-i18n="protocols.insurances_note">
-              Apresente o seu cartão de beneficiário para confirmação direta das condições acordadas.
-            </p>
-          </div>
+            <!-- Brilhos sutis decorativos na faixa -->
+            <div class="absolute -top-12 -left-12 w-48 h-48 bg-emerald-400/20 rounded-full blur-2xl pointer-events-none"></div>
+            <div class="absolute -bottom-12 -right-12 w-48 h-48 bg-emerald-300/20 rounded-full blur-2xl pointer-events-none"></div>
 
-          <!-- Área 2: Parceiros -->
-          <div class="p-8 rounded-3xl bg-brand-green-soft/50 border border-brand-green-soft hover:shadow-card transition-all duration-300">
-            <div class="flex items-center gap-3 mb-6">
-              <div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-green-dark shadow-xs">
-                <span class="material-symbols-outlined text-[24px]">corporate_fare</span>
-              </div>
-              <h3 class="font-serif text-xl font-bold text-brand-text" data-i18n="protocols.partners_title">Parceiros</h3>
+            <!-- Legenda da Faixa -->
+            <div class="text-center mb-6 relative z-10">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-emerald-100 text-xs font-semibold uppercase tracking-wider shadow-xs">
+                <span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span>
+                <span>Entidades, Seguros &amp; Parceiros Convencionados</span>
+              </span>
             </div>
-            
-            <div class="grid grid-cols-2 gap-4 mb-4">
-              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center hover:-translate-y-1 transition-transform">
-                <span class="font-serif text-base font-bold text-brand-text">Leroy Merlin</span>
-                <span class="text-[11px] text-brand-text/60 mt-0.5" data-i18n="protocols.partner1_sub">Protocolo Institucional</span>
-              </div>
-              <div class="p-4 rounded-2xl bg-white border border-brand-gray text-center shadow-xs flex flex-col items-center justify-center hover:-translate-y-1 transition-transform">
-                <span class="font-serif text-base font-bold text-brand-text">Banco Atlântico Europa</span>
-                <span class="text-[11px] text-brand-text/60 mt-0.5" data-i18n="protocols.partner2_sub">Protocolo Institucional</span>
-              </div>
-            </div>
-            <p class="text-xs text-brand-text/70 italic text-center" data-i18n="protocols.partners_note">
-              Condições aplicáveis a colaboradores e respetivos agregados familiares diretos.
-            </p>
-          </div>
 
+            <!-- Container do Roll Lateral Infinito (Marquee com degradê nas bordas para fade suave) -->
+            <div class="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)] py-2">
+              <div class="animate-marquee-infinite items-center gap-6 sm:gap-8">
+                
+                <!-- Conjunto 1 de Logos com bolinhas separadoras -->
+                <div class="flex items-center gap-6 sm:gap-8 shrink-0">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/1.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/2.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/3.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/4.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/5.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+                </div>
+
+                <!-- Conjunto 2 duplicado exato para emenda contínua 100% perfeita no loop -->
+                <div class="flex items-center gap-6 sm:gap-8 shrink-0" aria-hidden="true">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/1.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/2.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/3.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/4.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-300/80 shadow-[0_0_8px_rgba(167,243,208,0.9)] shrink-0"></span>
+                  <div class="h-16 sm:h-20 px-6 sm:px-8 py-3 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-white/60 flex items-center justify-center hover:scale-105 transition-transform duration-300 shrink-0">
+                    <img src="./logo_empresas/5.png" alt="Parceiro VCura" class="h-full w-auto max-h-12 sm:max-h-14 object-contain" />
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Botão Obrigatório -->
+        <!-- Botão Obrigatório em Degradê Esmeralda puxando para Verde Claro -->
         <div class="text-center v-reveal-up">
-          <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20as%20condi%C3%A7%C3%B5es%20do%20meu%20acordo%20ou%20seguro%20de%20sa%C3%BAde." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-sm hover:bg-brand-green-dark transition-all hover:scale-105">
-            <span class="material-symbols-outlined text-[18px]">verified</span>
+          <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20confirmar%20as%20condi%C3%A7%C3%B5es%20do%20meu%20acordo%20ou%20seguro%20de%20sa%C3%BAde." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-8 sm:px-10 py-4 rounded-full bg-gradient-to-r from-emerald-600 via-brand-green to-emerald-400 hover:from-emerald-500 hover:via-brand-green hover:to-emerald-300 text-white font-semibold text-sm sm:text-base shadow-[0_6px_22px_rgba(16,185,129,0.38)] hover:shadow-[0_10px_30px_rgba(16,185,129,0.55)] transition-all duration-300 transform hover:-translate-y-0.5 hover:scale-[1.02]">
+            <span class="material-symbols-outlined text-[20px]">verified</span>
             <span data-i18n="protocols.btn">Confirmar as condições do meu acordo</span>
           </a>
         </div>

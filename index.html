@@ -1377,7 +1377,7 @@
             </div>
 
             <!-- Biografia Obrigatória -->
-            <div class="space-y-4 text-base text-brand-text/85 leading-relaxed mb-8">
+            <div class="space-y-4 text-base text-brand-text/85 leading-relaxed mb-6">
               <p data-i18n="about.p1">
                 Com experiência clínica internacional e estágios hospitalares na China, em Luzhou e Sanya, e no Brasil, em São Paulo, Elisabete Monteiro lidera uma equipa de terapeutas que une diferentes abordagens para cuidar de cada pessoa de forma única, integrativa e humana.
               </p>
@@ -1386,7 +1386,21 @@
               </p>
             </div>
 
-            <!-- Ações e Credenciais -->
+            <!-- Fotografia Oficial da Fundadora (Aparece aqui no Telemóvel / Tablet: logo após o texto da biografia) -->
+            <div class="lg:hidden flex justify-center my-6">
+              <div class="relative w-full max-w-[380px] rounded-3xl overflow-hidden shadow-elevated border-4 border-white bg-white p-2 group">
+                <div class="absolute -inset-3 bg-gradient-to-tr from-brand-green/20 to-brand-blue/15 rounded-3xl blur-xl -z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                <div class="w-full aspect-[3/4] rounded-2xl overflow-hidden bg-brand-gray relative">
+                  <img src="./Video_%20Imagens/Imagens%20EM/Fotos%20EM%20Green%20Brand%20VCura.jpeg" alt="Elisabete Monteiro - Fundadora e Diretora Técnica da VCura Terapias" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" />
+                </div>
+                <div class="p-4 text-center">
+                  <span class="font-serif text-base font-bold text-brand-text block" data-i18n="about.name">Elisabete Monteiro</span>
+                  <span class="text-xs text-brand-green-dark font-medium" data-i18n-html="about.photo_badge">Fundadora &amp; Diretora Técnica • Cédula C-006284</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ações e Credenciais (Ficam após a imagem no telemóvel e abaixo do texto no desktop) -->
             <div class="flex flex-wrap items-center gap-4">
               <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20com%20a%20Dra.%20Elisabete%20Monteiro." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-brand-green text-white font-semibold text-sm shadow-card hover:bg-brand-green-dark transition-all hover:scale-105">
                 <span class="material-symbols-outlined text-[18px]">calendar_today</span>
@@ -1400,8 +1414,8 @@
 
           </div>
 
-          <!-- Coluna Direita: Fotografia Profissional Oficial da Fundadora -->
-          <div class="lg:col-span-5 flex justify-center v-reveal-right">
+          <!-- Coluna Direita (Visível apenas em Desktop lg: 1024px+) -->
+          <div class="hidden lg:flex lg:col-span-5 justify-center v-reveal-right">
             <div class="relative w-full max-w-[420px] rounded-3xl overflow-hidden shadow-elevated border-4 border-white bg-white p-2 group">
               <!-- Brilho ambiental sutil -->
               <div class="absolute -inset-3 bg-gradient-to-tr from-brand-green/20 to-brand-blue/15 rounded-3xl blur-xl -z-10 opacity-70 group-hover:opacity-100 transition-opacity"></div>

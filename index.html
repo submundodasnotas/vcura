@@ -1812,30 +1812,81 @@
           </div>
         </div>
 
-        <!-- Galeria de Eventos Obrigatória -->
-        <div>
-          <div class="flex items-center justify-between mb-6 v-reveal-up">
+        <!-- Galeria de Eventos — Carrossel Interativo com Autoplay a cada 2s e Scroll Manual/Touch -->
+        <div class="v-reveal-up">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
             <div>
               <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1" data-i18n="workshops.gallery_tag">Momentos de Partilha</span>
               <h3 class="font-serif text-2xl font-bold text-brand-text" data-i18n="workshops.gallery_title">Galeria de eventos</h3>
             </div>
-            <span class="text-xs text-brand-text/60" data-i18n="workshops.gallery_sub">Registos de workshops e encontros na clínica</span>
+            
+            <!-- Controles do Carrossel (Desktop e Mobile) -->
+            <div class="flex items-center gap-3">
+              <span class="text-xs text-brand-text/60 hidden md:inline-block" data-i18n="workshops.gallery_sub">Registos de workshops e encontros na clínica</span>
+              <div class="flex items-center gap-2">
+                <button type="button" id="events-carousel-prev" aria-label="Imagem anterior" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray/80 shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                  <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                </button>
+                <button type="button" id="events-carousel-next" aria-label="Próxima imagem" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray/80 shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                  <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 v-stagger-group">
-            
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer hover:-translate-y-1.5 transition-all" onclick="openLightbox('./WhatsApp%20Image%202025-02-22%20at%2019.31.16.jpeg', 'Workshop presencial na sala de formações da VCura Terapias')">
-              <img src="./WhatsApp%20Image%202025-02-22%20at%2019.31.16.jpeg" alt="Workshop e partilha em grupo na VCura Terapias" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          <!-- Trilho do Carrossel (com peek para mostrar que há mais fotos) -->
+          <div class="relative group">
+            <div id="events-carousel" class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-4 pt-1 px-1 cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+              
+              <!-- Slide 1 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/1.jpeg', 'Momento de partilha e workshop na VCura Terapias')">
+                <img src="./Video_%20Imagens/galeria-carrosel/1.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 1" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/2.jpeg', 'Formação e prática terapêutica na VCura')">
+                <img src="./Video_%20Imagens/galeria-carrosel/2.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 2" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/3.jpeg', 'Encontro e dinâmicas de grupo na VCura')">
+                <img src="./Video_%20Imagens/galeria-carrosel/3.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 3" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/4.jpeg', 'Acolhimento e vivências na VCura Terapias')">
+                <img src="./Video_%20Imagens/galeria-carrosel/4.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 4" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
             </div>
 
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer hover:-translate-y-1.5 transition-all" onclick="openLightbox('./Video_%20Imagens/1.jpg', 'Sala de formações e workshops equipada com cadeiras com prancheta')">
-              <img src="./Video_%20Imagens/1.jpg" alt="Sala de Formações VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <!-- Indicadores / Bolinhas de Navegação -->
+            <div id="events-carousel-dots" class="flex items-center justify-center gap-2 mt-4">
+              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 4"></button>
             </div>
-
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer hover:-translate-y-1.5 transition-all" onclick="openLightbox('./Video_%20Imagens/17.jpg', 'Espaço de formação e dinâmicas na VCura')">
-              <img src="./Video_%20Imagens/17.jpg" alt="Sala de Dinâmicas de Grupo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </div>
-
           </div>
         </div>
 
@@ -2527,6 +2578,163 @@
       }
       openModal('modal-flyer');
     }
+
+    // 4. Carrossel de Galeria de Eventos (Autoplay 2s, navegação manual e touch)
+    (function initEventsCarousel() {
+      const carousel = document.getElementById('events-carousel');
+      const prevBtn = document.getElementById('events-carousel-prev');
+      const nextBtn = document.getElementById('events-carousel-next');
+      const dotsContainer = document.getElementById('events-carousel-dots');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.events-slide');
+      const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+      let currentIndex = 0;
+      let autoPlayTimer = null;
+      let isPaused = false;
+
+      function getScrollStep() {
+        if (!slides.length) return 300;
+        const firstSlide = slides[0];
+        const gap = parseInt(window.getComputedStyle(carousel).gap || '16', 10) || 16;
+        return firstSlide.offsetWidth + gap;
+      }
+
+      function updateDots(index) {
+        dots.forEach((dot, idx) => {
+          if (idx === index) {
+            dot.classList.add('bg-brand-green', 'w-6');
+            dot.classList.remove('bg-brand-gray', 'w-2.5');
+          } else {
+            dot.classList.remove('bg-brand-green', 'w-6');
+            dot.classList.add('bg-brand-gray', 'w-2.5');
+          }
+        });
+      }
+
+      function scrollToIndex(index) {
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+        currentIndex = index;
+        const step = getScrollStep();
+        carousel.scrollTo({
+          left: currentIndex * step,
+          behavior: 'smooth'
+        });
+        updateDots(currentIndex);
+      }
+
+      function nextSlide() {
+        let nextIndex = currentIndex + 1;
+        if (nextIndex >= slides.length) {
+          nextIndex = 0;
+        }
+        scrollToIndex(nextIndex);
+      }
+
+      function prevSlide() {
+        let prevIndex = currentIndex - 1;
+        if (prevIndex < 0) {
+          prevIndex = slides.length - 1;
+        }
+        scrollToIndex(prevIndex);
+      }
+
+      // Autoplay a cada 2 segundos (2000ms)
+      function startAutoplay() {
+        stopAutoplay();
+        autoPlayTimer = setInterval(() => {
+          if (!isPaused) {
+            nextSlide();
+          }
+        }, 2000);
+      }
+
+      function stopAutoplay() {
+        if (autoPlayTimer) {
+          clearInterval(autoPlayTimer);
+          autoPlayTimer = null;
+        }
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          nextSlide();
+          startAutoplay(); // reinicia o timer ao clicar
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          prevSlide();
+          startAutoplay();
+        });
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          scrollToIndex(idx);
+          startAutoplay();
+        });
+      });
+
+      // Pausar autoplay ao passar o mouse ou segurar o toque
+      carousel.addEventListener('mouseenter', () => { isPaused = true; });
+      carousel.addEventListener('mouseleave', () => { isPaused = false; });
+      carousel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+      carousel.addEventListener('touchend', () => {
+        isPaused = false;
+        startAutoplay();
+      }, { passive: true });
+
+      // Sincronizar índice quando o usuário rolar manualmente
+      let scrollTimeout;
+      carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const step = getScrollStep();
+          if (step > 0) {
+            const calculated = Math.round(carousel.scrollLeft / step);
+            if (calculated >= 0 && calculated < slides.length) {
+              currentIndex = calculated;
+              updateDots(currentIndex);
+            }
+          }
+        }, 80);
+      }, { passive: true });
+
+      // Suporte para arrastar com o mouse no computador (drag to scroll)
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isPaused = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isDown) {
+          isDown = false;
+          isPaused = false;
+          startAutoplay();
+        }
+      });
+
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      // Iniciar
+      updateDots(0);
+      startAutoplay();
+    })();
 
     // Fechar modais ao carregar na tecla ESC ou fora do conteúdo
     window.addEventListener('keydown', (e) => {

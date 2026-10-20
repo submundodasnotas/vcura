@@ -37,7 +37,8 @@
           },
           fontFamily: {
             serif: ['"Noto Serif"', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            gabriola: ['Gabriola', 'Georgia', '"Noto Serif"', 'serif']
           },
           boxShadow: {
             'subtle': '0 4px 20px -2px rgba(33, 109, 37, 0.06)',
@@ -65,6 +66,10 @@
       font-family: 'Plus Jakarta Sans', sans-serif;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+    }
+    /* Tipografia de Marca VCura (Microsoft Gabriola) */
+    .font-gabriola {
+      font-family: 'Gabriola', 'Georgia', 'Noto Serif', serif !important;
     }
     /* Estilo de seleção de texto nas cores da marca */
     ::selection {
@@ -363,7 +368,7 @@
   <!-- ========================================================================= -->
   <!-- 2. BARRA DE UTILIDADE SUPERIOR (IDIOMAS & CONTACTO RÁPIDO) -->
   <!-- ========================================================================= -->
-  <aside class="bg-[#07170E] text-white/90 text-xs border-b border-brand-green/20 py-2 px-3 sm:px-6 relative z-50">
+  <aside class="bg-[#07170E] text-white/90 text-xs border-b border-brand-green/20 py-2 px-3 sm:px-6 relative z-[60]">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
       
       <!-- Contacto Rápido Sem Quebra de Linha -->
@@ -386,36 +391,36 @@
           <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-white/70">expand_more</span>
         </button>
         
-        <div class="lang-dropdown-menu hidden absolute right-0 mt-1.5 w-44 sm:w-48 rounded-2xl bg-white shadow-elevated border border-brand-gray py-2 z-[80] text-brand-text text-xs focus:outline-none">
+        <div class="lang-dropdown-menu hidden absolute right-0 mt-1.5 w-48 sm:w-52 rounded-2xl bg-white shadow-elevated border border-brand-gray py-2 z-[90] text-brand-text text-xs focus:outline-none">
           <div class="px-3 py-1 text-[10px] font-bold text-brand-text/50 uppercase tracking-wider border-b border-brand-gray mb-1" data-i18n="lang.label">
             Idioma / Language
           </div>
           <button type="button" onclick="changeLanguage('pt', 'Portugal', '🇵🇹')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-base leading-none">🇵🇹</span>
-            <div class="flex flex-col">
+            <span class="text-lg leading-none shrink-0">🇵🇹</span>
+            <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">Português</span>
-              <span class="text-[10px] text-brand-text/60">Portugal</span>
+              <span class="text-[10px] text-brand-text/60 ml-2">Portugal</span>
             </div>
           </button>
           <button type="button" onclick="changeLanguage('en', 'Reino Unido', '🇬🇧')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-base leading-none">🇬🇧</span>
-            <div class="flex flex-col">
+            <span class="text-lg leading-none shrink-0">🇬🇧</span>
+            <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">English</span>
-              <span class="text-[10px] text-brand-text/60">Reino Unido</span>
+              <span class="text-[10px] text-brand-text/60 ml-2">UK</span>
             </div>
           </button>
           <button type="button" onclick="changeLanguage('fr', 'França', '🇫🇷')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-base leading-none">🇫🇷</span>
-            <div class="flex flex-col">
+            <span class="text-lg leading-none shrink-0">🇫🇷</span>
+            <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">Français</span>
-              <span class="text-[10px] text-brand-text/60">França</span>
+              <span class="text-[10px] text-brand-text/60 ml-2">France</span>
             </div>
           </button>
           <button type="button" onclick="changeLanguage('es', 'Espanha', '🇪🇸')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-base leading-none">🇪🇸</span>
-            <div class="flex flex-col">
+            <span class="text-lg leading-none shrink-0">🇪🇸</span>
+            <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">Español</span>
-              <span class="text-[10px] text-brand-text/60">Espanha</span>
+              <span class="text-[10px] text-brand-text/60 ml-2">España</span>
             </div>
           </button>
         </div>
@@ -434,7 +439,7 @@
       <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0" aria-label="VCura Terapias - Página Inicial">
         <img src="./Logo.png" alt="Logótipo Oficial VCura Terapias" class="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
         <div class="flex flex-col">
-          <span class="font-serif text-lg sm:text-2xl font-bold text-brand-green-dark tracking-tight leading-none whitespace-nowrap">VCura</span>
+          <span class="font-gabriola text-2xl sm:text-3xl font-bold text-brand-green-dark tracking-tight leading-none whitespace-nowrap">VCura</span>
           <span class="text-[9px] sm:text-[11px] font-semibold text-brand-green tracking-widest uppercase mt-0.5 whitespace-nowrap">Terapias • Lisboa</span>
         </div>
       </a>
@@ -2477,7 +2482,7 @@
           <div class="flex items-center gap-3 mb-4">
             <img src="./Logo.png" alt="VCura Terapias" class="h-10 w-auto object-contain" />
             <div class="flex flex-col">
-              <span class="font-serif text-xl font-bold text-brand-green-dark leading-none">VCura</span>
+              <span class="font-gabriola text-2xl sm:text-3xl font-bold text-brand-green-dark leading-none">VCura</span>
               <span class="text-[10px] font-semibold text-brand-green tracking-widest uppercase">Terapias • Lisboa</span>
             </div>
           </div>
@@ -2499,36 +2504,36 @@
                 <span class="material-symbols-outlined text-[16px] text-brand-green-dark">expand_less</span>
               </button>
               
-              <div class="lang-dropdown-menu hidden absolute left-0 bottom-full mb-2 w-48 rounded-2xl bg-white shadow-elevated border border-brand-gray py-2 z-[80] text-brand-text text-xs focus:outline-none">
+              <div class="lang-dropdown-menu hidden absolute left-0 bottom-full mb-2 w-48 sm:w-52 rounded-2xl bg-white shadow-elevated border border-brand-gray py-2 z-[90] text-brand-text text-xs focus:outline-none">
                 <div class="px-3 py-1 text-[10px] font-bold text-brand-text/50 uppercase tracking-wider border-b border-brand-gray mb-1">
                   Selecione o Idioma
                 </div>
                 <button type="button" onclick="changeLanguage('pt', 'Portugal', '🇵🇹')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-base leading-none">🇵🇹</span>
-                  <div class="flex flex-col">
-                    <span class="font-semibold text-brand-text">Português</span>
-                    <span class="text-[10px] text-brand-text/60">Portugal</span>
+                  <span class="text-lg leading-none shrink-0">🇵🇹</span>
+                  <div class="flex items-center justify-between w-full">
+                    <span class="font-semibold text-brand-text text-xs">Português</span>
+                    <span class="text-[10px] text-brand-text/60 ml-2">Portugal</span>
                   </div>
                 </button>
                 <button type="button" onclick="changeLanguage('en', 'Reino Unido', '🇬🇧')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-base leading-none">🇬🇧</span>
-                  <div class="flex flex-col">
-                    <span class="font-semibold text-brand-text">English</span>
-                    <span class="text-[10px] text-brand-text/60">Reino Unido</span>
+                  <span class="text-lg leading-none shrink-0">🇬🇧</span>
+                  <div class="flex items-center justify-between w-full">
+                    <span class="font-semibold text-brand-text text-xs">English</span>
+                    <span class="text-[10px] text-brand-text/60 ml-2">UK</span>
                   </div>
                 </button>
                 <button type="button" onclick="changeLanguage('fr', 'França', '🇫🇷')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-base leading-none">🇫🇷</span>
-                  <div class="flex flex-col">
-                    <span class="font-semibold text-brand-text">Français</span>
-                    <span class="text-[10px] text-brand-text/60">França</span>
+                  <span class="text-lg leading-none shrink-0">🇫🇷</span>
+                  <div class="flex items-center justify-between w-full">
+                    <span class="font-semibold text-brand-text text-xs">Français</span>
+                    <span class="text-[10px] text-brand-text/60 ml-2">France</span>
                   </div>
                 </button>
                 <button type="button" onclick="changeLanguage('es', 'Espanha', '🇪🇸')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-base leading-none">🇪🇸</span>
-                  <div class="flex flex-col">
-                    <span class="font-semibold text-brand-text">Español</span>
-                    <span class="text-[10px] text-brand-text/60">Espanha</span>
+                  <span class="text-lg leading-none shrink-0">🇪🇸</span>
+                  <div class="flex items-center justify-between w-full">
+                    <span class="font-semibold text-brand-text text-xs">Español</span>
+                    <span class="text-[10px] text-brand-text/60 ml-2">España</span>
                   </div>
                 </button>
               </div>

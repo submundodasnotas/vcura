@@ -253,9 +253,9 @@ window.VCURA_TRANSLATIONS = {
     "space.btn": "Marcar consulta",
 
     // Secção 14: Aluguer de Salas
-    "rooms.tag": "Comunidade de Saúde & Bem-Estar",
-    "rooms.title": "Um espaço para desenvolver a sua atividade",
-    "rooms.desc": "A VCura Terapias disponibiliza gabinetes clínicos e salas para terapeutas, psicólogos, nutricionistas, osteopatas e profissionais de saúde integrativa que procurem um ambiente acolhedor, profissional e com excelente localização na Alta de Lisboa.",
+    "rooms.tag": "Aluguer de Salas & Gabinetes Clínicos",
+    "rooms.title": "Aluguer de Salas para Desenvolver a Sua Atividade Clínica",
+    "rooms.desc": "A VCura Terapias disponibiliza o serviço de aluguer de salas e gabinetes clínicos totalmente equipados para terapeutas, psicólogos, nutricionistas, osteopatas e profissionais de saúde integrativa que procuram um espaço acolhedor, profissional e com excelente localização na Alta de Lisboa.",
     "rooms.check1": "Salas preparadas para consultas e terapias manuais",
     "rooms.check2": "Sala multiusos para workshops, cursos e palestras",
     "rooms.check3": "Zona de acolhimento e receção serena",
@@ -578,9 +578,9 @@ window.VCURA_TRANSLATIONS = {
     "space.btn": "Book appointment",
 
     // Section 14: Room Rental
-    "rooms.tag": "Health & Wellness Community",
-    "rooms.title": "A serene venue to grow your clinical practice",
-    "rooms.desc": "VCura Terapias provides fully equipped clinical rooms and a multipurpose hall for therapists, psychologists, nutritionists, osteopaths, and integrative practitioners seeking a warm, professional setting with convenient Lisbon access.",
+    "rooms.tag": "Clinical Room Rental & Spaces",
+    "rooms.title": "Clinical Room Rental to Grow Your Health Practice",
+    "rooms.desc": "VCura Terapias provides fully equipped clinical room rentals and a multipurpose room for therapists, psychologists, nutritionists, osteopaths, and integrative healthcare practitioners seeking a welcoming, professional space with an excellent location in Alta de Lisboa.",
     "rooms.check1": "Rooms furnished for clinical consultations & manual therapies",
     "rooms.check2": "Multipurpose room for workshops, courses, and lectures",
     "rooms.check3": "Serene waiting lounge and welcoming reception area",
@@ -903,9 +903,9 @@ window.VCURA_TRANSLATIONS = {
     "space.btn": "Prendre rendez-vous",
 
     // Section 14: Location de Salles
-    "rooms.tag": "Communauté Santé & Bien-Être",
-    "rooms.title": "Un cadre idéal pour développer votre activité",
-    "rooms.desc": "VCura Terapias met à disposition des cabinets de consultation et une salle polyvalente pour thérapeutes, psychologues, ostéopathes, nutritionnistes et praticiens de santé intégrative cherchant un cadre chaleureux et professionnel à Lisbonne.",
+    "rooms.tag": "Location de Salles & Cabinets Médicaux",
+    "rooms.title": "Location de Salles pour Développer Votre Activité Clinique",
+    "rooms.desc": "VCura Terapias propose la location de cabinets cliniques et d'une salle polyvalente entièrement équipés pour thérapeutes, psychologues, ostéopathes, nutritionnistes et praticiens de santé intégrative à la recherche d'un espace chaleureux et professionnel à Alta de Lisboa.",
     "rooms.check1": "Salles aménagées pour consultations et thérapies manuelles",
     "rooms.check2": "Salle polyvalente équipée pour ateliers, formations et cours",
     "rooms.check3": "Espace d'accueil et salon d'attente serein",
@@ -1228,9 +1228,9 @@ window.VCURA_TRANSLATIONS = {
     "space.btn": "Reservar cita",
 
     // Sección 14: Alquiler de Salas
-    "rooms.tag": "Comunidad de Salud y Bienestar",
-    "rooms.title": "Un entorno óptimo para ejercer su actividad",
-    "rooms.desc": "VCura Terapias pone salas de consulta y una sala multiusos a disposición de terapeutas, psicólogos, osteópatas, nutricionistas y profesionales integrativos que deseen un ambiente impecable y bien conectado en Lisboa.",
+    "rooms.tag": "Alquiler de Salas y Gabinetes Clínicos",
+    "rooms.title": "Alquiler de Salas para Desarrollar su Actividad Clínica",
+    "rooms.desc": "VCura Terapias pone a su disposición el servicio de alquiler de salas y gabinetes clínicos totalmente equipados para terapeutas, psicólogos, osteópatas, nutricionistas y profesionales integrativos que busquen un entorno cálido, profesional y con excelente ubicación en Alta de Lisboa.",
     "rooms.check1": "Salas acondicionadas para consultas y terapias manuales",
     "rooms.check2": "Sala multiusos equipada para talleres, cursos y charlas",
     "rooms.check3": "Zona de recepción y sala de espera serena",

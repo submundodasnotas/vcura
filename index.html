@@ -2199,21 +2199,21 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-14">
           
           <div class="lg:col-span-8 v-reveal-left">
-            <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block" data-i18n="rooms.tag">Comunidade de Saúde &amp; Bem-Estar</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block" data-i18n="rooms.tag">Aluguer de Salas &amp; Gabinetes Clínicos</span>
             <!-- Título Obrigatório -->
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-4" data-i18n="rooms.title">
-              Um espaço para desenvolver a sua atividade
+              Aluguer de Salas para Desenvolver a Sua Atividade Clínica
             </h2>
             
             <!-- Descrição fiel ao serviço oficial sem inventar preços ou condições não fornecidas -->
             <p class="text-base sm:text-lg text-brand-text/85 leading-relaxed mb-6" data-i18n="rooms.desc">
-              A VCura Terapias disponibiliza gabinetes clínicos e sala multiusos para terapeutas, psicólogos, nutricionistas, osteopatas e profissionais de saúde integrativa que procurem um ambiente acolhedor, profissional e com excelente localização na Alta de Lisboa.
+              A VCura Terapias disponibiliza o serviço de aluguer de salas e gabinetes clínicos totalmente equipados para terapeutas, psicólogos, nutricionistas, osteopatas e profissionais de saúde integrativa que procuram um espaço acolhedor, profissional e com excelente localização na Alta de Lisboa.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-brand-text/80 mb-8">
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-brand-green text-[18px]">check</span>
-                <span data-i18n="rooms.check1">Gabinetes preparados para consultas e terapias manuais</span>
+                <span data-i18n="rooms.check1">Salas preparadas para consultas e terapias manuais</span>
               </div>
               <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-brand-green text-[18px]">check</span>
@@ -2264,12 +2264,26 @@
           <h3 class="font-serif text-xl font-bold text-brand-text mb-6 v-reveal-up" data-i18n="rooms.gallery_title">Salas disponíveis para aluguer</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 v-stagger-group">
             
-            <!-- Sala 1: Sala Healing -->
+            <!-- Sala 1: Sala Healing com Carrossel Automático (Loop de 2 em 2s) -->
             <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group hover:-translate-y-1.5 transition-all">
-              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Sala Healing - Sala para consultas e terapias com marquesa e secretária')">
-                <img src="./Video_%20Imagens/2.jpg" alt="Sala Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark" data-i18n="space.photo3">
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer group/img">
+                <div class="room-carousel relative w-full h-full overflow-hidden" data-interval="2000">
+                  <div class="room-carousel-track flex w-full h-full transition-transform duration-700 ease-in-out">
+                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Sala Healing - Sala para consultas e terapias com marquesa e secretária')">
+                      <img src="./Video_%20Imagens/2.jpg" alt="Sala Healing - Vista 1" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                    <!-- Slot preparado para fotos adicionais -->
+                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('./Video_%20Imagens/7.jpg', 'Sala Healing - Perspetiva complementar')">
+                      <img src="./Video_%20Imagens/7.jpg" alt="Sala Healing - Vista 2" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark shadow-xs z-10 pointer-events-none" data-i18n="space.photo3">
                   Sala Healing
+                </span>
+                <span class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/60 backdrop-blur-sm text-white rounded-full text-[11px] font-medium flex items-center gap-1 z-10 pointer-events-none">
+                  <span class="material-symbols-outlined text-[13px]">view_carousel</span>
+                  <span class="room-carousel-counter">1/2</span>
                 </span>
               </div>
               <div class="p-5">
@@ -2280,12 +2294,26 @@
               </div>
             </div>
 
-            <!-- Sala 2: Sala Harmony -->
+            <!-- Sala 2: Sala Harmony com Carrossel Automático (Loop de 2 em 2s) -->
             <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group hover:-translate-y-1.5 transition-all">
-              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Sala Harmony - Sala acolhedora ideal para terapias manuais e acupuntura')">
-                <img src="./Video_%20Imagens/3.jpg" alt="Sala Harmony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark" data-i18n="space.photo2">
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer group/img">
+                <div class="room-carousel relative w-full h-full overflow-hidden" data-interval="2000">
+                  <div class="room-carousel-track flex w-full h-full transition-transform duration-700 ease-in-out">
+                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Sala Harmony - Sala acolhedora ideal para terapias manuais e acupuntura')">
+                      <img src="./Video_%20Imagens/3.jpg" alt="Sala Harmony - Vista 1" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                    <!-- Slot preparado para fotos adicionais -->
+                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('./Video_%20Imagens/0.jpg', 'Sala Harmony - Detalhe do espaço')">
+                      <img src="./Video_%20Imagens/0.jpg" alt="Sala Harmony - Vista 2" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark shadow-xs z-10 pointer-events-none" data-i18n="space.photo2">
                   Sala Harmony
+                </span>
+                <span class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/60 backdrop-blur-sm text-white rounded-full text-[11px] font-medium flex items-center gap-1 z-10 pointer-events-none">
+                  <span class="material-symbols-outlined text-[13px]">view_carousel</span>
+                  <span class="room-carousel-counter">1/2</span>
                 </span>
               </div>
               <div class="p-5">
@@ -2296,12 +2324,26 @@
               </div>
             </div>
 
-            <!-- Sala 3: Sala Multiusos & Formações -->
+            <!-- Sala 3: Sala Multiusos & Formações com Carrossel Automático (Loop de 2 em 2s) -->
             <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group hover:-translate-y-1.5 transition-all">
-              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/1.jpg', 'Sala Multiusos - Sala ampla para formações, workshops e cursos com cadeiras individuais')">
-                <img src="./Video_%20Imagens/1.jpg" alt="Sala Multiusos e Workshops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark" data-i18n="nav.rooms">
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer group/img">
+                <div class="room-carousel relative w-full h-full overflow-hidden" data-interval="2000">
+                  <div class="room-carousel-track flex w-full h-full transition-transform duration-700 ease-in-out">
+                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('./Video_%20Imagens/1.jpg', 'Sala Multiusos - Sala ampla para formações, workshops e cursos com cadeiras individuais')">
+                      <img src="./Video_%20Imagens/1.jpg" alt="Sala Multiusos e Workshops - Vista 1" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                    <!-- Slot preparado para fotos adicionais -->
+                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('./Video_%20Imagens/17.jpg', 'Sala Multiusos - Disposição para eventos e palestras')">
+                      <img src="./Video_%20Imagens/17.jpg" alt="Sala Multiusos e Workshops - Vista 2" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                  </div>
+                </div>
+                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark shadow-xs z-10 pointer-events-none" data-i18n="nav.rooms">
                   Sala Multiusos
+                </span>
+                <span class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/60 backdrop-blur-sm text-white rounded-full text-[11px] font-medium flex items-center gap-1 z-10 pointer-events-none">
+                  <span class="material-symbols-outlined text-[13px]">view_carousel</span>
+                  <span class="room-carousel-counter">1/2</span>
                 </span>
               </div>
               <div class="p-5">
@@ -3346,6 +3388,46 @@
 
       updateDots(0);
       startAutoplay();
+    })();
+
+    // 8. Carrossel Automático de Cada Sala Disponível (Loop a cada 2s)
+    (function initRoomCarousels() {
+      const roomCarousels = document.querySelectorAll('.room-carousel');
+      if (!roomCarousels.length) return;
+
+      roomCarousels.forEach(carousel => {
+        const track = carousel.querySelector('.room-carousel-track');
+        if (!track) return;
+        const slides = track.querySelectorAll('.room-carousel-slide');
+        if (slides.length <= 1) return;
+
+        const counter = carousel.parentElement.querySelector('.room-carousel-counter');
+        const interval = parseInt(carousel.getAttribute('data-interval') || '2000', 10);
+        let currentIndex = 0;
+        let isPaused = false;
+
+        function updateCounter() {
+          if (counter) {
+            counter.textContent = `${currentIndex + 1}/${slides.length}`;
+          }
+        }
+
+        function nextSlide() {
+          if (isPaused) return;
+          currentIndex = (currentIndex + 1) % slides.length;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          updateCounter();
+        }
+
+        let timer = setInterval(nextSlide, interval);
+
+        carousel.addEventListener('mouseenter', () => { isPaused = true; });
+        carousel.addEventListener('mouseleave', () => { isPaused = false; });
+        carousel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+        carousel.addEventListener('touchend', () => { isPaused = false; }, { passive: true });
+
+        updateCounter();
+      });
     })();
 
     // Fechar modais ao carregar na tecla ESC ou fora do conteúdo

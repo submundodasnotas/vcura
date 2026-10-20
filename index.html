@@ -1686,83 +1686,106 @@
 
         </div>
 
-        <!-- Workshops Presenciais e Online — Grelha de Temas Obrigatória -->
-        <div class="mb-16">
-          <div class="mb-6 v-reveal-up">
-            <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1" data-i18n="workshops.catalog_tag">Catálogo de Temáticas</span>
-            <h3 class="font-serif text-2xl font-bold text-brand-text" data-i18n="workshops.catalog_title">Workshops presenciais e online</h3>
+        <!-- Workshops Presenciais e Online — Carrossel de Temáticas Deslizável com Tom Verde Claro Leve -->
+        <div class="mb-16 v-reveal-up">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1" data-i18n="workshops.catalog_tag">Catálogo de Temáticas</span>
+              <h3 class="font-serif text-2xl font-bold text-brand-text" data-i18n="workshops.catalog_title">Workshops presenciais e online</h3>
+            </div>
+            <!-- Controles do Carrossel de Temas -->
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-brand-text/60 hidden sm:inline-block">Arraste para explorar</span>
+              <button type="button" id="topics-carousel-prev" aria-label="Tema anterior" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-green-soft shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+              </button>
+              <button type="button" id="topics-carousel-next" aria-label="Próximo tema" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-green-soft shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+              </button>
+            </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 v-stagger-group">
-            
-            <!-- Tema 1 -->
-            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle hover:shadow-card hover:-translate-y-1.5 transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
-                  <span class="material-symbols-outlined text-[20px]">psychology</span>
+          <!-- Trilho do Carrossel de Cards -->
+          <div class="relative group">
+            <div id="topics-carousel" class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-4 pt-1 px-1 cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+              
+              <!-- Tema 1: Fadiga Mental -->
+              <div class="topic-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[28%] p-6 rounded-3xl bg-gradient-to-b from-[#f2f9f3] to-[#e8f5ec] border border-[#cbe8d4] shadow-subtle hover:shadow-card hover:border-brand-green/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="w-11 h-11 rounded-2xl bg-white text-brand-green-dark shadow-xs flex items-center justify-center mb-4 border border-brand-green-soft">
+                    <span class="material-symbols-outlined text-[22px]">psychology</span>
+                  </div>
+                  <h4 class="font-serif text-lg font-bold text-brand-text mb-2" data-i18n="workshops.t1_title">Fadiga Mental</h4>
+                  <p class="text-xs sm:text-sm text-brand-text/75 leading-relaxed mb-6" data-i18n="workshops.t1_desc">
+                    Identificar, Compreender e Recuperar.
+                  </p>
                 </div>
-                <h4 class="font-serif text-base font-bold text-brand-text mb-2" data-i18n="workshops.t1_title">Fadiga Mental</h4>
-                <p class="text-xs text-brand-text/75 leading-relaxed mb-4" data-i18n="workshops.t1_desc">
-                  Identificar, Compreender e Recuperar.
-                </p>
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Fadiga%20Mental." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-[#cbe8d4]">
+                  <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
               </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Fadiga%20Mental." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
-                <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-              </a>
+
+              <!-- Tema 2: Stress Crónico -->
+              <div class="topic-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[28%] p-6 rounded-3xl bg-gradient-to-b from-[#f2f9f3] to-[#e8f5ec] border border-[#cbe8d4] shadow-subtle hover:shadow-card hover:border-brand-green/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="w-11 h-11 rounded-2xl bg-white text-brand-green-dark shadow-xs flex items-center justify-center mb-4 border border-brand-green-soft">
+                    <span class="material-symbols-outlined text-[22px]">bolt</span>
+                  </div>
+                  <h4 class="font-serif text-lg font-bold text-brand-text mb-2" data-i18n="workshops.t2_title">Stress Crónico</h4>
+                  <p class="text-xs sm:text-sm text-brand-text/75 leading-relaxed mb-6" data-i18n="workshops.t2_desc">
+                    Compreender, Prevenir e Intervir.
+                  </p>
+                </div>
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Stress%20Cr%C3%B3nico." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-[#cbe8d4]">
+                  <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+
+              <!-- Tema 3: Climatério & Menopausa -->
+              <div class="topic-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[28%] p-6 rounded-3xl bg-gradient-to-b from-[#f2f9f3] to-[#e8f5ec] border border-[#cbe8d4] shadow-subtle hover:shadow-card hover:border-brand-green/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="w-11 h-11 rounded-2xl bg-white text-brand-green-dark shadow-xs flex items-center justify-center mb-4 border border-brand-green-soft">
+                    <span class="material-symbols-outlined text-[22px]">nature_people</span>
+                  </div>
+                  <h4 class="font-serif text-lg font-bold text-brand-text mb-2" data-i18n="workshops.t3_title">Climatério &amp; Menopausa</h4>
+                  <p class="text-xs sm:text-sm text-brand-text/75 leading-relaxed mb-6" data-i18n="workshops.t3_desc">
+                    Do Sofrimento ao Florescimento.
+                  </p>
+                </div>
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Climat%C3%A9rio%20e%20Menopausa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-[#cbe8d4]">
+                  <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+
+              <!-- Tema 4: Alimentação Saudável -->
+              <div class="topic-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[28%] p-6 rounded-3xl bg-gradient-to-b from-[#f2f9f3] to-[#e8f5ec] border border-[#cbe8d4] shadow-subtle hover:shadow-card hover:border-brand-green/40 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+                <div>
+                  <div class="w-11 h-11 rounded-2xl bg-white text-brand-green-dark shadow-xs flex items-center justify-center mb-4 border border-brand-green-soft">
+                    <span class="material-symbols-outlined text-[22px]">nutrition</span>
+                  </div>
+                  <h4 class="font-serif text-base font-bold text-brand-text mb-2" data-i18n="workshops.t4_title">Alimentação Saudável</h4>
+                  <p class="text-xs sm:text-sm text-brand-text/75 leading-relaxed mb-6" data-i18n="workshops.t4_desc">
+                    Integrar a alimentação como pilar no seu estilo de vida com Dietoterapia Chinesa e Naturopatia.
+                  </p>
+                </div>
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Alimenta%C3%A7%C3%A3o%20Saud%C3%A1vel." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-[#cbe8d4]">
+                  <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
+                  <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+              </div>
+
             </div>
 
-            <!-- Tema 2 -->
-            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle hover:shadow-card hover:-translate-y-1.5 transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
-                  <span class="material-symbols-outlined text-[20px]">bolt</span>
-                </div>
-                <h4 class="font-serif text-base font-bold text-brand-text mb-2" data-i18n="workshops.t2_title">Stress Crónico</h4>
-                <p class="text-xs text-brand-text/75 leading-relaxed mb-4" data-i18n="workshops.t2_desc">
-                  Compreender, Prevenir e Intervir.
-                </p>
-              </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Stress%20Cr%C3%B3nico." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
-                <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-              </a>
+            <!-- Indicadores / Bolinhas de Navegação dos Temas -->
+            <div id="topics-carousel-dots" class="flex items-center justify-center gap-2 mt-4">
+              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Tema 1"></button>
+              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 2"></button>
+              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 3"></button>
+              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 4"></button>
             </div>
-
-            <!-- Tema 3 -->
-            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle hover:shadow-card hover:-translate-y-1.5 transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
-                  <span class="material-symbols-outlined text-[20px]">nature_people</span>
-                </div>
-                <h4 class="font-serif text-base font-bold text-brand-text mb-2" data-i18n="workshops.t3_title">Climatério &amp; Menopausa</h4>
-                <p class="text-xs text-brand-text/75 leading-relaxed mb-4" data-i18n="workshops.t3_desc">
-                  Do Sofrimento ao Florescimento.
-                </p>
-              </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Climat%C3%A9rio%20e%20Menopausa." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
-                <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-              </a>
-            </div>
-
-            <!-- Tema 4 -->
-            <div class="p-6 rounded-2xl bg-white border border-brand-gray shadow-subtle hover:shadow-card hover:-translate-y-1.5 transition-all flex flex-col justify-between">
-              <div>
-                <div class="w-10 h-10 rounded-xl bg-brand-green-soft flex items-center justify-center text-brand-green-dark mb-4">
-                  <span class="material-symbols-outlined text-[20px]">nutrition</span>
-                </div>
-                <h4 class="font-serif text-base font-bold text-brand-text mb-2" data-i18n="workshops.t4_title">Alimentação Saudável</h4>
-                <p class="text-xs text-brand-text/75 leading-relaxed mb-4" data-i18n="workshops.t4_desc">
-                  Integrar a alimentação como pilar no seu estilo de vida com Dietoterapia Chinesa e Naturopatia.
-                </p>
-              </div>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Alimenta%C3%A7%C3%A3o%20Saud%C3%A1vel." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-dark hover:text-brand-green pt-3 border-t border-brand-gray">
-                <span data-i18n="btn.info_inscriptions">Informações e inscrições</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-              </a>
-            </div>
-
           </div>
         </div>
 
@@ -1878,14 +1901,146 @@
                 </div>
               </div>
 
+              <!-- Slide 5 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/5.jpeg', 'Momentos de formação prática na VCura')">
+                <img src="./Video_%20Imagens/galeria-carrosel/5.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 5" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 6 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/6.jpeg', 'Aprendizagem e desenvolvimento pessoal')">
+                <img src="./Video_%20Imagens/galeria-carrosel/6.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 6" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 7 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/7.jpeg', 'Partilha de saberes em grupo')">
+                <img src="./Video_%20Imagens/galeria-carrosel/7.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 7" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 8 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/8.jpeg', 'Ambiente de tranquilidade e estudo')">
+                <img src="./Video_%20Imagens/galeria-carrosel/8.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 8" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 9 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/9.jpeg', 'Workshops e formações clínicas')">
+                <img src="./Video_%20Imagens/galeria-carrosel/9.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 9" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 10 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/10.jpeg', 'Encontros temáticos de saúde')">
+                <img src="./Video_%20Imagens/galeria-carrosel/10.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 10" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 11 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/11.jpeg', 'Técnicas e demonstrações práticas')">
+                <img src="./Video_%20Imagens/galeria-carrosel/11.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 11" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 12 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/12.jpeg', 'Vivência em grupo na clínica')">
+                <img src="./Video_%20Imagens/galeria-carrosel/12.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 12" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 13 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/13.jpeg', 'Formação com terapeutas e especialistas')">
+                <img src="./Video_%20Imagens/galeria-carrosel/13.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 13" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 14 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/14.jpeg', 'Dinâmicas interativas e desenvolvimento')">
+                <img src="./Video_%20Imagens/galeria-carrosel/14.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 14" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 15 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/15.jpeg', 'Convivência acolhedora e integrada')">
+                <img src="./Video_%20Imagens/galeria-carrosel/15.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 15" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
+              <!-- Slide 16 -->
+              <div class="events-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[32%] aspect-[4/3] rounded-3xl overflow-hidden shadow-card border border-brand-gray/80 bg-white group/item cursor-pointer hover:-translate-y-1.5 transition-all duration-300 relative" onclick="openLightbox('./Video_%20Imagens/galeria-carrosel/16.jpeg', 'Espaço de partilha e bem-estar')">
+                <img src="./Video_%20Imagens/galeria-carrosel/16.jpeg" alt="Workshop e formação na VCura Terapias - Imagem 16" class="w-full h-full object-cover group-hover/item:scale-105 transition-transform duration-500" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span class="text-white text-xs font-medium flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-[18px]">zoom_in</span> Ver ampliado
+                  </span>
+                </div>
+              </div>
+
             </div>
 
             <!-- Indicadores / Bolinhas de Navegação -->
-            <div id="events-carousel-dots" class="flex items-center justify-center gap-2 mt-4">
-              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Slide 1"></button>
-              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 2"></button>
-              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 3"></button>
-              <button type="button" class="carousel-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 4"></button>
+            <div id="events-carousel-dots" class="flex items-center justify-center gap-1.5 mt-4 flex-wrap max-w-md mx-auto">
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-green transition-all duration-300" aria-label="Slide 1"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 2"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 3"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 4"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 5"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 6"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 7"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 8"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 9"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 10"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 11"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 12"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 13"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 14"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 15"></button>
+              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 16"></button>
             </div>
           </div>
         </div>
@@ -2734,6 +2889,112 @@
       // Iniciar
       updateDots(0);
       startAutoplay();
+    })();
+
+    // 5. Carrossel de Temáticas de Workshops (Scroll suave, arrastar, botões e touch)
+    (function initTopicsCarousel() {
+      const carousel = document.getElementById('topics-carousel');
+      const prevBtn = document.getElementById('topics-carousel-prev');
+      const nextBtn = document.getElementById('topics-carousel-next');
+      const dotsContainer = document.getElementById('topics-carousel-dots');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.topic-slide');
+      const dots = dotsContainer ? dotsContainer.querySelectorAll('.topic-dot') : [];
+      let currentIndex = 0;
+
+      function getScrollStep() {
+        if (!slides.length) return 320;
+        const firstSlide = slides[0];
+        const gap = parseInt(window.getComputedStyle(carousel).gap || '16', 10) || 16;
+        return firstSlide.offsetWidth + gap;
+      }
+
+      function updateDots(index) {
+        dots.forEach((dot, idx) => {
+          if (idx === index) {
+            dot.classList.add('bg-brand-green', 'w-6');
+            dot.classList.remove('bg-brand-gray', 'w-2.5');
+          } else {
+            dot.classList.remove('bg-brand-green', 'w-6');
+            dot.classList.add('bg-brand-gray', 'w-2.5');
+          }
+        });
+      }
+
+      function scrollToIndex(index) {
+        if (index < 0) index = 0;
+        if (index >= slides.length) index = slides.length - 1;
+        currentIndex = index;
+        const step = getScrollStep();
+        carousel.scrollTo({
+          left: currentIndex * step,
+          behavior: 'smooth'
+        });
+        updateDots(currentIndex);
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          let next = currentIndex + 1;
+          if (next >= slides.length) next = 0;
+          scrollToIndex(next);
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          let prev = currentIndex - 1;
+          if (prev < 0) prev = slides.length - 1;
+          scrollToIndex(prev);
+        });
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          scrollToIndex(idx);
+        });
+      });
+
+      let scrollTimeout;
+      carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const step = getScrollStep();
+          if (step > 0) {
+            const calculated = Math.round(carousel.scrollLeft / step);
+            if (calculated >= 0 && calculated < slides.length) {
+              currentIndex = calculated;
+              updateDots(currentIndex);
+            }
+          }
+        }, 80);
+      }, { passive: true });
+
+      // Suporte para arrastar com o mouse no computador (drag to scroll)
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        isDown = false;
+      });
+
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      updateDots(0);
     })();
 
     // Fechar modais ao carregar na tecla ESC ou fora do conteúdo

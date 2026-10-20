@@ -1605,104 +1605,114 @@
           </p>
         </div>
 
-        <!-- Eventos em Destaque Obrigatórios (2 Colunas) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 v-stagger-group">
-          
-          <!-- Evento 1 em Destaque: Workshop Presencial - Menopausa Consciente -->
-          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-gray/80 shadow-card hover:shadow-elevated hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3.5 py-1 rounded-full bg-brand-green-soft text-brand-green-dark font-semibold text-xs" data-i18n="workshops.ev1_badge">
-                  Workshop Presencial em Destaque
-                </span>
+        <!-- Eventos em Destaque — Carrossel Interativo com Transição Suave e Setas Laterais -->
+        <div class="relative max-w-4xl mx-auto mb-16 v-reveal-up group">
+          <div id="events-cards-carousel" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-2 cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+            
+            <!-- Evento 1: Workshop Menopausa Consciente -->
+            <div class="event-card-slide snap-center shrink-0 w-full p-1">
+              <div class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-gray/80 shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group/card">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="px-3.5 py-1 rounded-full bg-brand-green-soft text-brand-green-dark font-semibold text-xs" data-i18n="workshops.ev1_badge">
+                      Workshop Presencial em Destaque
+                    </span>
+                    <span class="text-xs font-semibold text-brand-text/50">1 / 2</span>
+                  </div>
+
+                  <!-- Título Obrigatório -->
+                  <h3 class="font-serif text-2xl font-bold text-brand-text mb-4" data-i18n="workshops.ev1_title">
+                    Menopausa Consciente | Conhecer. Escolher. Cuidar.
+                  </h3>
+
+                  <!-- Cartaz Oficial do Workshop -->
+                  <div class="mb-5 rounded-2xl overflow-hidden border border-brand-gray/80 bg-brand-gray/20 shadow-sm flex items-center justify-center">
+                    <img src="./IMG_2869.PNG" alt="Cartaz Oficial — Workshop Menopausa Consciente" class="w-full h-auto max-h-[440px] object-contain rounded-xl group-hover/card:scale-[1.01] transition-transform duration-300" />
+                  </div>
+
+                  <!-- Descrição Obrigatória -->
+                  <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed mb-6" data-i18n="workshops.ev1_desc">
+                    Um encontro dirigido a mulheres que querem compreender melhor as transformações do climatério e da menopausa, conhecer diferentes possibilidades de cuidado e adquirir ferramentas para viver esta fase de forma mais consciente.
+                  </p>
+                </div>
+
+                <!-- Botões: Inscrição em Degradê Esmeralda & Saber mais -->
+                <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-brand-gray">
+                  <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20a%20minha%20inscri%C3%A7%C3%A3o%20no%20Workshop%20Menopausa%20Consciente." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_22px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02]">
+                    <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+                    <span data-i18n="btn.inscriptions">Inscrição</span>
+                  </a>
+                  <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Workshop%20Menopausa%20Consciente." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-brand-gray text-brand-text font-semibold text-sm hover:bg-brand-green-soft hover:text-brand-green-dark transition-all">
+                    <span data-i18n="btn.learn_more">Saber mais</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                </div>
               </div>
-
-              <!-- Título Obrigatório -->
-              <h3 class="font-serif text-2xl font-bold text-brand-text mb-4" data-i18n="workshops.ev1_title">
-                Menopausa Consciente | Conhecer. Escolher. Cuidar.
-              </h3>
-
-              <!-- Cartaz Oficial do Workshop (Substitui as informações de texto com imagem direta do evento) -->
-              <div class="mb-5 rounded-2xl overflow-hidden border border-brand-gray/80 bg-brand-gray/20 shadow-sm flex items-center justify-center">
-                <img src="./IMG_2869.PNG" alt="Cartaz Oficial — Workshop Menopausa Consciente" class="w-full h-auto max-h-[440px] object-contain rounded-xl group-hover:scale-[1.01] transition-transform duration-300" />
-              </div>
-
-              <!-- Descrição Obrigatória -->
-              <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed mb-6" data-i18n="workshops.ev1_desc">
-                Um encontro dirigido a mulheres que querem compreender melhor as transformações do climatério e da menopausa, conhecer diferentes possibilidades de cuidado e adquirir ferramentas para viver esta fase de forma mais consciente.
-              </p>
             </div>
 
-            <!-- Botões: Inscrição em Degradê Esmeralda & Saber mais -->
-            <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-brand-gray">
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20a%20minha%20inscri%C3%A7%C3%A3o%20no%20Workshop%20Menopausa%20Consciente." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_22px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02]">
-                <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
-                <span data-i18n="btn.inscriptions">Inscrição</span>
-              </a>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Workshop%20Menopausa%20Consciente." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-brand-gray text-brand-text font-semibold text-sm hover:bg-brand-green-soft hover:text-brand-green-dark transition-all">
-                <span data-i18n="btn.learn_more">Saber mais</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-              </a>
+            <!-- Evento 2: Formação Presencial Reiki Usui Nível 1 -->
+            <div class="event-card-slide snap-center shrink-0 w-full p-1">
+              <div class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-gray/80 shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group/card">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="px-3.5 py-1 rounded-full bg-brand-green-soft text-brand-green-dark font-semibold text-xs" data-i18n="workshops.ev2_badge">
+                      Formação Presencial Certificada
+                    </span>
+                    <span class="text-xs font-semibold text-brand-text/50">2 / 2</span>
+                  </div>
+
+                  <!-- Título Obrigatório -->
+                  <h3 class="font-serif text-2xl font-bold text-brand-text mb-4" data-i18n="workshops.ev2_title">
+                    Formação presencial — Reiki Usui, Nível 1
+                  </h3>
+
+                  <!-- Cartaz Oficial da Formação -->
+                  <div class="mb-5 rounded-2xl overflow-hidden border border-brand-gray/80 bg-brand-gray/20 shadow-sm flex items-center justify-center">
+                    <img src="./IMG_2868.PNG" alt="Cartaz Oficial — Formação Reiki Usui Nível 1" class="w-full h-auto max-h-[440px] object-contain rounded-xl group-hover/card:scale-[1.01] transition-transform duration-300" />
+                  </div>
+
+                  <!-- Descrição Obrigatória -->
+                  <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed mb-6" data-i18n="workshops.ev2_desc">
+                    Uma formação presencial de iniciação ao Reiki Usui, dirigida a quem deseja conhecer e aprofundar esta prática.
+                  </p>
+                </div>
+
+                <!-- Botões: Inscrição em Degradê Esmeralda & Saber mais -->
+                <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-brand-gray">
+                  <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20a%20minha%20inscri%C3%A7%C3%A3o%20na%20Forma%C3%A7%C3%A3o%20presencial%20de%20Reiki%20Usui%20N%C3%ADvel%201." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_22px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02]">
+                    <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+                    <span data-i18n="btn.interest">Inscrições</span>
+                  </a>
+                  <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20curso%20de%20Reiki%20Usui%20N%C3%ADvel%201." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-brand-gray text-brand-text font-semibold text-sm hover:bg-brand-green-soft hover:text-brand-green-dark transition-all">
+                    <span data-i18n="btn.learn_more">Saber mais</span>
+                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
             </div>
+
           </div>
 
-          <!-- Evento 2: Formação Presencial — Reiki Usui, Nível 1 -->
-          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-brand-gray/80 shadow-card hover:shadow-elevated hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="px-3.5 py-1 rounded-full bg-brand-green-soft text-brand-green-dark font-semibold text-xs" data-i18n="workshops.ev2_badge">
-                  Formação Presencial Certificada
-                </span>
-              </div>
+          <!-- Setas Flutuantes Discretas no Meio das Laterais -->
+          <button type="button" id="events-cards-prev" aria-label="Evento anterior" class="absolute -left-3 sm:-left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md hover:bg-brand-green hover:text-white text-brand-text border border-brand-gray shadow-card flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 z-20">
+            <span class="material-symbols-outlined text-[24px]">chevron_left</span>
+          </button>
+          <button type="button" id="events-cards-next" aria-label="Próximo evento" class="absolute -right-3 sm:-right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md hover:bg-brand-green hover:text-white text-brand-text border border-brand-gray shadow-card flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 z-20">
+            <span class="material-symbols-outlined text-[24px]">chevron_right</span>
+          </button>
 
-              <!-- Título Obrigatório -->
-              <h3 class="font-serif text-2xl font-bold text-brand-text mb-4" data-i18n="workshops.ev2_title">
-                Formação presencial — Reiki Usui, Nível 1
-              </h3>
-
-              <!-- Cartaz Oficial da Formação (Substitui as informações de texto com imagem direta do evento) -->
-              <div class="mb-5 rounded-2xl overflow-hidden border border-brand-gray/80 bg-brand-gray/20 shadow-sm flex items-center justify-center">
-                <img src="./IMG_2868.PNG" alt="Cartaz Oficial — Formação Reiki Usui Nível 1" class="w-full h-auto max-h-[440px] object-contain rounded-xl group-hover:scale-[1.01] transition-transform duration-300" />
-              </div>
-
-              <!-- Descrição Obrigatória -->
-              <p class="text-sm sm:text-base text-brand-text/80 leading-relaxed mb-6" data-i18n="workshops.ev2_desc">
-                Uma formação presencial de iniciação ao Reiki Usui, dirigida a quem deseja conhecer e aprofundar esta prática.
-              </p>
-            </div>
-
-            <!-- Botões: Inscrição em Degradê Esmeralda & Saber mais -->
-            <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-brand-gray">
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20a%20minha%20inscri%C3%A7%C3%A3o%20na%20Forma%C3%A7%C3%A3o%20presencial%20de%20Reiki%20Usui%20N%C3%ADvel%201." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_22px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02]">
-                <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
-                <span data-i18n="btn.interest">Inscrições</span>
-              </a>
-              <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20curso%20de%20Reiki%20Usui%20N%C3%ADvel%201." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-full bg-brand-gray text-brand-text font-semibold text-sm hover:bg-brand-green-soft hover:text-brand-green-dark transition-all">
-                <span data-i18n="btn.learn_more">Saber mais</span>
-                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-              </a>
-            </div>
+          <!-- Indicadores de Navegação dos Eventos -->
+          <div id="events-cards-dots" class="flex items-center justify-center gap-2 mt-4">
+            <button type="button" class="event-card-dot w-6 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Evento 1"></button>
+            <button type="button" class="event-card-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Evento 2"></button>
           </div>
-
         </div>
 
         <!-- Workshops Presenciais e Online — Carrossel de Temáticas Deslizável com Tom Verde Claro Leve -->
         <div class="mb-16 v-reveal-up">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1" data-i18n="workshops.catalog_tag">Catálogo de Temáticas</span>
-              <h3 class="font-serif text-2xl font-bold text-brand-text" data-i18n="workshops.catalog_title">Workshops presenciais e online</h3>
-            </div>
-            <!-- Controles do Carrossel de Temas -->
-            <div class="flex items-center gap-2">
-              <span class="text-xs text-brand-text/60 hidden sm:inline-block">Arraste para explorar</span>
-              <button type="button" id="topics-carousel-prev" aria-label="Tema anterior" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-green-soft shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
-                <span class="material-symbols-outlined text-[20px]">chevron_left</span>
-              </button>
-              <button type="button" id="topics-carousel-next" aria-label="Próximo tema" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-green-soft shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
-                <span class="material-symbols-outlined text-[20px]">chevron_right</span>
-              </button>
-            </div>
+          <div class="text-center max-w-2xl mx-auto mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1" data-i18n="workshops.catalog_tag">Catálogo de Temáticas</span>
+            <h3 class="font-serif text-2xl font-bold text-brand-text" data-i18n="workshops.catalog_title">Workshops presenciais e online</h3>
           </div>
 
           <!-- Trilho do Carrossel de Cards -->
@@ -1779,12 +1789,23 @@
 
             </div>
 
-            <!-- Indicadores / Bolinhas de Navegação dos Temas -->
-            <div id="topics-carousel-dots" class="flex items-center justify-center gap-2 mt-4">
-              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Tema 1"></button>
-              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 2"></button>
-              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 3"></button>
-              <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 4"></button>
+            <!-- Controles de Navegação Embaixo em cada extremidade com Dots no Centro -->
+            <div class="flex items-center justify-between mt-5 px-2">
+              <button type="button" id="topics-carousel-prev" aria-label="Tema anterior" class="w-11 h-11 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+              </button>
+
+              <!-- Indicadores / Bolinhas de Navegação dos Temas -->
+              <div id="topics-carousel-dots" class="flex items-center justify-center gap-2">
+                <button type="button" class="topic-dot w-6 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Tema 1"></button>
+                <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 2"></button>
+                <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 3"></button>
+                <button type="button" class="topic-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Tema 4"></button>
+              </div>
+
+              <button type="button" id="topics-carousel-next" aria-label="Próximo tema" class="w-11 h-11 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                <span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+              </button>
             </div>
           </div>
         </div>
@@ -1837,24 +1858,10 @@
 
         <!-- Galeria de Eventos — Carrossel Interativo com Autoplay a cada 2s e Scroll Manual/Touch -->
         <div class="v-reveal-up">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
-            <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1" data-i18n="workshops.gallery_tag">Momentos de Partilha</span>
-              <h3 class="font-serif text-2xl font-bold text-brand-text" data-i18n="workshops.gallery_title">Galeria de eventos</h3>
-            </div>
-            
-            <!-- Controles do Carrossel (Desktop e Mobile) -->
-            <div class="flex items-center gap-3">
-              <span class="text-xs text-brand-text/60 hidden md:inline-block" data-i18n="workshops.gallery_sub">Registos de workshops e encontros na clínica</span>
-              <div class="flex items-center gap-2">
-                <button type="button" id="events-carousel-prev" aria-label="Imagem anterior" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray/80 shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
-                  <span class="material-symbols-outlined text-[20px]">chevron_left</span>
-                </button>
-                <button type="button" id="events-carousel-next" aria-label="Próxima imagem" class="w-10 h-10 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray/80 shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
-                  <span class="material-symbols-outlined text-[20px]">chevron_right</span>
-                </button>
-              </div>
-            </div>
+          <div class="text-center max-w-2xl mx-auto mb-6">
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-green-dark block mb-1" data-i18n="workshops.gallery_tag">Momentos de Partilha</span>
+            <h3 class="font-serif text-2xl font-bold text-brand-text mb-1" data-i18n="workshops.gallery_title">Galeria de eventos</h3>
+            <p class="text-xs sm:text-sm text-brand-text/60" data-i18n="workshops.gallery_sub">Registos de workshops e encontros na clínica</p>
           </div>
 
           <!-- Trilho do Carrossel (com peek para mostrar que há mais fotos) -->
@@ -2023,24 +2030,35 @@
 
             </div>
 
-            <!-- Indicadores / Bolinhas de Navegação -->
-            <div id="events-carousel-dots" class="flex items-center justify-center gap-1.5 mt-4 flex-wrap max-w-md mx-auto">
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-green transition-all duration-300" aria-label="Slide 1"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 2"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 3"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 4"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 5"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 6"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 7"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 8"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 9"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 10"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 11"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 12"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 13"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 14"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 15"></button>
-              <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 16"></button>
+            <!-- Controles de Navegação Embaixo em cada extremidade com Dots no Centro -->
+            <div class="flex items-center justify-between mt-5 px-2">
+              <button type="button" id="events-carousel-prev" aria-label="Imagem anterior" class="w-11 h-11 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 shrink-0">
+                <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+              </button>
+
+              <!-- Indicadores / Bolinhas de Navegação -->
+              <div id="events-carousel-dots" class="flex items-center justify-center gap-1.5 px-3 flex-wrap max-w-xs sm:max-w-md mx-auto">
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-green transition-all duration-300" aria-label="Slide 1"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 2"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 3"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 4"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 5"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 6"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 7"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 8"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 9"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 10"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 11"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 12"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 13"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 14"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 15"></button>
+                <button type="button" class="carousel-dot w-2 h-2 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Slide 16"></button>
+              </div>
+
+              <button type="button" id="events-carousel-next" aria-label="Próxima imagem" class="w-11 h-11 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95 shrink-0">
+                <span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+              </button>
             </div>
           </div>
         </div>
@@ -2103,29 +2121,62 @@
           </div>
         </div>
 
-        <!-- Galeria de Imagens Reais das Instalações Obrigatória (com Lightbox) -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 v-stagger-group">
-          
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/71.jpg', 'Entrada Principal da VCura Terapias no Lumiar')">
-            <img src="./Video_%20Imagens/71.jpg" alt="Entrada da clínica VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text" data-i18n="space.photo1">Entrada Principal</span>
+        <!-- Galeria de Imagens Reais das Instalações — Carrossel Deslizável com Peek -->
+        <div class="relative max-w-5xl mx-auto mb-10 v-reveal-up">
+          <div id="space-rooms-carousel" class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-3 pt-1 px-1 cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+            
+            <!-- Foto 1: Entrada Principal -->
+            <div class="space-room-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[31%] aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer relative hover:-translate-y-1.5 transition-all duration-300" onclick="openLightbox('./Video_%20Imagens/71.jpg', 'Entrada Principal da VCura Terapias no Lumiar')">
+              <img src="./Video_%20Imagens/71.jpg" alt="Entrada da clínica VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                <span class="px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-lg text-xs font-semibold text-brand-text shadow-xs" data-i18n="space.photo1">Entrada Principal</span>
+              </div>
+            </div>
+
+            <!-- Foto 2: Sala Harmony -->
+            <div class="space-room-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[31%] aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer relative hover:-translate-y-1.5 transition-all duration-300" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Sala Harmony - Marquesa de Tratamento e Decoração Zen')">
+              <img src="./Video_%20Imagens/3.jpg" alt="Sala Harmony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                <span class="px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-lg text-xs font-semibold text-brand-text shadow-xs" data-i18n="space.photo2">Sala Harmony</span>
+              </div>
+            </div>
+
+            <!-- Foto 3: Sala Healing -->
+            <div class="space-room-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[31%] aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer relative hover:-translate-y-1.5 transition-all duration-300" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Sala Healing - Consulta e Terapia Manual')">
+              <img src="./Video_%20Imagens/2.jpg" alt="Sala Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                <span class="px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-lg text-xs font-semibold text-brand-text shadow-xs" data-i18n="space.photo3">Sala Healing</span>
+              </div>
+            </div>
+
+            <!-- Foto 4: Gabinete VCura (Único Gabinete) -->
+            <div class="space-room-slide snap-start shrink-0 w-[84%] sm:w-[48%] lg:w-[31%] aspect-[4/3] rounded-2xl overflow-hidden shadow-subtle border border-brand-gray bg-white group cursor-pointer relative hover:-translate-y-1.5 transition-all duration-300" onclick="openLightbox('./Video_%20Imagens/7.jpg', 'Gabinete VCura - Gabinete de Consulta Clínica e Anamnese')">
+              <img src="./Video_%20Imagens/7.jpg" alt="Gabinete VCura" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end p-3">
+                <span class="px-2.5 py-1 bg-white/95 backdrop-blur-sm rounded-lg text-xs font-semibold text-brand-text shadow-xs" data-i18n="space.photo4">Gabinete VCura</span>
+              </div>
+            </div>
+
           </div>
 
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Gabinete Harmony - Marquesa de Tratamento e Decoração Zen')">
-            <img src="./Video_%20Imagens/3.jpg" alt="Gabinete Harmony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text" data-i18n="space.photo2">Gabinete Harmony</span>
-          </div>
+          <!-- Controles de Navegação Embaixo em cada extremidade -->
+          <div class="flex items-center justify-between mt-5 px-2">
+            <button type="button" id="space-rooms-prev" aria-label="Espaço anterior" class="w-11 h-11 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+              <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+            </button>
 
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Gabinete Healing - Consulta e Terapia Manual')">
-            <img src="./Video_%20Imagens/2.jpg" alt="Gabinete Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text" data-i18n="space.photo3">Gabinete Healing</span>
-          </div>
+            <!-- Indicadores Centrais -->
+            <div id="space-rooms-dots" class="flex items-center justify-center gap-2">
+              <button type="button" class="space-room-dot w-6 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Espaço 1"></button>
+              <button type="button" class="space-room-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Espaço 2"></button>
+              <button type="button" class="space-room-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Espaço 3"></button>
+              <button type="button" class="space-room-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Espaço 4"></button>
+            </div>
 
-          <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xs border border-brand-gray bg-brand-gray group cursor-pointer relative" onclick="openLightbox('./Video_%20Imagens/7.jpg', 'Gabinete VCura - Gabinete de Consulta Clínica e Anamnese')">
-            <img src="./Video_%20Imagens/7.jpg" alt="Gabinete de Consulta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <span class="absolute bottom-2 left-2 px-2.5 py-1 bg-white/90 backdrop-blur-sm rounded-lg text-[11px] font-semibold text-brand-text" data-i18n="space.photo4">Gabinete de Consulta</span>
+            <button type="button" id="space-rooms-next" aria-label="Próximo espaço" class="w-11 h-11 rounded-full bg-white hover:bg-brand-green-soft text-brand-text hover:text-brand-green-dark border border-brand-gray shadow-xs flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+              <span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+            </button>
           </div>
-
         </div>
 
         <!-- Botão Obrigatório -->
@@ -2213,32 +2264,32 @@
           <h3 class="font-serif text-xl font-bold text-brand-text mb-6 v-reveal-up" data-i18n="rooms.gallery_title">Salas disponíveis para aluguer</h3>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 v-stagger-group">
             
-            <!-- Sala 1: Gabinete Healing -->
+            <!-- Sala 1: Sala Healing -->
             <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group hover:-translate-y-1.5 transition-all">
-              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Gabinete Healing - Gabinete para consultas e terapias com marquesa e secretária')">
-                <img src="./Video_%20Imagens/2.jpg" alt="Gabinete Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/2.jpg', 'Sala Healing - Sala para consultas e terapias com marquesa e secretária')">
+                <img src="./Video_%20Imagens/2.jpg" alt="Sala Healing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark" data-i18n="space.photo3">
-                  Gabinete Healing
+                  Sala Healing
                 </span>
               </div>
               <div class="p-5">
-                <h4 class="font-serif text-base font-bold text-brand-text mb-1" data-i18n="rooms.room1_title">Gabinete Clínico Healing</h4>
+                <h4 class="font-serif text-base font-bold text-brand-text mb-1" data-i18n="rooms.room1_title">Sala Clínica Healing</h4>
                 <p class="text-xs text-brand-text/75" data-i18n="rooms.room1_desc">
-                  Equipado com marquesa clínica, mesa de consulta e iluminação natural.
+                  Equipada com marquesa clínica, mesa de consulta e iluminação natural.
                 </p>
               </div>
             </div>
 
-            <!-- Sala 2: Gabinete Harmony -->
+            <!-- Sala 2: Sala Harmony -->
             <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group hover:-translate-y-1.5 transition-all">
-              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Gabinete Harmony - Gabinete acolhedor ideal para terapias manuais e acupuntura')">
-                <img src="./Video_%20Imagens/3.jpg" alt="Gabinete Harmony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer" onclick="openLightbox('./Video_%20Imagens/3.jpg', 'Sala Harmony - Sala acolhedora ideal para terapias manuais e acupuntura')">
+                <img src="./Video_%20Imagens/3.jpg" alt="Sala Harmony" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark" data-i18n="space.photo2">
-                  Gabinete Harmony
+                  Sala Harmony
                 </span>
               </div>
               <div class="p-5">
-                <h4 class="font-serif text-base font-bold text-brand-text mb-1" data-i18n="rooms.room2_title">Gabinete Clínico Harmony</h4>
+                <h4 class="font-serif text-base font-bold text-brand-text mb-1" data-i18n="rooms.room2_title">Sala Clínica Harmony</h4>
                 <p class="text-xs text-brand-text/75" data-i18n="rooms.room2_desc">
                   Ambiente sereno com marquesa regulável, decoração zen e total privacidade.
                 </p>
@@ -2891,7 +2942,7 @@
       startAutoplay();
     })();
 
-    // 5. Carrossel de Temáticas de Workshops (Scroll suave, arrastar, botões e touch)
+    // 5. Carrossel de Temáticas de Workshops (Scroll suave, arrastar, botões, touch e Autoplay 2s)
     (function initTopicsCarousel() {
       const carousel = document.getElementById('topics-carousel');
       const prevBtn = document.getElementById('topics-carousel-prev');
@@ -2902,6 +2953,8 @@
       const slides = carousel.querySelectorAll('.topic-slide');
       const dots = dotsContainer ? dotsContainer.querySelectorAll('.topic-dot') : [];
       let currentIndex = 0;
+      let autoplayTimer = null;
+      let isPaused = false;
 
       function getScrollStep() {
         if (!slides.length) return 320;
@@ -2934,11 +2987,23 @@
         updateDots(currentIndex);
       }
 
+      function startAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => {
+          if (!isPaused) {
+            let next = currentIndex + 1;
+            if (next >= slides.length) next = 0;
+            scrollToIndex(next);
+          }
+        }, 2000);
+      }
+
       if (nextBtn) {
         nextBtn.addEventListener('click', () => {
           let next = currentIndex + 1;
           if (next >= slides.length) next = 0;
           scrollToIndex(next);
+          startAutoplay();
         });
       }
 
@@ -2947,14 +3012,24 @@
           let prev = currentIndex - 1;
           if (prev < 0) prev = slides.length - 1;
           scrollToIndex(prev);
+          startAutoplay();
         });
       }
 
       dots.forEach((dot, idx) => {
         dot.addEventListener('click', () => {
           scrollToIndex(idx);
+          startAutoplay();
         });
       });
+
+      carousel.addEventListener('mouseenter', () => { isPaused = true; });
+      carousel.addEventListener('mouseleave', () => { isPaused = false; });
+      carousel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+      carousel.addEventListener('touchend', () => {
+        isPaused = false;
+        startAutoplay();
+      }, { passive: true });
 
       let scrollTimeout;
       carousel.addEventListener('scroll', () => {
@@ -2978,12 +3053,17 @@
 
       carousel.addEventListener('mousedown', (e) => {
         isDown = true;
+        isPaused = true;
         startX = e.pageX - carousel.offsetLeft;
         scrollLeft = carousel.scrollLeft;
       });
 
       window.addEventListener('mouseup', () => {
-        isDown = false;
+        if (isDown) {
+          isDown = false;
+          isPaused = false;
+          startAutoplay();
+        }
       });
 
       carousel.addEventListener('mousemove', (e) => {
@@ -2995,6 +3075,277 @@
       });
 
       updateDots(0);
+      startAutoplay();
+    })();
+
+    // 6. Carrossel dos Cards de Eventos em Destaque (Autoplay a cada 2s com transição suave)
+    (function initEventsCardsCarousel() {
+      const carousel = document.getElementById('events-cards-carousel');
+      const prevBtn = document.getElementById('events-cards-prev');
+      const nextBtn = document.getElementById('events-cards-next');
+      const dotsContainer = document.getElementById('events-cards-dots');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.event-card-slide');
+      const dots = dotsContainer ? dotsContainer.querySelectorAll('.event-card-dot') : [];
+      let currentIndex = 0;
+      let autoplayTimer = null;
+      let isPaused = false;
+
+      function getScrollStep() {
+        if (!slides.length) return carousel.offsetWidth || 500;
+        return slides[0].offsetWidth;
+      }
+
+      function updateDots(index) {
+        dots.forEach((dot, idx) => {
+          if (idx === index) {
+            dot.classList.add('bg-brand-green', 'w-6');
+            dot.classList.remove('bg-brand-gray', 'w-2.5');
+          } else {
+            dot.classList.remove('bg-brand-green', 'w-6');
+            dot.classList.add('bg-brand-gray', 'w-2.5');
+          }
+        });
+      }
+
+      function scrollToIndex(index) {
+        if (index < 0) index = 0;
+        if (index >= slides.length) index = slides.length - 1;
+        currentIndex = index;
+        const step = getScrollStep();
+        carousel.scrollTo({
+          left: currentIndex * step,
+          behavior: 'smooth'
+        });
+        updateDots(currentIndex);
+      }
+
+      function startAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => {
+          if (!isPaused) {
+            let next = currentIndex + 1;
+            if (next >= slides.length) next = 0;
+            scrollToIndex(next);
+          }
+        }, 2000);
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          let next = currentIndex + 1;
+          if (next >= slides.length) next = 0;
+          scrollToIndex(next);
+          startAutoplay();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          let prev = currentIndex - 1;
+          if (prev < 0) prev = slides.length - 1;
+          scrollToIndex(prev);
+          startAutoplay();
+        });
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          scrollToIndex(idx);
+          startAutoplay();
+        });
+      });
+
+      carousel.addEventListener('mouseenter', () => { isPaused = true; });
+      carousel.addEventListener('mouseleave', () => { isPaused = false; });
+      carousel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+      carousel.addEventListener('touchend', () => {
+        isPaused = false;
+        startAutoplay();
+      }, { passive: true });
+
+      let scrollTimeout;
+      carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const step = getScrollStep();
+          if (step > 0) {
+            const calculated = Math.round(carousel.scrollLeft / step);
+            if (calculated >= 0 && calculated < slides.length) {
+              currentIndex = calculated;
+              updateDots(currentIndex);
+            }
+          }
+        }, 80);
+      }, { passive: true });
+
+      // Suporte a arrasto (drag)
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isPaused = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isDown) {
+          isDown = false;
+          isPaused = false;
+          startAutoplay();
+        }
+      });
+
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      updateDots(0);
+      startAutoplay();
+    })();
+
+    // 7. Carrossel de Instalações / Salas do Espaço VCura (Autoplay a cada 2s)
+    (function initSpaceRoomsCarousel() {
+      const carousel = document.getElementById('space-rooms-carousel');
+      const prevBtn = document.getElementById('space-rooms-prev');
+      const nextBtn = document.getElementById('space-rooms-next');
+      const dotsContainer = document.getElementById('space-rooms-dots');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.space-room-slide');
+      const dots = dotsContainer ? dotsContainer.querySelectorAll('.space-room-dot') : [];
+      let currentIndex = 0;
+      let autoplayTimer = null;
+      let isPaused = false;
+
+      function getScrollStep() {
+        if (!slides.length) return 320;
+        const firstSlide = slides[0];
+        const gap = parseInt(window.getComputedStyle(carousel).gap || '16', 10) || 16;
+        return firstSlide.offsetWidth + gap;
+      }
+
+      function updateDots(index) {
+        dots.forEach((dot, idx) => {
+          if (idx === index) {
+            dot.classList.add('bg-brand-green', 'w-6');
+            dot.classList.remove('bg-brand-gray', 'w-2.5');
+          } else {
+            dot.classList.remove('bg-brand-green', 'w-6');
+            dot.classList.add('bg-brand-gray', 'w-2.5');
+          }
+        });
+      }
+
+      function scrollToIndex(index) {
+        if (index < 0) index = 0;
+        if (index >= slides.length) index = slides.length - 1;
+        currentIndex = index;
+        const step = getScrollStep();
+        carousel.scrollTo({
+          left: currentIndex * step,
+          behavior: 'smooth'
+        });
+        updateDots(currentIndex);
+      }
+
+      function startAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => {
+          if (!isPaused) {
+            let next = currentIndex + 1;
+            if (next >= slides.length) next = 0;
+            scrollToIndex(next);
+          }
+        }, 2000);
+      }
+
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          let next = currentIndex + 1;
+          if (next >= slides.length) next = 0;
+          scrollToIndex(next);
+          startAutoplay();
+        });
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          let prev = currentIndex - 1;
+          if (prev < 0) prev = slides.length - 1;
+          scrollToIndex(prev);
+          startAutoplay();
+        });
+      }
+
+      dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+          scrollToIndex(idx);
+          startAutoplay();
+        });
+      });
+
+      carousel.addEventListener('mouseenter', () => { isPaused = true; });
+      carousel.addEventListener('mouseleave', () => { isPaused = false; });
+      carousel.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+      carousel.addEventListener('touchend', () => {
+        isPaused = false;
+        startAutoplay();
+      }, { passive: true });
+
+      let scrollTimeout;
+      carousel.addEventListener('scroll', () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          const step = getScrollStep();
+          if (step > 0) {
+            const calculated = Math.round(carousel.scrollLeft / step);
+            if (calculated >= 0 && calculated < slides.length) {
+              currentIndex = calculated;
+              updateDots(currentIndex);
+            }
+          }
+        }, 80);
+      }, { passive: true });
+
+      // Drag to scroll
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      carousel.addEventListener('mousedown', (e) => {
+        isDown = true;
+        isPaused = true;
+        startX = e.pageX - carousel.offsetLeft;
+        scrollLeft = carousel.scrollLeft;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (isDown) {
+          isDown = false;
+          isPaused = false;
+          startAutoplay();
+        }
+      });
+
+      carousel.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - carousel.offsetLeft;
+        const walk = (x - startX) * 1.5;
+        carousel.scrollLeft = scrollLeft - walk;
+      });
+
+      updateDots(0);
+      startAutoplay();
     })();
 
     // Fechar modais ao carregar na tecla ESC ou fora do conteúdo

@@ -71,6 +71,22 @@
     .font-gabriola {
       font-family: 'Gabriola', 'Georgia', 'Noto Serif', serif !important;
     }
+    /* Bandeiras SVG Nativas de Alta Nitidez (100% Compatível com Windows/Chrome/Edge) */
+    .flag-icon {
+      display: inline-block;
+      width: 1.25rem;
+      height: 0.95rem;
+      border-radius: 3px;
+      object-fit: cover;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+    .flag-icon-sm {
+      width: 1.1rem;
+      height: 0.8rem;
+      border-radius: 2px;
+    }
     /* Estilo de seleção de texto nas cores da marca */
     ::selection {
       background-color: #F2F8EF;
@@ -386,7 +402,9 @@
       <!-- Chave / Dropdown de Idiomas do Topo -->
       <div class="relative inline-block text-left lang-dropdown-wrapper shrink-0">
         <button type="button" class="lang-dropdown-btn inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 text-white text-[11px] sm:text-xs font-medium transition-all shadow-xs focus:outline-none" aria-expanded="false" aria-haspopup="true" aria-label="Selecionar Idioma">
-          <span class="lang-flag-current text-sm sm:text-base leading-none">🇵🇹</span>
+          <span class="lang-flag-current flex items-center">
+            <img src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x" alt="Bandeira de Portugal" class="flag-icon" />
+          </span>
           <span class="lang-name-current font-medium">Portugal</span>
           <span class="material-symbols-outlined text-[15px] sm:text-[16px] text-white/70">expand_more</span>
         </button>
@@ -395,29 +413,29 @@
           <div class="px-3 py-1 text-[10px] font-bold text-brand-text/50 uppercase tracking-wider border-b border-brand-gray mb-1" data-i18n="lang.label">
             Idioma / Language
           </div>
-          <button type="button" onclick="changeLanguage('pt', 'Portugal', '🇵🇹')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-lg leading-none shrink-0">🇵🇹</span>
+          <button type="button" onclick="changeLanguage('pt', 'Portugal', 'pt')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+            <img src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x" alt="Portugal" class="flag-icon" />
             <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">Português</span>
               <span class="text-[10px] text-brand-text/60 ml-2">Portugal</span>
             </div>
           </button>
-          <button type="button" onclick="changeLanguage('en', 'Reino Unido', '🇬🇧')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-lg leading-none shrink-0">🇬🇧</span>
+          <button type="button" onclick="changeLanguage('en', 'Reino Unido', 'gb')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+            <img src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x" alt="Reino Unido" class="flag-icon" />
             <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">English</span>
               <span class="text-[10px] text-brand-text/60 ml-2">UK</span>
             </div>
           </button>
-          <button type="button" onclick="changeLanguage('fr', 'França', '🇫🇷')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-lg leading-none shrink-0">🇫🇷</span>
+          <button type="button" onclick="changeLanguage('fr', 'França', 'fr')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+            <img src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x" alt="França" class="flag-icon" />
             <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">Français</span>
               <span class="text-[10px] text-brand-text/60 ml-2">France</span>
             </div>
           </button>
-          <button type="button" onclick="changeLanguage('es', 'Espanha', '🇪🇸')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-            <span class="text-lg leading-none shrink-0">🇪🇸</span>
+          <button type="button" onclick="changeLanguage('es', 'Espanha', 'es')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+            <img src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x" alt="Espanha" class="flag-icon" />
             <div class="flex items-center justify-between w-full">
               <span class="font-semibold text-brand-text text-xs">Español</span>
               <span class="text-[10px] text-brand-text/60 ml-2">España</span>
@@ -483,17 +501,21 @@
       <div class="pb-3 mb-3 border-b border-brand-gray flex items-center justify-between">
         <span class="text-xs font-bold text-brand-text/70 uppercase tracking-wider" data-i18n="lang.label">Idioma / Language:</span>
         <div class="flex items-center gap-1.5">
-          <button type="button" onclick="changeLanguage('pt', 'Portugal', '🇵🇹')" class="px-2.5 py-1 rounded-lg bg-brand-green-soft text-brand-green-dark text-xs font-semibold flex items-center gap-1 border border-brand-green/20" title="Português">
-            <span>🇵🇹</span> <span>PT</span>
+          <button type="button" onclick="changeLanguage('pt', 'Portugal', 'pt')" class="lang-btn-mobile px-2.5 py-1 rounded-lg bg-brand-green-soft text-brand-green-dark text-xs font-semibold flex items-center gap-1.5 border border-brand-green/20" data-lang="pt" title="Português">
+            <img src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x" alt="Portugal" class="flag-icon-sm" />
+            <span>PT</span>
           </button>
-          <button type="button" onclick="changeLanguage('en', 'Reino Unido', '🇬🇧')" class="px-2.5 py-1 rounded-lg bg-brand-gray hover:bg-brand-green-soft text-brand-text text-xs font-medium flex items-center gap-1 transition-colors" title="English">
-            <span>🇬🇧</span> <span>EN</span>
+          <button type="button" onclick="changeLanguage('en', 'Reino Unido', 'gb')" class="lang-btn-mobile px-2.5 py-1 rounded-lg bg-brand-gray hover:bg-brand-green-soft text-brand-text text-xs font-medium flex items-center gap-1.5 transition-colors" data-lang="en" title="English">
+            <img src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x" alt="Reino Unido" class="flag-icon-sm" />
+            <span>EN</span>
           </button>
-          <button type="button" onclick="changeLanguage('fr', 'França', '🇫🇷')" class="px-2.5 py-1 rounded-lg bg-brand-gray hover:bg-brand-green-soft text-brand-text text-xs font-medium flex items-center gap-1 transition-colors" title="Français">
-            <span>🇫🇷</span> <span>FR</span>
+          <button type="button" onclick="changeLanguage('fr', 'França', 'fr')" class="lang-btn-mobile px-2.5 py-1 rounded-lg bg-brand-gray hover:bg-brand-green-soft text-brand-text text-xs font-medium flex items-center gap-1.5 transition-colors" data-lang="fr" title="Français">
+            <img src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x" alt="França" class="flag-icon-sm" />
+            <span>FR</span>
           </button>
-          <button type="button" onclick="changeLanguage('es', 'Espanha', '🇪🇸')" class="px-2.5 py-1 rounded-lg bg-brand-gray hover:bg-brand-green-soft text-brand-text text-xs font-medium flex items-center gap-1 transition-colors" title="Español">
-            <span>🇪🇸</span> <span>ES</span>
+          <button type="button" onclick="changeLanguage('es', 'Espanha', 'es')" class="lang-btn-mobile px-2.5 py-1 rounded-lg bg-brand-gray hover:bg-brand-green-soft text-brand-text text-xs font-medium flex items-center gap-1.5 transition-colors" data-lang="es" title="Español">
+            <img src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x" alt="Espanha" class="flag-icon-sm" />
+            <span>ES</span>
           </button>
         </div>
       </div>
@@ -2499,7 +2521,9 @@
             <span class="text-[11px] font-bold text-brand-text/60 uppercase tracking-wider block mb-2" data-i18n="footer.lang_title">Tradução / Language</span>
             <div class="relative inline-block text-left lang-dropdown-wrapper">
               <button type="button" class="lang-dropdown-btn inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-brand-gray bg-white text-brand-text text-xs font-semibold hover:border-brand-green transition-all shadow-xs" aria-expanded="false" aria-haspopup="true" aria-label="Alterar Idioma" data-i18n-aria="header.change_lang">
-                <span class="lang-flag-current text-base leading-none">🇵🇹</span>
+                <span class="lang-flag-current flex items-center">
+                  <img src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x" alt="Bandeira de Portugal" class="flag-icon" />
+                </span>
                 <span class="lang-name-current">Portugal</span>
                 <span class="material-symbols-outlined text-[16px] text-brand-green-dark">expand_less</span>
               </button>
@@ -2508,29 +2532,29 @@
                 <div class="px-3 py-1 text-[10px] font-bold text-brand-text/50 uppercase tracking-wider border-b border-brand-gray mb-1">
                   Selecione o Idioma
                 </div>
-                <button type="button" onclick="changeLanguage('pt', 'Portugal', '🇵🇹')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-lg leading-none shrink-0">🇵🇹</span>
+                <button type="button" onclick="changeLanguage('pt', 'Portugal', 'pt')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+                  <img src="https://flagcdn.com/w40/pt.png" srcset="https://flagcdn.com/w80/pt.png 2x" alt="Portugal" class="flag-icon" />
                   <div class="flex items-center justify-between w-full">
                     <span class="font-semibold text-brand-text text-xs">Português</span>
                     <span class="text-[10px] text-brand-text/60 ml-2">Portugal</span>
                   </div>
                 </button>
-                <button type="button" onclick="changeLanguage('en', 'Reino Unido', '🇬🇧')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-lg leading-none shrink-0">🇬🇧</span>
+                <button type="button" onclick="changeLanguage('en', 'Reino Unido', 'gb')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+                  <img src="https://flagcdn.com/w40/gb.png" srcset="https://flagcdn.com/w80/gb.png 2x" alt="Reino Unido" class="flag-icon" />
                   <div class="flex items-center justify-between w-full">
                     <span class="font-semibold text-brand-text text-xs">English</span>
                     <span class="text-[10px] text-brand-text/60 ml-2">UK</span>
                   </div>
                 </button>
-                <button type="button" onclick="changeLanguage('fr', 'França', '🇫🇷')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-lg leading-none shrink-0">🇫🇷</span>
+                <button type="button" onclick="changeLanguage('fr', 'França', 'fr')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+                  <img src="https://flagcdn.com/w40/fr.png" srcset="https://flagcdn.com/w80/fr.png 2x" alt="França" class="flag-icon" />
                   <div class="flex items-center justify-between w-full">
                     <span class="font-semibold text-brand-text text-xs">Français</span>
                     <span class="text-[10px] text-brand-text/60 ml-2">France</span>
                   </div>
                 </button>
-                <button type="button" onclick="changeLanguage('es', 'Espanha', '🇪🇸')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
-                  <span class="text-lg leading-none shrink-0">🇪🇸</span>
+                <button type="button" onclick="changeLanguage('es', 'Espanha', 'es')" class="w-full text-left px-3.5 py-2 flex items-center gap-2.5 hover:bg-brand-green-soft hover:text-brand-green-dark transition-colors font-medium">
+                  <img src="https://flagcdn.com/w40/es.png" srcset="https://flagcdn.com/w80/es.png 2x" alt="Espanha" class="flag-icon" />
                   <div class="flex items-center justify-between w-full">
                     <span class="font-semibold text-brand-text text-xs">Español</span>
                     <span class="text-[10px] text-brand-text/60 ml-2">España</span>
@@ -3615,19 +3639,30 @@
 
     // 5. Controlador dos Dropdowns de Tradução & Troca de Idioma (PT, EN, FR, ES)
     const LANG_DATA = {
-      pt: { name: 'Português', country: 'Portugal', flag: '🇵🇹' },
-      en: { name: 'English', country: 'Reino Unido', flag: '🇬🇧' },
-      fr: { name: 'Français', country: 'França', flag: '🇫🇷' },
-      es: { name: 'Español', country: 'Espanha', flag: '🇪🇸' }
+      pt: { name: 'Português', country: 'Portugal', code: 'pt' },
+      en: { name: 'English', country: 'Reino Unido', code: 'gb' },
+      fr: { name: 'Français', country: 'França', code: 'fr' },
+      es: { name: 'Español', country: 'Espanha', code: 'es' }
     };
 
     function updateLanguageUI(langCode) {
       const info = LANG_DATA[langCode] || LANG_DATA.pt;
+      const flagImg = `<img src="https://flagcdn.com/w40/${info.code}.png" srcset="https://flagcdn.com/w80/${info.code}.png 2x" alt="${info.country}" class="flag-icon" />`;
       document.querySelectorAll('.lang-flag-current').forEach(el => {
-        el.textContent = info.flag;
+        el.innerHTML = flagImg;
       });
       document.querySelectorAll('.lang-name-current').forEach(el => {
         el.textContent = info.country;
+      });
+
+      // Atualizar destaque dos botões no menu mobile
+      document.querySelectorAll('.lang-btn-mobile').forEach(btn => {
+        const blang = btn.getAttribute('data-lang');
+        if (blang === langCode) {
+          btn.className = 'lang-btn-mobile px-2.5 py-1 rounded-lg bg-brand-green-soft text-brand-green-dark text-xs font-semibold flex items-center gap-1.5 border border-brand-green/30 shadow-xs';
+        } else {
+          btn.className = 'lang-btn-mobile px-2.5 py-1 rounded-lg bg-brand-gray hover:bg-brand-green-soft text-brand-text text-xs font-medium flex items-center gap-1.5 transition-colors';
+        }
       });
     }
 

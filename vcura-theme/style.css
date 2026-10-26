@@ -1,0 +1,388 @@
+﻿/*
+Theme Name: VCura Terapias
+Theme URI: https://vcura.pt
+Author: VCura Terapias
+Author URI: https://vcura.pt
+Description: Tema exclusivo e personalizado para a Clínica VCura Terapias Integrativas (Alta de Lisboa).
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: vcura
+Tags: health, clinic, therapies, custom-theme, modern, responsive
+*/
+
+
+    /* Suavização de scroll e estilos base */
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      color: #303830;
+      background-color: #FFFFFF;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    /* Tipografia de Marca VCura (Microsoft Gabriola) */
+    .font-gabriola {
+      font-family: 'Gabriola', 'Georgia', 'Noto Serif', serif !important;
+    }
+    /* Bandeiras SVG Nativas de Alta Nitidez (100% Compatível com Windows/Chrome/Edge) */
+    .flag-icon {
+      display: inline-block;
+      width: 1.25rem;
+      height: 0.95rem;
+      border-radius: 3px;
+      object-fit: cover;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+    .flag-icon-sm {
+      width: 1.1rem;
+      height: 0.8rem;
+      border-radius: 2px;
+    }
+    /* Estilo de seleção de texto nas cores da marca */
+    ::selection {
+      background-color: #F2F8EF;
+      color: #216D25;
+    }
+    /* Material Symbols alinhamento perfeito */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-flex;
+      vertical-align: middle;
+    }
+    .material-symbols-outlined.fill-1 {
+      font-variation-settings: 'FILL' 1;
+    }
+    /* Animação suave para acordião */
+    .accordion-content {
+      transition: max-height 0.35s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    /* Salvaguarda para ecrãs móveis ultra-estreitos e quebra segura de texto */
+    .break-mobile-words {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 480px) {
+      .break-mobile-words {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        hyphens: auto;
+      }
+    }
+
+    /* ========================================================================= */
+    /* SISTEMA DE ANIMAÇÃO DINÂMICA DE SCROLL (BIDIRECIONAL: ENTRADA E SAÍDA)   */
+    /* Ao descer: os blocos surgem fluidamente com fade, scale e translação     */
+    /* Ao subir: os blocos abaixo somem suavemente para reaparecer ao re-descer */
+    /* ========================================================================= */
+    
+    .v-reveal,
+    .v-reveal-up,
+    .v-reveal-left,
+    .v-reveal-right,
+    .v-reveal-scale,
+    .v-reveal-fade {
+      opacity: 0;
+      will-change: transform, opacity, filter;
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Revelação de Baixo para Cima */
+    .v-reveal-up, .v-reveal {
+      transform: translateY(42px);
+      filter: blur(5px);
+    }
+    .v-reveal-up.v-in-view, .v-reveal.v-in-view {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+
+    /* Revelação da Esquerda */
+    .v-reveal-left {
+      transform: translateX(-45px);
+      filter: blur(5px);
+    }
+    .v-reveal-left.v-in-view {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
+
+    /* Revelação da Direita */
+    .v-reveal-right {
+      transform: translateX(45px);
+      filter: blur(5px);
+    }
+    .v-reveal-right.v-in-view {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
+
+    /* Revelação com Zoom/Escala Suave */
+    .v-reveal-scale {
+      transform: scale(0.92) translateY(24px);
+      filter: blur(6px);
+    }
+    .v-reveal-scale.v-in-view {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      filter: blur(0);
+    }
+
+    /* Revelação com Fade Puro */
+    .v-reveal-fade {
+      filter: blur(8px);
+    }
+    .v-reveal-fade.v-in-view {
+      opacity: 1;
+      filter: blur(0);
+    }
+
+    /* Grupo de Elementos com Revelação Escalonada (Stagger) */
+    .v-stagger-group > * {
+      opacity: 0;
+      transform: translateY(35px);
+      filter: blur(4px);
+      will-change: opacity, transform, filter;
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .v-stagger-group.v-in-view > *:nth-child(1) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.05s; }
+    .v-stagger-group.v-in-view > *:nth-child(2) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.15s; }
+    .v-stagger-group.v-in-view > *:nth-child(3) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.25s; }
+    .v-stagger-group.v-in-view > *:nth-child(4) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.35s; }
+    .v-stagger-group.v-in-view > *:nth-child(5) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.45s; }
+    .v-stagger-group.v-in-view > *:nth-child(6) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.55s; }
+    .v-stagger-group.v-in-view > *:nth-child(7) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.65s; }
+    .v-stagger-group.v-in-view > *:nth-child(8) { opacity: 1; transform: translateY(0); filter: blur(0); transition-delay: 0.75s; }
+
+    /* ========================================================================= */
+    /* CLASSES DE DEGRADÊ ESCURO EXCLUSIVAS (DARK BOTANICAL GRADIENTS)           */
+    /* ========================================================================= */
+    .bg-dark-emerald-gradient {
+      background: linear-gradient(135deg, #07170E 0%, #0E291B 45%, #153C28 100%);
+    }
+    .bg-dark-botanical-section {
+      background: linear-gradient(180deg, #07160D 0%, #0D2619 50%, #06130C 100%);
+    }
+    .bg-dark-navy-emerald {
+      background: linear-gradient(135deg, #08171B 0%, #0E291F 50%, #133924 100%);
+    }
+    .bg-dark-cta-gradient {
+      background: linear-gradient(145deg, #05130B 0%, #0C281A 45%, #163F28 100%);
+    }
+    .bg-dark-rose-feminine,
+    .bg-uva-rosada-gradient {
+      background: linear-gradient(180deg, #75F6BE 0%, #A6F4C0 25%, #D4EFC1 48%, #F7C0B4 72%, #FE7899 100%);
+    }
+    .shadow-glow-rose {
+      box-shadow: 0 20px 45px -10px rgba(117, 246, 190, 0.35), 0 0 35px rgba(254, 120, 153, 0.25);
+    }
+
+    /* Efeito de Vidro Fosco Escuro (Dark Glassmorphism) */
+    .glass-dark {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .glass-dark:hover {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(55, 168, 23, 0.45);
+    }
+    .glass-dark-rose {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+    }
+    .glass-dark-rose:hover {
+      background: rgba(255, 255, 255, 0.75);
+      border-color: rgba(255, 255, 255, 0.95);
+    }
+
+    /* ========================================================================= */
+    /* LINHA DO TEMPO DINÂMICA (SCROLL-TRIGGERED TIMELINE)                       */
+    /* Acende verde esmeralda ao descer (meio da visão) e apaga ao subir         */
+    /* ========================================================================= */
+    .v-timeline-step {
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.4s ease,
+                  background-color 0.4s ease,
+                  box-shadow 0.4s ease;
+      background: rgba(10, 28, 18, 0.85);
+    }
+    
+    .v-timeline-step.timeline-active {
+      border-color: rgba(55, 168, 23, 0.85) !important;
+      background: rgba(14, 45, 28, 0.95) !important;
+      box-shadow: 0 14px 40px -5px rgba(55, 168, 23, 0.40), 0 0 30px rgba(55, 168, 23, 0.25) !important;
+      transform: translateY(-6px);
+    }
+
+    .v-timeline-step .timeline-badge {
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .v-timeline-step.timeline-active .timeline-badge {
+      background: linear-gradient(135deg, #37A817 0%, #10b981 100%) !important;
+      color: #FFFFFF !important;
+      border-color: #a7f3d0 !important;
+      box-shadow: 0 0 35px rgba(55, 168, 23, 0.95), 0 0 60px rgba(16, 185, 129, 0.45) !important;
+      transform: scale(1.12);
+    }
+
+    .v-timeline-step.timeline-focal .timeline-halo {
+      opacity: 1;
+      animation: timelinePulseRing 2s infinite cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .v-timeline-step.timeline-active .timeline-title {
+      color: #6ee7b7 !important;
+    }
+
+    .v-timeline-step.timeline-active .timeline-desc {
+      color: #e6f7ec !important;
+    }
+
+    @keyframes timelinePulseRing {
+      0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+        box-shadow: 0 0 0 0 rgba(55, 168, 23, 0.75);
+      }
+      70% {
+        transform: scale(1.45);
+        opacity: 0;
+        box-shadow: 0 0 0 25px rgba(55, 168, 23, 0);
+      }
+      100% {
+        transform: scale(1.45);
+        opacity: 0;
+        box-shadow: 0 0 0 0 rgba(55, 168, 23, 0);
+      }
+    }
+
+    /* Brilho pulsante suave em degradê */
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.45; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.04); }
+    }
+    .animate-pulse-glow {
+      animation: pulseGlow 4s ease-in-out infinite;
+    }
+
+    /* ========================================================================= */
+    /* ========================================================================= */
+    /* FAIXA EM DEGRADÊ VERDE & ESTEIRA INFINITA COM BLOCO NEON E CARDS BRANCOS  */
+    /* ========================================================================= */
+    .bg-emerald-strip-gradient {
+      background: linear-gradient(90deg, #003D26 0%, #045233 22%, #087A4A 55%, #109358 80%, #16A765 100%);
+    }
+
+    /* Faixa de iluminação difusa neon verde esmeralda atrás dos blocos */
+    .neon-partner-strip {
+      position: absolute;
+      top: 50%;
+      left: -5%;
+      width: 110%;
+      height: 60px;
+      transform: translateY(-50%);
+      background: radial-gradient(ellipse at center, rgba(52, 211, 153, 0.45) 0%, rgba(16, 185, 129, 0.35) 45%, rgba(16, 185, 129, 0.15) 70%, transparent 100%);
+      box-shadow: 0 0 35px 12px rgba(52, 211, 153, 0.35),
+                  0 0 70px 25px rgba(16, 185, 129, 0.25);
+      filter: blur(12px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Linha de brilho neon sutil horizontal */
+    .neon-partner-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: translateY(-50%);
+      background: linear-gradient(90deg, transparent 0%, rgba(110, 231, 183, 0.2) 15%, rgba(110, 231, 183, 0.7) 50%, rgba(110, 231, 183, 0.2) 85%, transparent 100%);
+      box-shadow: 0 0 15px rgba(52, 211, 153, 0.8);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Bloco quadrado individual branco com cantos arredondados e sombra de profundidade */
+    .partner-card-box {
+      width: 130px;
+      height: 130px;
+      background: #FFFFFF;
+      border-radius: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      position: relative;
+      z-index: 5;
+      box-shadow: 0 14px 28px -4px rgba(0, 0, 0, 0.35),
+                  0 6px 14px -2px rgba(0, 0, 0, 0.25),
+                  0 0 18px 2px rgba(16, 185, 129, 0.20);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 640px) {
+      .partner-card-box {
+        width: 165px;
+        height: 165px;
+        border-radius: 34px;
+        padding: 22px;
+        box-shadow: 0 18px 36px -6px rgba(0, 0, 0, 0.38),
+                    0 8px 18px -3px rgba(0, 0, 0, 0.28),
+                    0 0 24px 4px rgba(16, 185, 129, 0.25);
+      }
+    }
+
+    .partner-card-box:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 22px 42px -6px rgba(0, 0, 0, 0.45),
+                  0 0 28px 6px rgba(52, 211, 153, 0.45);
+    }
+
+    @keyframes logoMarquee {
+      0% { transform: translate3d(0, 0, 0); }
+      100% { transform: translate3d(-50%, 0, 0); }
+    }
+
+    .animate-marquee-infinite {
+      display: flex;
+      width: max-content;
+      will-change: transform;
+      animation: logoMarquee 26s linear infinite;
+    }
+
+    .animate-marquee-infinite:hover {
+      animation-play-state: paused;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .animate-marquee-infinite {
+        animation: none;
+        overflow-x: auto;
+        width: 100%;
+        justify-content: center;
+      }
+      .bg-emerald-strip-gradient {
+        animation: none;
+      }
+    }
+
+  </style>

@@ -684,7 +684,7 @@ get_header();
             <div class="lg:col-span-5 flex justify-center">
               <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-emerald-400/30 bg-[#0B2116] group/img hover:border-emerald-300/60 transition-all duration-500">
                 <div class="absolute -inset-4 bg-gradient-to-tr from-brand-green/30 to-emerald-400/20 rounded-[2.5rem] blur-2xl -z-10 pointer-events-none"></div>
-                <img src="<?php echo esc_url( get_template_directory_uri() . "/assets/images/" ); ?>7.jpg" alt="Mesa de avaliação clínica e nutrição funcional" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700" />
+                <img src="<?php echo esc_url( get_template_directory_uri() . "/assets/images/vcura-posts.png" ); ?>" alt="VCura Terapias - Publicações e Espaço Clínico" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700" />
               </div>
             </div>
 
@@ -1857,7 +1857,7 @@ get_header();
         <!-- Galeria Dedicada Exclusivamente às Salas Disponíveis Obrigatória -->
         <div>
           <h3 class="font-serif text-xl font-bold text-brand-text mb-6 v-reveal-up" data-i18n="rooms.gallery_title">Salas disponíveis para aluguer</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 v-stagger-group">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto v-stagger-group">
             
             <!-- Sala 1: Sala Healing com Carrossel Automático (Loop de 2 em 2s) -->
             <!-- Sala 1: Sala Healing -->
@@ -1911,35 +1911,6 @@ get_header();
               </div>
             </div>
 
-            <!-- Sala 3: Sala Multiusos & Formações com Carrossel Automático (Loop de 2 em 2s) -->
-            <div class="bg-white rounded-2xl overflow-hidden border border-brand-gray shadow-subtle group hover:-translate-y-1.5 transition-all">
-              <div class="aspect-[4/3] overflow-hidden bg-brand-gray relative cursor-pointer group/img">
-                <div class="room-carousel relative w-full h-full overflow-hidden" data-interval="2000">
-                  <div class="room-carousel-track flex w-full h-full transition-transform duration-700 ease-in-out">
-                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('<?php echo esc_url( get_template_directory_uri() . "/assets/images/" ); ?>1.jpg', 'Sala Multiusos - Sala ampla para formações, workshops e cursos com cadeiras individuais')">
-                      <img src="<?php echo esc_url( get_template_directory_uri() . "/assets/images/" ); ?>1.jpg" alt="Sala Multiusos e Workshops - Vista 1" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
-                    </div>
-                    <!-- Slot preparado para fotos adicionais -->
-                    <div class="room-carousel-slide shrink-0 w-full h-full" onclick="openLightbox('<?php echo esc_url( get_template_directory_uri() . "/assets/images/" ); ?>17.jpg', 'Sala Multiusos - Disposição para eventos e palestras')">
-                      <img src="<?php echo esc_url( get_template_directory_uri() . "/assets/images/" ); ?>17.jpg" alt="Sala Multiusos e Workshops - Vista 2" class="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500" loading="lazy" />
-                    </div>
-                  </div>
-                </div>
-                <span class="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-bold text-brand-green-dark shadow-xs z-10 pointer-events-none" data-i18n="nav.rooms">
-                  Sala Multiusos
-                </span>
-                <span class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/60 backdrop-blur-sm text-white rounded-full text-[11px] font-medium flex items-center gap-1 z-10 pointer-events-none">
-                  <span class="material-symbols-outlined text-[13px]">view_carousel</span>
-                  <span class="room-carousel-counter">1/2</span>
-                </span>
-              </div>
-              <div class="p-5">
-                <h4 class="font-serif text-base font-bold text-brand-text mb-1" data-i18n="rooms.room3_title">Sala Multiusos &amp; Workshops</h4>
-                <p class="text-xs text-brand-text/75" data-i18n="rooms.room3_desc">
-                  Espaço amplo com cadeiras individuais com prancheta, mesa de formador e luz natural.
-                </p>
-              </div>
-            </div>
 
           </div>
         </div>

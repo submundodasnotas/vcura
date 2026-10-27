@@ -12,7 +12,6 @@
       const msg = customMsg || "Olá! Gostaria de obter mais informações e marcar uma consulta na VCura Terapias.";
       return `https://wa.me/${VCURA_CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
     }
-  </script>
 
     // 1. Menu Mobile Hamburger Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -976,4 +975,3 @@
         applyTranslations('pt');
       }
     })();
-  </script>

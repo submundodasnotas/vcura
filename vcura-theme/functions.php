@@ -54,33 +54,13 @@ function vcura_enqueue_scripts() {
 	wp_enqueue_style( 'vcura-google-fonts', 'https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap', array(), null );
 	wp_enqueue_style( 'vcura-material-symbols', 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200', array(), null );
 
-	// Tailwind CSS via CDN
+	// Estilo principal do tema
+	wp_enqueue_style( 'vcura-main-style', get_stylesheet_uri(), array(), '1.0.1' );
+
+	// Tailwind CSS via CDN (carregado no <head> com prioridade)
 	wp_enqueue_script( 'vcura-tailwindcss', 'https://cdn.tailwindcss.com', array(), null, false );
 
-	// Estilo principal do tema
-	wp_enqueue_style( 'vcura-main-style', get_stylesheet_uri(), array(), '1.0.0' );
-
-	// Dicionário de Traduções
-	wp_enqueue_script( 'vcura-translations', get_template_directory_uri() . '/assets/js/translations.js', array(), '1.0.0', false );
-
-	// Script interativo principal
-	wp_enqueue_script( 'vcura-main-script', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true );
-
-	// Passar variáveis PHP/WordPress para o JavaScript
-	wp_localize_script( 'vcura-main-script', 'vcuraData', array(
-		'themeUri' => get_template_directory_uri(),
-		'ajaxUrl'  => admin_url( 'admin-ajax.php' ),
-		'homeUrl'  => home_url( '/' ),
-	) );
-}
-add_action( 'wp_enqueue_scripts', 'vcura_enqueue_scripts' );
-
-/**
- * Configuração do Tailwind no <head>
- */
-function vcura_tailwind_inline_config() {
-	?>
-	<script>
+	$tailwind_config = "
 		tailwind.config = {
 			theme: {
 				extend: {
@@ -101,9 +81,9 @@ function vcura_tailwind_inline_config() {
 						}
 					},
 					fontFamily: {
-						serif: ['"Noto Serif"', 'serif'],
-						sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-						gabriola: ['Gabriola', 'Georgia', '"Noto Serif"', 'serif']
+						serif: ['\"Noto Serif\"', 'serif'],
+						sans: ['\"Plus Jakarta Sans\"', 'sans-serif'],
+						gabriola: ['Gabriola', 'Georgia', '\"Noto Serif\"', 'serif']
 					},
 					boxShadow: {
 						'subtle': '0 4px 20px -2px rgba(33, 109, 37, 0.06)',
@@ -115,7 +95,20 @@ function vcura_tailwind_inline_config() {
 				}
 			}
 		};
-	</script>
-	<?php
+	";
+	wp_add_inline_script( 'vcura-tailwindcss', $tailwind_config, 'after' );
+
+	// Dicionário de Traduções
+	wp_enqueue_script( 'vcura-translations', get_template_directory_uri() . '/assets/js/translations.js', array(), '1.0.1', false );
+
+	// Script interativo principal (no rodapé)
+	wp_enqueue_script( 'vcura-main-script', get_template_directory_uri() . '/assets/js/main.js', array( 'vcura-translations' ), '1.0.1', true );
+
+	// Passar variáveis PHP/WordPress para o JavaScript
+	wp_localize_script( 'vcura-main-script', 'vcuraData', array(
+		'themeUri' => get_template_directory_uri(),
+		'ajaxUrl'  => admin_url( 'admin-ajax.php' ),
+		'homeUrl'  => home_url( '/' ),
+	) );
 }
-add_action( 'wp_head', 'vcura_tailwind_inline_config', 2 );
+add_action( 'wp_enqueue_scripts', 'vcura_enqueue_scripts' );

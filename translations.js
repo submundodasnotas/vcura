@@ -1,4 +1,4 @@
-/**
+﻿/**
  * VCura Terapias - Dicionário Oficial de Traduções Nativas
  * Suporte completo para:
  * - pt: Português (Portugal)
@@ -43,7 +43,7 @@ window.VCURA_TRANSLATIONS = {
     "hero.badge1_cat": "Espaço Clínico",
     "hero.badge1_title": "Ambiente Sereno & Acolhedor",
     "hero.badge2_cat": "Medicina Chinesa",
-    "hero.badge2_title": "Equilíbrio, Prevenção e Cura",
+    "hero.badge2_title": "Equilíbrio e Prevenção",
 
     // Secção 5: Tratamentos
     "treatments.tag": "Áreas de Acompanhamento",
@@ -369,7 +369,7 @@ window.VCURA_TRANSLATIONS = {
     "hero.badge1_cat": "Clinical Space",
     "hero.badge1_title": "Serene & Welcoming Environment",
     "hero.badge2_cat": "Chinese Medicine",
-    "hero.badge2_title": "Balance, Prevention & Healing",
+    "hero.badge2_title": "Balance & Prevention",
 
     // Section 5: Treatments
     "treatments.tag": "Areas of Care",
@@ -695,7 +695,7 @@ window.VCURA_TRANSLATIONS = {
     "hero.badge1_cat": "Espace Clinique",
     "hero.badge1_title": "Environnement Serein & Chaleureux",
     "hero.badge2_cat": "Médecine Chinoise",
-    "hero.badge2_title": "Équilibre, Prévention & Guérison",
+    "hero.badge2_title": "Équilibre & Prévention",
 
     // Section 5: Traitements
     "treatments.tag": "Domaines d'Accompagnement",
@@ -1021,7 +1021,7 @@ window.VCURA_TRANSLATIONS = {
     "hero.badge1_cat": "Espacio Clínico",
     "hero.badge1_title": "Ambiente Sereno y Acogedor",
     "hero.badge2_cat": "Medicina China",
-    "hero.badge2_title": "Equilibrio, Prevención y Salud",
+    "hero.badge2_title": "Equilibrio y Prevención",
 
     // Sección 5: Tratamientos
     "treatments.tag": "Áreas de Acompañamiento",

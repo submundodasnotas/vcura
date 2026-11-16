@@ -1,5 +1,7 @@
 ﻿<?php
 /**
+ * Template Name: VCura - Página Inicial (Landing Page)
+ *
  * The template for displaying the home/front page
  *
  * @package VCura

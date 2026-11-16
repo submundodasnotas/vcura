@@ -112,3 +112,19 @@ function vcura_enqueue_scripts() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'vcura_enqueue_scripts' );
+
+/**
+ * Forçar carregamento da front-page.php na página inicial
+ * (Garante a exibição da landing page mesmo se houver página estática do Elementor ou template legado)
+ */
+function vcura_force_front_page_template( $template ) {
+	if ( is_front_page() || is_home() ) {
+		$custom_front = get_template_directory() . '/front-page.php';
+		if ( file_exists( $custom_front ) ) {
+			return $custom_front;
+		}
+	}
+	return $template;
+}
+add_filter( 'template_include', 'vcura_force_front_page_template', 9999 );
+

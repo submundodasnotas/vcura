@@ -73,7 +73,46 @@
     });
 
     // 3. Funções de Modais e Lightbox
+    
+    // Carrossel de Certificados no Modal de Certificação Hospitalar
+    let currentCertIndex = 0;
+    const totalCertSlides = 2;
+
+    function updateCertCarousel() {
+      const track = document.getElementById('cert-carousel-track');
+      const counter = document.getElementById('cert-counter');
+      const dots = document.querySelectorAll('.cert-dot');
+      if (track) {
+        track.style.transform = 	ranslateX(- + (currentCertIndex * 100) + %);
+      }
+      if (counter) {
+        counter.textContent = ${currentCertIndex + 1}/;
+      }
+      if (dots && dots.length > 0) {
+        dots.forEach((dot, idx) => {
+          if (idx === currentCertIndex) {
+            dot.classList.add('bg-brand-green');
+            dot.classList.remove('bg-brand-gray');
+          } else {
+            dot.classList.remove('bg-brand-green');
+            dot.classList.add('bg-brand-gray');
+          }
+        });
+      }
+    }
+
+    function changeCertSlide(step) {
+      currentCertIndex = (currentCertIndex + step + totalCertSlides) % totalCertSlides;
+      updateCertCarousel();
+    }
+
+    function goToCertSlide(index) {
+      currentCertIndex = index;
+      updateCertCarousel();
+    }
+
     function openModal(modalId) {
+      if (modalId === 'modal-cert') { currentCertIndex = 0; updateCertCarousel(); }
       const modal = document.getElementById(modalId);
       if (modal) {
         modal.classList.remove('hidden');

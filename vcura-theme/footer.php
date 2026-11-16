@@ -221,41 +221,51 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</div>
 
-	<!-- Modal 3: Certificação Hospitalar (Sanya, China) -->
-	<div id="modal-cert" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
-		<div class="relative max-w-2xl w-full bg-white rounded-3xl p-6 flex flex-col items-center shadow-2xl">
-			<div class="w-full flex items-center justify-between pb-4 border-b border-brand-gray mb-4">
-				<h4 class="font-serif text-lg font-bold text-brand-text" data-i18n="modal.cert_title">Certificação Hospitalar • Sanya, China</h4>
-				<button onclick="closeModal('modal-cert')" type="button" class="text-brand-text hover:text-brand-green p-1">
+	<!-- Modal 3: Certificação Hospitalar (Sanya, China) — Carrossel com 2 Certificados -->
+	<div id="modal-cert" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4">
+		<div class="relative max-w-2xl w-full bg-white rounded-3xl p-5 sm:p-6 flex flex-col items-center shadow-2xl">
+			<div class="w-full flex items-center justify-between pb-3 sm:pb-4 border-b border-brand-gray mb-3 sm:mb-4">
+				<h4 class="font-serif text-base sm:text-lg font-bold text-brand-text" data-i18n="modal.cert_title">Certificação Hospitalar • Sanya, China</h4>
+				<button onclick="closeModal('modal-cert')" type="button" class="text-brand-text hover:text-brand-green p-1" aria-label="Fechar modal de certificados">
 					<span class="material-symbols-outlined text-2xl">close</span>
 				</button>
 			</div>
-			<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/30.jpg' ); ?>" alt="Certificado Hospitalar Sanya Traditional Chinese Medicine Hospital" class="w-full h-auto max-h-[65vh] object-contain rounded-xl border border-brand-gray" />
-			<p class="text-xs text-brand-text/70 mt-3 text-center" data-i18n="modal.cert_desc">
-				Certificado de estudos hospitalares em Acupuntura, Fitoterapia Chinesa e Massagem Tuina no Sanya TCM Hospital (China) atribuído à Dra. Elisabete Pina Monteiro.
-			</p>
-		</div>
-	</div>
 
-	<!-- Modal 4: Política de Privacidade Placeholder -->
-	<div id="modal-privacidade" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden flex items-center justify-center p-4">
-		<div class="relative max-w-xl w-full bg-white rounded-3xl p-6 sm:p-8 shadow-2xl">
-			<div class="flex items-center justify-between pb-4 border-b border-brand-gray mb-4">
-				<h4 class="font-serif text-xl font-bold text-brand-text" data-i18n="modal.privacy_title">Política de Privacidade</h4>
-				<button onclick="closeModal('modal-privacidade')" type="button" class="text-brand-text hover:text-brand-green p-1">
-					<span class="material-symbols-outlined text-2xl">close</span>
+			<!-- Carrossel de Certificados -->
+			<div class="relative w-full overflow-hidden rounded-2xl border border-brand-gray bg-brand-gray/30 group">
+				<div id="cert-carousel-track" class="flex w-full transition-transform duration-500 ease-in-out">
+					<div class="shrink-0 w-full flex items-center justify-center p-2 bg-white">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/certificado-1.jpeg' ); ?>" alt="Certificado 1 - Hospital Sanya TCM" class="w-full h-auto max-h-[58vh] sm:max-h-[64vh] object-contain rounded-xl cursor-pointer" onclick="openLightbox('<?php echo esc_url( get_template_directory_uri() . '/assets/images/certificado-1.jpeg' ); ?>', 'Certificação Hospitalar • Sanya, China — Documento 1')" />
+					</div>
+					<div class="shrink-0 w-full flex items-center justify-center p-2 bg-white">
+						<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/images/certificado-2.jpeg' ); ?>" alt="Certificado 2 - Hospital Sanya TCM" class="w-full h-auto max-h-[58vh] sm:max-h-[64vh] object-contain rounded-xl cursor-pointer" onclick="openLightbox('<?php echo esc_url( get_template_directory_uri() . '/assets/images/certificado-2.jpeg' ); ?>', 'Certificação Hospitalar • Sanya, China — Documento 2')" />
+					</div>
+				</div>
+
+				<!-- Botões de Navegação Anterior / Seguinte -->
+				<button type="button" onclick="changeCertSlide(-1)" class="absolute left-2.5 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/60 hover:bg-black/85 text-white flex items-center justify-center transition-all shadow-md active:scale-95 z-20" aria-label="Certificado anterior">
+					<span class="material-symbols-outlined text-lg sm:text-xl">chevron_left</span>
 				</button>
-			</div>
-			<div class="space-y-3 text-sm text-brand-text/80 max-h-[60vh] overflow-y-auto pr-2">
-				<p data-i18n="modal.privacy_p1">A VCura Terapias está empenhada em proteger a privacidade e os dados pessoais dos seus pacientes e visitantes.</p>
-				<p data-i18n="modal.privacy_p2">Todos os dados recolhidos através de canais diretos (como formulários de contacto ou mensagens de WhatsApp) destinam-se exclusivamente à gestão de consultas, prestação de esclarecimentos clínicos e informações sobre eventos solicitados pelo titular.</p>
-				<p data-i18n="modal.privacy_p3">Os seus dados não são cedidos a terceiros sem consentimento prévio e são tratados ao abrigo do Regulamento Geral sobre a Proteção de Dados (RGPD).</p>
-			</div>
-			<div class="pt-4 border-t border-brand-gray mt-4 text-right">
-				<button onclick="closeModal('modal-privacidade')" type="button" class="px-5 py-2.5 rounded-full bg-brand-green text-white text-xs font-semibold hover:bg-brand-green-dark transition-colors" data-i18n="modal.privacy_btn">
-					Compreendi
+				<button type="button" onclick="changeCertSlide(1)" class="absolute right-2.5 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/60 hover:bg-black/85 text-white flex items-center justify-center transition-all shadow-md active:scale-95 z-20" aria-label="Próximo certificado">
+					<span class="material-symbols-outlined text-lg sm:text-xl">chevron_right</span>
 				</button>
+
+				<!-- Indicador de slide (1/2) -->
+				<div class="absolute bottom-3 right-3 px-2.5 py-1 bg-black/70 backdrop-blur-sm text-white rounded-full text-[11px] font-semibold flex items-center gap-1 z-20 pointer-events-none">
+					<span class="material-symbols-outlined text-[13px]">view_carousel</span>
+					<span id="cert-counter">1/2</span>
+				</div>
 			</div>
+
+			<!-- Pontos de navegação (Dots) -->
+			<div class="flex items-center justify-center gap-2 mt-3">
+				<button type="button" onclick="goToCertSlide(0)" class="cert-dot w-2.5 h-2.5 rounded-full bg-brand-green transition-all" aria-label="Ir para certificado 1"></button>
+				<button type="button" onclick="goToCertSlide(1)" class="cert-dot w-2.5 h-2.5 rounded-full bg-brand-gray border border-brand-green/30 transition-all" aria-label="Ir para certificado 2"></button>
+			</div>
+
+			<p class="text-xs text-brand-text/70 mt-3 text-center max-w-xl" data-i18n="modal.cert_desc">
+				Certificados de estudos hospitalares em Acupuntura, Fitoterapia Chinesa e Massagem Tuina no Sanya TCM Hospital (China) atribuídos à Dra. Elisabete Pina Monteiro.
+			</p>
 		</div>
 	</div>
 

@@ -83,10 +83,10 @@
       const counter = document.getElementById('cert-counter');
       const dots = document.querySelectorAll('.cert-dot');
       if (track) {
-        track.style.transform = 	ranslateX(- + (currentCertIndex * 100) + %);
+        track.style.transform = 'translateX(-' + (currentCertIndex * 100) + '%)';
       }
       if (counter) {
-        counter.textContent = ${currentCertIndex + 1}/;
+        counter.textContent = (currentCertIndex + 1) + '/' + totalCertSlides;
       }
       if (dots && dots.length > 0) {
         dots.forEach((dot, idx) => {

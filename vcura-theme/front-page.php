@@ -207,7 +207,7 @@ get_header();
                   Saúde Feminina
                 </h3>
                 <p class="text-sm text-brand-text/80 leading-relaxed mb-4" data-i18n="treatments.card1_desc">
-                  Ciclo menstrual, TPM, cistite, endometriose, climatério e menopausa.
+                  Ciclo menstrual, TPM, cistite, endometriose, climatério (perimenopausa e menopausa).
                 </p>
               </div>
               <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20consulta%20de%20Sa%C3%BAde%20Feminina." target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center justify-center gap-2 w-full py-3 px-5 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_24px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02] group/btn">
@@ -303,7 +303,7 @@ get_header();
                 Tem outras queixas ou não sabe qual a abordagem indicada para si?
               </h4>
               <p class="text-xs sm:text-sm text-emerald-100/80 mt-1" data-i18n="treatments.highlight_desc">
-                Envie-nos uma mensagem e a nossa equipa ajuda a esclarecer o melhor caminho para o seu caso.
+                Envie-nos uma mensagem que ajudamos.
               </p>
             </div>
           </div>
@@ -465,7 +465,7 @@ get_header();
                 </div>
                 <h4 class="font-serif text-lg font-bold text-brand-text mb-2" data-i18n-html="shiatsu.title">Shiatsu &amp; Reflexologia</h4>
                 <p class="text-sm text-brand-text/75 leading-relaxed" data-i18n="shiatsu.desc">
-                  Shiatsu Terapêutico e Reflexologia Podal. Pressão pontual nos meridianos e pontos reflexos dos pés para restabelecer a harmonia orgânica.
+                  Shiatsu Terapêutico e Reflexologia Podal. Pressão manual nos meridianos ao longo do corpo e pontos reflexos.
                 </p>
               </div>
             </div>
@@ -502,7 +502,7 @@ get_header();
                 </div>
                 <h4 class="font-serif text-base sm:text-lg font-bold text-brand-text mb-2" data-i18n="wellness.constel_title">Constelações Familiares</h4>
                 <p class="text-xs sm:text-sm text-brand-text/75 leading-relaxed" data-i18n="wellness.constel_desc">
-                  Abordagem sistémica e fenomenológica para identificar e harmonizar dinâmicas inconscientes familiares, bloqueios relacionais e padrões emocionais repetitivos.
+                  Abordagem sistémica para identificar e harmonizar dinâmicas inconscientes familiares, bloqueios relacionais e padrões emocionais repetitivos.
                 </p>
               </div>
             </div>
@@ -1333,12 +1333,12 @@ get_header();
                   <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/15 backdrop-blur-md text-emerald-200 shadow-xs flex items-center justify-center mb-3 sm:mb-4 border border-white/25">
                     <span class="material-symbols-outlined text-[20px] sm:text-[22px]">nature_people</span>
                   </div>
-                  <h4 class="font-serif text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2" data-i18n="workshops.t3_title">ClimatÃ©rio &amp; Menopausa</h4>
+                  <h4 class="font-serif text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2" data-i18n="workshops.t3_title">Perimenopausa e Menopausa</h4>
                   <p class="text-xs sm:text-sm text-emerald-50/90 leading-relaxed mb-4 sm:mb-6 font-light" data-i18n="workshops.t3_desc">
                     Do Sofrimento ao Florescimento.
                   </p>
                 </div>
-                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Climat%C3%A9rio%20e%20Menopausa." target="_blank" rel="noopener noreferrer" class="relative z-10 inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-white text-[#003D26] hover:bg-emerald-50 font-bold text-xs shadow-md hover:scale-[1.02] transition-all">
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Perimenopausa%20e%20Menopausa." target="_blank" rel="noopener noreferrer" class="relative z-10 inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-white text-[#003D26] hover:bg-emerald-50 font-bold text-xs shadow-md hover:scale-[1.02] transition-all">
                   <span data-i18n="btn.info_inscriptions">InformaÃ§Ãµes e inscriÃ§Ãµes</span>
                   <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </a>
@@ -1351,12 +1351,12 @@ get_header();
                   <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-white/15 backdrop-blur-md text-emerald-200 shadow-xs flex items-center justify-center mb-3 sm:mb-4 border border-white/25">
                     <span class="material-symbols-outlined text-[20px] sm:text-[22px]">nutrition</span>
                   </div>
-                  <h4 class="font-serif text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2" data-i18n="workshops.t4_title">AlimentaÃ§Ã£o SaudÃ¡vel</h4>
+                  <h4 class="font-serif text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2" data-i18n="workshops.t4_title">Alimentação Nutritiva</h4>
                   <p class="text-xs sm:text-sm text-emerald-50/90 leading-relaxed mb-4 sm:mb-6 font-light" data-i18n="workshops.t4_desc">
                     Integrar a alimentaÃ§Ã£o como pilar no seu estilo de vida com Dietoterapia Chinesa e Naturopatia.
                   </p>
                 </div>
-                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Alimenta%C3%A7%C3%A3o%20Saud%C3%A1vel." target="_blank" rel="noopener noreferrer" class="relative z-10 inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-white text-[#003D26] hover:bg-emerald-50 font-bold text-xs shadow-md hover:scale-[1.02] transition-all">
+                <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20e%20inscri%C3%A7%C3%A3o%20no%20Workshop%20de%20Alimenta%C3%A7%C3%A3o%20Nutritiva." target="_blank" rel="noopener noreferrer" class="relative z-10 inline-flex items-center justify-between w-full px-4 py-2.5 rounded-xl bg-white text-[#003D26] hover:bg-emerald-50 font-bold text-xs shadow-md hover:scale-[1.02] transition-all">
                   <span data-i18n="btn.info_inscriptions">InformaÃ§Ãµes e inscriÃ§Ãµes</span>
                   <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                 </a>
@@ -1928,7 +1928,7 @@ get_header();
           <span class="text-xs font-bold uppercase tracking-widest text-brand-green-dark mb-2 block" data-i18n="faq.tag">Esclareça as suas dúvidas</span>
           <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-text mb-3" data-i18n="faq.title">Perguntas frequentes</h2>
           <p class="text-base text-brand-text/80" data-i18n="faq.desc">
-            Respostas às dúvidas mais habituais antes da sua primeira consulta na VCura.
+            Respostas às dúvidas antes da sua primeira consulta na VCura.
           </p>
         </div>
 

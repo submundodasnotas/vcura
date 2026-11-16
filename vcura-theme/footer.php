@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Footer Template
  *
@@ -115,7 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<span class="material-symbols-outlined text-brand-green text-[20px] shrink-0 mt-0.5">local_parking</span>
 						<div>
 							<p class="font-semibold text-brand-text" data-i18n="footer.parking_title">Estacionamento:</p>
-							<p class="text-xs" data-i18n="footer.parking_desc">Estacionamento gratuito facilitado em frente à clínica.</p>
+							<p class="text-xs" data-i18n="footer.parking_desc">Estacionamento gratuito.</p>
 						</div>
 					</div>
 				</div>

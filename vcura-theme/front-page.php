@@ -1180,52 +1180,12 @@ get_header();
 
         </div>
 
-        <!-- Eventos em Destaque — Carrossel Interativo Tipo Folhas com Prévia Lateral (Peek) e Setas -->
-        <div class="relative max-w-5xl mx-auto mb-16 v-reveal-up group">
-          <div id="events-cards-carousel" class="flex gap-4 sm:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar pb-3 px-2 sm:px-4 cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <!-- Evento em Destaque -->
+        <div class="relative max-w-4xl mx-auto mb-16 v-reveal-up group">
+          <div id="events-cards-carousel" class="flex justify-center pb-3 px-2 sm:px-4">
             
-            <!-- Evento 1: Workshop Menopausa Consciente -->
-            <div class="event-card-slide snap-center shrink-0 w-[90%] sm:w-[84%] lg:w-[80%] mx-auto">
-              <div class="bg-white rounded-3xl p-5 sm:p-8 md:p-10 border border-brand-gray/80 shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group/card h-full">
-                <div>
-                  <div class="flex items-center justify-between mb-4">
-                    <span class="px-3 sm:px-3.5 py-1 rounded-full bg-brand-green-soft text-brand-green-dark font-semibold text-[11px] sm:text-xs" data-i18n="workshops.ev1_badge">
-                      Workshop Presencial em Destaque
-                    </span>
-                  </div>
-
-                  <!-- Título Obrigatório -->
-                  <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-text mb-3 sm:mb-4 leading-snug" data-i18n="workshops.ev1_title">
-                    Menopausa Consciente | Conhecer. Escolher. Cuidar.
-                  </h3>
-
-                  <!-- Cartaz Oficial do Workshop -->
-                  <div class="mb-5 rounded-2xl overflow-hidden border border-brand-gray/80 bg-brand-gray/20 shadow-sm flex items-center justify-center">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . "/assets/images/IMG_2869.PNG" ); ?>" alt="Cartaz Oficial — Workshop Menopausa Consciente" class="w-full h-auto max-h-[340px] sm:max-h-[440px] object-contain rounded-xl group-hover/card:scale-[1.01] transition-transform duration-300" />
-                  </div>
-
-                  <!-- Descrição Obrigatória -->
-                  <p class="text-xs sm:text-base text-brand-text/80 leading-relaxed mb-6" data-i18n="workshops.ev1_desc">
-                    Um encontro dirigido a mulheres que querem compreender melhor as transformações do climatério e da menopausa, conhecer diferentes possibilidades de cuidado e adquirir ferramentas para viver esta fase de forma mais consciente.
-                  </p>
-                </div>
-
-                <!-- Botões: Inscrição em Degradê Esmeralda & Saber mais -->
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-5 sm:pt-6 border-t border-brand-gray">
-                  <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20a%20minha%20inscri%C3%A7%C3%A3o%20no%20Workshop%20Menopausa%20Consciente." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-gradient-to-r from-brand-green to-emerald-500 hover:from-emerald-400 hover:to-brand-green text-white font-semibold text-xs sm:text-sm shadow-[0_4px_16px_rgba(55,168,23,0.30)] hover:shadow-[0_6px_22px_rgba(55,168,23,0.45)] transition-all duration-300 hover:scale-[1.02] w-full sm:w-auto">
-                    <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
-                    <span data-i18n="btn.inscriptions">Inscrição</span>
-                  </a>
-                  <a href="https://wa.me/351964423853?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Workshop%20Menopausa%20Consciente." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-center gap-1.5 px-4 sm:px-5 py-3 rounded-full bg-brand-gray text-brand-text font-semibold text-xs sm:text-sm hover:bg-brand-green-soft hover:text-brand-green-dark transition-all w-full sm:w-auto">
-                    <span data-i18n="btn.learn_more">Saber mais</span>
-                    <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Evento 2: Formação Presencial Reiki Usui Nível 1 -->
-            <div class="event-card-slide snap-center shrink-0 w-[90%] sm:w-[84%] lg:w-[80%] mx-auto">
+            <!-- Evento: Formação Presencial Reiki Usui Nível 1 -->
+            <div class="event-card-slide w-full max-w-3xl mx-auto">
               <div class="bg-white rounded-3xl p-5 sm:p-8 md:p-10 border border-brand-gray/80 shadow-card hover:shadow-elevated transition-all duration-300 flex flex-col justify-between group/card h-full">
                 <div>
                   <div class="flex items-center justify-between mb-4">
@@ -1241,7 +1201,7 @@ get_header();
 
                   <!-- Cartaz Oficial da Formação -->
                   <div class="mb-5 rounded-2xl overflow-hidden border border-brand-gray/80 bg-brand-gray/20 shadow-sm flex items-center justify-center">
-                    <img src="<?php echo esc_url( get_template_directory_uri() . "/assets/images/IMG_2868.PNG" ); ?>" alt="Cartaz Oficial — Formação Reiki Usui Nível 1" class="w-full h-auto max-h-[340px] sm:max-h-[440px] object-contain rounded-xl group-hover/card:scale-[1.01] transition-transform duration-300" />
+                    <img src="<?php echo esc_url( get_template_directory_uri() . "/assets/images/IMG_2868.PNG" ); ?>" alt="Cartaz Oficial — Formação Reiki Usui Nível 1" class="w-full h-auto max-h-[380px] sm:max-h-[460px] object-contain rounded-xl group-hover/card:scale-[1.01] transition-transform duration-300" />
                   </div>
 
                   <!-- Descrição Obrigatória -->
@@ -1264,20 +1224,6 @@ get_header();
               </div>
             </div>
 
-          </div>
-
-          <!-- Setas Flutuantes Discretas no Meio das Laterais -->
-          <button type="button" id="events-cards-prev" aria-label="Evento anterior" class="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md hover:bg-brand-green hover:text-white text-brand-text border border-brand-gray shadow-card flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 z-20">
-            <span class="material-symbols-outlined text-[24px]">chevron_left</span>
-          </button>
-          <button type="button" id="events-cards-next" aria-label="Próximo evento" class="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white/95 backdrop-blur-md hover:bg-brand-green hover:text-white text-brand-text border border-brand-gray shadow-card flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 z-20">
-            <span class="material-symbols-outlined text-[24px]">chevron_right</span>
-          </button>
-
-          <!-- Indicadores de Navegação dos Eventos com Contador -->
-          <div id="events-cards-dots" class="flex items-center justify-center gap-2 mt-4">
-            <button type="button" class="event-card-dot w-6 h-2.5 rounded-full bg-brand-green transition-all duration-300" aria-label="Workshop 1"></button>
-            <button type="button" class="event-card-dot w-2.5 h-2.5 rounded-full bg-brand-gray hover:bg-brand-green-soft transition-all duration-300" aria-label="Workshop 2"></button>
           </div>
         </div>
 

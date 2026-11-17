@@ -554,6 +554,12 @@
       if (!carousel) return;
 
       const slides = carousel.querySelectorAll('.event-card-slide');
+      if (slides.length <= 1) {
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        if (dotsContainer) dotsContainer.style.display = 'none';
+        return;
+      }
       const dots = dotsContainer ? dotsContainer.querySelectorAll('.event-card-dot') : [];
       let currentIndex = 0;
       let autoplayTimer = null;
